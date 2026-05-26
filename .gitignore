@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+backend/target/
+
+# Environment
+.env
+.env.local
+.env.production
+application-prod.properties
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+frontend/dist/
+*.log
+
+# Secrets (nunca commitear)
+*.pem
+*.pfx
+*.jks

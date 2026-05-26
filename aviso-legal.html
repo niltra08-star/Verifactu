@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aviso Legal — FacturaIA</title>
+<meta name="robots" content="noindex, follow">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230A1628'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Inter,sans-serif' font-weight='800' font-size='18' fill='%23C8943E'>F</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg-deep: #060E1A; --bg-primary: #0A1628; --bg-secondary: #0E1D34; --bg-card: #132540;
+  --text-primary: #FFFFFF; --text-secondary: #8899B4; --text-tertiary: #556580;
+  --accent-gold: #C8943E; --accent-gold-light: #DEB356; --accent-gold-glow: rgba(200, 148, 62, 0.15);
+  --border-subtle: rgba(255,255,255,0.06); --border-card: rgba(255,255,255,0.08);
+  --radius-md: 12px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg-deep); color: var(--text-primary); line-height: 1.6;
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+.container { width: 100%; max-width: 800px; margin: 0 auto; padding: 0 24px; }
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100; padding: 16px 0;
+  background: rgba(10, 22, 40, 0.85); backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px); box-shadow: 0 1px 0 var(--border-subtle);
+}
+.nav-inner { display: flex; align-items: center; justify-content: space-between; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.nav-logo { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 22px; letter-spacing: -0.5px; color: var(--text-primary); text-decoration: none; }
+.nav-logo-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent-gold); box-shadow: 0 0 12px var(--accent-gold-glow); }
+.nav-back { display: inline-flex; align-items: center; gap: 6px; padding: 8px 16px; background: rgba(255,255,255,0.05); border: 1px solid var(--border-card); border-radius: var(--radius-md); color: var(--text-secondary); font-size: 13px; font-weight: 600; text-decoration: none; transition: all 150ms ease; }
+.nav-back:hover { background: rgba(255,255,255,0.1); color: var(--text-primary); }
+.content { padding: 140px 0 80px; }
+.content h1 { font-size: 36px; font-weight: 800; letter-spacing: -1px; margin-bottom: 8px; }
+.content .last-updated { font-size: 13px; color: var(--text-tertiary); margin-bottom: 40px; }
+.content h2 { font-size: 22px; font-weight: 700; margin-top: 40px; margin-bottom: 12px; color: var(--accent-gold-light); }
+.content p, .content li { font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 12px; }
+.content a { color: var(--accent-gold); text-decoration: none; }
+.content a:hover { text-decoration: underline; }
+.footer { padding: 40px 0; border-top: 1px solid var(--border-subtle); text-align: center; }
+.footer-logo { display: inline-flex; align-items: center; gap: 8px; font-weight: 800; font-size: 18px; color: var(--text-primary); text-decoration: none; margin-bottom: 8px; }
+.footer-copy { font-size: 13px; color: var(--text-tertiary); }
+@media (max-width: 768px) { .content { padding: 120px 0 60px; } .content h1 { font-size: 28px; } }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><span class="nav-logo-dot"></span>FacturaIA</a>
+    <a href="index.html" class="nav-back">&larr; Volver</a>
+  </div>
+</nav>
+
+<main class="content">
+  <div class="container">
+    <h1>Aviso Legal</h1>
+    <p class="last-updated">&Uacute;ltima actualizaci&oacute;n: 26 de mayo de 2026</p>
+
+    <h2>1. Identificaci&oacute;n del titular</h2>
+    <p>En cumplimiento del art&iacute;culo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de la Informaci&oacute;n y Comercio Electr&oacute;nico (LSSI-CE), se informa:</p>
+    <ul>
+      <li><strong>Proyecto:</strong> FacturaIA</li>
+      <li><strong>Naturaleza:</strong> Proyecto de software open source bajo licencia MIT</li>
+      <li><strong>Contacto:</strong> <a href="mailto:legal@facturaia.app">legal@facturaia.app</a></li>
+      <li><strong>Sitio web:</strong> <a href="https://facturaia.app">https://facturaia.app</a></li>
+    </ul>
+
+    <h2>2. Objeto</h2>
+    <p>FacturaIA es un software gratuito y open source de facturaci&oacute;n electr&oacute;nica para aut&oacute;nomos y pymes espa&ntilde;olas, compatible con la normativa VeriFactu (RD 1007/2023) de la Agencia Tributaria. El sitio web tiene car&aacute;cter meramente informativo y de prestaci&oacute;n del servicio.</p>
+
+    <h2>3. Condiciones de uso</h2>
+    <p>El acceso y uso de este sitio web atribuye la condici&oacute;n de usuario e implica la aceptaci&oacute;n plena de este aviso legal, la <a href="privacidad.html">pol&iacute;tica de privacidad</a> y los <a href="terminos.html">t&eacute;rminos y condiciones</a>. Si no est&aacute;s de acuerdo, abstente de utilizar el sitio.</p>
+
+    <h2>4. Propiedad intelectual e industrial</h2>
+    <p>El c&oacute;digo fuente de FacturaIA se distribuye bajo <strong>licencia MIT</strong>, lo que permite su uso, copia, modificaci&oacute;n y distribuci&oacute;n libre, siempre que se mantenga el aviso de copyright. El nombre "FacturaIA" y su logotipo son marcas del proyecto.</p>
+    <p>El contenido generado por los usuarios (facturas, datos de clientes, tickets) es propiedad exclusiva de cada usuario.</p>
+
+    <h2>5. Enlaces externos</h2>
+    <p>FacturaIA puede contener enlaces a sitios web de terceros (AEAT, GitHub, Ko-fi). No nos hacemos responsables del contenido ni de las pol&iacute;ticas de privacidad de dichos sitios.</p>
+
+    <h2>6. Exclusi&oacute;n de responsabilidad</h2>
+    <p>FacturaIA no garantiza la ausencia de errores en el software ni en los contenidos del sitio web. El usuario acepta que:</p>
+    <ul>
+      <li>El software se proporciona "tal cual", sin garant&iacute;as impl&iacute;citas o expl&iacute;citas.</li>
+      <li>Los c&aacute;lculos fiscales automatizados no sustituyen el asesoramiento profesional.</li>
+      <li>El usuario es responsable de verificar la correcci&oacute;n de sus facturas ante la AEAT.</li>
+    </ul>
+
+    <h2>7. Legislaci&oacute;n aplicable</h2>
+    <p>Este aviso legal se rige por la legislaci&oacute;n espa&ntilde;ola. Para cualquier controversia, las partes se someten a los juzgados y tribunales de Madrid, con renuncia expresa a cualquier otro fuero que pudiera corresponderles.</p>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <a href="index.html" class="footer-logo"><span class="nav-logo-dot"></span>FacturaIA</a>
+    <p class="footer-copy">&copy; 2026 FacturaIA</p>
+  </div>
+</footer>
+
+</body>
+</html>
