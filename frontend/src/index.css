@@ -27,13 +27,13 @@
   }
 
   .card {
-    @apply bg-bg-card border border-white/8 rounded-xl;
+    @apply bg-bg-card border border-white/[.08] rounded-xl;
   }
 
   .input-field {
-    @apply w-full px-4 py-3 bg-bg-input border border-white/12 rounded-xl text-text-primary text-sm
+    @apply w-full px-4 py-3 bg-bg-input border border-white/[.12] rounded-xl text-text-primary text-sm
            placeholder:text-text-tertiary outline-none transition-all duration-200
-           focus:border-accent-gold/40 focus:ring-3 focus:ring-accent-gold/15;
+           focus:border-accent-gold/40 focus:ring-2 focus:ring-accent-gold/15;
   }
 
   .stat-value {

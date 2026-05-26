@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: facturaia-backend
+    runtime: docker
+    repo: https://github.com/niltra08-star/Verifactu
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    envVars:
+      - key: SUPABASE_DB_PASSWORD
+        value: hfmqFNI9V4OKGztY
+      - key: JWT_SECRET
+        value: facturaia-prod-2026-secure-key-replace-me
+      - key: PORT
+        value: "8080"
