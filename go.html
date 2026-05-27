@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Redirigiendo... | FacturaIA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #060E1A;
+    color: #F8FAFC;
+    display: flex; align-items: center; justify-content: center;
+    min-height: 100vh; text-align: center;
+    -webkit-font-smoothing: antialiased;
+  }
+  .redirect-box {
+    padding: 40px 32px;
+    max-width: 420px;
+  }
+  .redirect-logo {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-weight: 800; font-size: 22px; text-decoration: none;
+    color: #F8FAFC; margin-bottom: 32px;
+  }
+  .redirect-logo-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #D4A843; flex-shrink: 0;
+  }
+  .spinner {
+    width: 40px; height: 40px; margin: 0 auto 20px;
+    border: 3px solid rgba(212,168,67,0.15);
+    border-top-color: #D4A843;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  h1 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+  p { font-size: 14px; color: #94A3B8; margin-bottom: 24px; line-height: 1.5; }
+  .service-name { color: #E8C873; font-weight: 600; }
+  .fallback-link {
+    display: inline-block; padding: 10px 24px;
+    background: rgba(212,168,67,0.12); border: 1px solid rgba(212,168,67,0.3);
+    border-radius: 8px; color: #D4A843; font-size: 14px; font-weight: 600;
+    text-decoration: none; transition: all 180ms ease;
+  }
+  .fallback-link:hover { background: rgba(212,168,67,0.2); border-color: rgba(212,168,67,0.5); }
+  .footer-note { font-size: 11px; color: #64748B; margin-top: 32px; }
+</style>
+</head>
+<body>
+<div class="redirect-box">
+  <a href="/" class="redirect-logo"><span class="redirect-logo-dot"></span>FacturaIA</a>
+  <div class="spinner"></div>
+  <h1>Redirigiendo a <span class="service-name" id="serviceName">...</span></h1>
+  <p>Te estamos llevando a la pagina del servicio. Si no se abre automaticamente, usa el enlace de abajo.</p>
+  <a href="#" id="fallbackLink" class="fallback-link" target="_blank" rel="sponsored noopener">Ir ahora &#8594;</a>
+  <p class="footer-note">Al usar enlaces de afiliado, puedes apoyar a FacturaIA sin coste adicional. <a href="/sobre-nosotros.html" style="color:#64748B;">Mas info</a></p>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  var REDIRECTS = {
+    declarando: { name: 'Declarando', url: 'https://declarando.es' },
+    n26: { name: 'N26 Business', url: 'https://n26.com/es-es/autonomos' },
+    amazon: { name: 'Amazon', url: 'https://www.amazon.es/s?k=material+oficina+autonomo+contabilidad' },
+    revolut: { name: 'Revolut Business', url: 'https://www.revolut.com/es-ES/negocios/' },
+    acumbamail: { name: 'Acumbamail', url: 'https://acumbamail.com/es/precios/' },
+    holded: { name: 'Holded', url: 'https://www.holded.com' }
+  };
+
+  var params = new URLSearchParams(window.location.search);
+  var to = (params.get('to') || '').toLowerCase();
+  var entry = REDIRECTS[to];
+
+  if (entry) {
+    document.getElementById('serviceName').textContent = entry.name;
+    document.getElementById('fallbackLink').href = entry.url;
+    document.title = 'Redirigiendo a ' + entry.name + ' | FacturaIA';
+
+    setTimeout(function() {
+      window.location.href = entry.url;
+    }, 1200);
+  } else {
+    document.getElementById('serviceName').textContent = 'la pagina solicitada';
+    document.getElementById('fallbackLink').href = '/';
+    document.getElementById('fallbackLink').textContent = 'Volver a FacturaIA';
+    document.querySelector('h1').innerHTML = 'Redirigiendo a <span class="service-name">FacturaIA</span>';
+    document.querySelector('.redirect-box > p').textContent = 'Servicio no encontrado. Volviendo a la pagina principal.';
+  }
+})();
+</script>
+</body>
+</html>

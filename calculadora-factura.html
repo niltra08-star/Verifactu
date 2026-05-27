@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Factura Completa (Base + IVA - IRPF) | FacturaIA</title>
+  <meta name="description" content="Calcula el total de tu factura con IVA e IRPF incluidos. Introduce la base imponible y obtén el desglose completo. Para autónomos que necesitan saber el total exacto.">
+  <meta name="keywords" content="calcular factura, total factura, iva irpf factura, calcular base imponible, factura total, precio factura autonomo">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://facturaia.app/calculadora-factura.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="seo/css/style.css">
+  <meta property="og:title" content="Calculadora de Factura Completa (Base + IVA - IRPF) | FacturaIA">
+  <meta property="og:description" content="Calcula el total de tu factura con IVA e IRPF incluidos. Introduce la base imponible y obtén el desglose completo. Para autónomos que necesitan saber el total exacto.">
+  <meta property="og:url" content="https://facturaia.app/calculadora-factura.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FacturaIA">
+  <meta property="og:locale" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculadora de Factura Completa (Base + IVA - IRPF) | FacturaIA">
+  <meta name="twitter:description" content="Calcula el total de tu factura con IVA e IRPF incluidos. Desglose completo para autónomos.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://facturaia.app/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Herramientas",
+        "item": "https://facturaia.app/herramientas/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Calculadora de Factura Completa",
+        "item": "https://facturaia.app/calculadora-factura.html"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Calculadora de Factura Completa",
+    "url": "https://facturaia.app/calculadora-factura.html",
+    "description": "Calcula el total de tu factura con IVA e IRPF incluidos. Desglose completo de la factura para autónomos.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "FacturaIA"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<nav class="nav" id="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><span class="nav-logo-dot"></span>FacturaIA</a>
+    <div class="nav-links">
+      <a href="/#features" class="nav-link">Funcionalidades</a>
+      <a href="/blog/" class="nav-link">Blog</a>
+      <a href="/herramientas/" class="nav-link">Herramientas</a>
+      <a href="/#faq" class="nav-link">FAQ</a>
+      <a href="/app" class="nav-cta">Probar gratis</a>
+    </div>
+  </div>
+</nav>
+
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <div class="container">
+    <ol>
+      <li><a href="/">Inicio</a></li>
+      <li><a href="/herramientas/">Herramientas</a></li>
+      <li>Calculadora de Factura Completa</li>
+    </ol>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="container">
+    <h1>Calculadora de <span class="highlight">Factura Completa</span></h1>
+    <p class="page-subtitle">Introduce la base imponible y calcula el total con IVA e IRPF automáticamente.</p>
+  </div>
+</header>
+
+<main>
+  <section class="section-padding">
+    <div class="container">
+      <div class="prose">
+        <p>Cuando emites una factura como autónomo en España, el importe que finalmente cobrarás no es simplemente tu precio más el IVA. La <strong>retención del IRPF</strong> reduce el total que tu cliente te pagará. Esta calculadora reúne los tres conceptos clave de cualquier factura profesional —<strong>base imponible, IVA e IRPF</strong>— para que sepas exactamente cuánto dinero recibirás en tu cuenta.</p>
+        <p>Con esta herramienta evitas sorpresas: podrás ver de un vistazo el desglose completo y el <strong>importe total que debe pagar tu cliente</strong>, así como el neto real que percibirás tras la retención fiscal. Ideal para presupuestar proyectos, negociar tarifas y mantener tus finanzas bajo control.</p>
+      </div>
+
+      <div class="calc-card" id="calcFactura">
+        <h2 class="calc-title">Calcular Factura Completa</h2>
+        <div class="calc-field">
+          <label for="facturaBase">Base imponible (€)</label>
+          <input type="number" id="facturaBase" placeholder="Ej: 1000" min="0" step="0.01">
+        </div>
+        <div class="calc-field">
+          <label for="facturaIva">Tipo de IVA</label>
+          <select id="facturaIva">
+            <option value="21">21% - IVA General</option>
+            <option value="10">10% - IVA Reducido</option>
+            <option value="4">4% - IVA Superreducido</option>
+            <option value="0">0% - Exento de IVA</option>
+          </select>
+        </div>
+        <div class="calc-field">
+          <label for="facturaIrpf">Tipo de retención IRPF</label>
+          <select id="facturaIrpf">
+            <option value="15">15% - Retención general</option>
+            <option value="7">7% - Nuevos autónomos (primeros 3 años)</option>
+          </select>
+        </div>
+        <div class="calc-result" id="facturaResultado">
+          <div class="result-item">
+            <span class="result-label">Base imponible</span>
+            <span class="result-value" id="facturaBaseResult">0,00 €</span>
+          </div>
+          <div class="result-item">
+            <span class="result-label">IVA</span>
+            <span class="result-value" id="facturaIvaResult">0,00 €</span>
+          </div>
+          <div class="result-item">
+            <span class="result-label">Retención IRPF</span>
+            <span class="result-value" id="facturaIrpfResult">0,00 €</span>
+          </div>
+          <div class="result-item result-total">
+            <span class="result-label">Total a pagar por el cliente</span>
+            <span class="result-value" id="facturaTotalResult">0,00 €</span>
+          </div>
+          <div class="result-item" style="background: rgba(212,168,67,0.1); border-radius: 6px; padding: 4px 8px;">
+            <span class="result-label" style="color: var(--gold, #D4A843);">Neto que recibirás</span>
+            <span class="result-value" id="facturaNetoResult" style="color: var(--gold, #D4A843);">0,00 €</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 48px;">
+        <div class="info-card">
+          <h3>¿Qué es la base imponible?</h3>
+          <p>La base imponible es el <strong>importe neto</strong> de tu servicio o producto antes de aplicar cualquier impuesto. Es tu precio "limpio" como profesional. Sobre esta base se calculan tanto el IVA (que se suma) como la retención de IRPF (que se resta). Es el punto de partida de cualquier factura y el concepto fiscal más importante: representa el valor real de tu trabajo o producto en el mercado.</p>
+          <p>En FacturaIA, la base imponible se calcula automáticamente al crear facturas, asegurando que todos los cálculos fiscales posteriores sean correctos y cumplan con la normativa de VeriFactu.</p>
+        </div>
+        <div class="info-card">
+          <h3>IVA: el impuesto que cobras para Hacienda</h3>
+          <p>El IVA se <strong>suma</strong> a la base imponible y lo cobras a tu cliente para luego ingresarlo en Hacienda. Actúas como intermediario recaudador. Los tipos vigentes en España peninsular y Baleares son:</p>
+          <ul>
+            <li><strong>21% General:</strong> para la mayoría de servicios profesionales (consultoría, diseño, programación, etc.).</li>
+            <li><strong>10% Reducido:</strong> transporte, hostelería, alimentos procesados, viviendas.</li>
+            <li><strong>4% Superreducido:</strong> bienes de primera necesidad (pan, leche, libros, medicamentos).</li>
+          </ul>
+          <p>El IVA se liquida trimestralmente mediante el modelo 303 y su cálculo correcto es obligatorio bajo la normativa VeriFactu.</p>
+        </div>
+        <div class="info-card">
+          <h3>IRPF: la retención que descuenta tu cliente</h3>
+          <p>La retención del IRPF se <strong>resta</strong> del total. Tu cliente retiene ese porcentaje sobre la base imponible y lo ingresa en Hacienda a cuenta de tu futura declaración de la renta. Tipos aplicables:</p>
+          <ul>
+            <li><strong>15%:</strong> tipo general para la mayoría de actividades profesionales (desde 2015).</li>
+            <li><strong>7%:</strong> tipo reducido para nuevos autónomos durante los tres primeros años de actividad.</li>
+          </ul>
+          <p>La retención solo se aplica si tu cliente es empresa o profesional. Si facturas a particulares, no se aplica retención de IRPF salvo excepciones concretas (como arrendamientos).</p>
+        </div>
+        <div class="info-card">
+          <h3>Ejemplo real de factura</h3>
+          <p>Supongamos que eres desarrollador y acuerdas un proyecto por 2.000 € (base imponible). Tu factura quedaría así:</p>
+          <ul>
+            <li>Base imponible: <strong>2.000,00 €</strong></li>
+            <li>IVA 21%: <strong>+420,00 €</strong></li>
+            <li>IRPF 15%: <strong>-300,00 €</strong></li>
+            <li>Total que paga el cliente: <strong>2.120,00 €</strong></li>
+            <li>Neto en tu cuenta: <strong>2.120,00 €</strong></li>
+          </ul>
+          <p>Aunque la base son 2.000 € y el IVA suma 420 € (2.420 € teóricos), terminas cobrando 2.120 € porque los 300 € del IRPF se los queda Hacienda vía tu cliente. Este desfase de 300 € es clave para entender tu liquidez real y planificar tus finanzas correctamente.</p>
+        </div>
+      </div>
+
+      <div class="prose" style="margin-top: 48px;">
+        <h2>Estructura legal de una factura en España</h2>
+        <p>Toda factura emitida por un autónomo o empresa en España debe contener obligatoriamente los siguientes elementos según el <strong>Reglamento de Facturación (RD 1619/2012)</strong>:</p>
+        <ul>
+          <li>Número de factura (serie y correlativo)</li>
+          <li>Fecha de expedición y fecha de prestación del servicio (si difieren)</li>
+          <li>Datos identificativos del emisor (nombre, NIF, dirección)</li>
+          <li>Datos identificativos del cliente (nombre, NIF, dirección)</li>
+          <li>Descripción detallada de la operación</li>
+          <li>Base imponible desglosada</li>
+          <li>Tipo de IVA aplicado y cuota resultante</li>
+          <li>Tipo de retención de IRPF aplicado y cuota resultante (si procede)</li>
+          <li>Importe total de la factura</li>
+        </ul>
+        <p>Con la entrada en vigor de <strong>VeriFactu</strong> en 2027, todas las facturas deberán cumplir requisitos adicionales de integridad e inalterabilidad, incluyendo códigos QR y registros de eventos encadenados. FacturaIA está diseñada para cumplir con todos estos requisitos desde el primer día.</p>
+
+        <h2>Errores comunes al calcular facturas</h2>
+        <p>Muchos autónomos cometen errores al calcular sus facturas manualmente. Los más frecuentes incluyen aplicar el IVA después de restar el IRPF (debe ser al revés: primero el IVA sobre la base, luego el IRPF sobre la base), olvidar que el IRPF reduce directamente el flujo de caja, o confundir la base imponible con el precio final. Usar una calculadora o un software de facturación automatizado elimina estos riesgos por completo.</p>
+      </div>
+
+      <div class="trust-badges" style="margin-top: 48px; display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; text-align: center;">
+        <div class="trust-badge">
+          <span style="font-size: 2rem;">&#128274;</span>
+          <p>Sin registro</p>
+        </div>
+        <div class="trust-badge">
+          <span style="font-size: 2rem;">&#9889;</span>
+          <p>Desglose completo</p>
+        </div>
+        <div class="trust-badge">
+          <span style="font-size: 2rem;">&#127758;</span>
+          <p>100% gratis</p>
+        </div>
+        <div class="trust-badge">
+          <span style="font-size: 2rem;">&#9989;</span>
+          <p>VeriFactu compatible</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding" style="background: var(--bg-card, #1a1a2e);">
+    <div class="container">
+      <div class="cta-box" style="text-align: center; max-width: 600px; margin: 0 auto;">
+        <h2>Crea facturas completas con FacturaIA en segundos</h2>
+        <p>IVA, IRPF, base imponible y total calculados automáticamente. Cumple con VeriFactu sin esfuerzo. Open source y 100% gratis.</p>
+        <form class="waitlist-form" style="display: flex; gap: 12px; max-width: 450px; margin: 24px auto 0;" id="ctaForm" onsubmit="event.preventDefault(); alert('¡Gracias! Te avisaremos cuando esté disponible.'); this.reset();">
+          <input type="email" placeholder="tu@email.com" required style="flex: 1; padding: 12px 16px; border-radius: 8px; border: 1px solid var(--border-color, #2a2a4a); background: var(--bg-input, #0f0f23); color: #fff; font-family: inherit;">
+          <button type="submit" class="btn-primary">Unirme</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 32px;">También te puede interesar</h2>
+      <div class="related-links" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+        <a href="/calculadora-iva.html" class="info-card" style="text-decoration: none; display: block; transition: transform 0.2s; border: 1px solid var(--border-color, #2a2a4a);">
+          <h3>Calculadora de IVA</h3>
+          <p>Calcula el IVA de tus facturas al instante con los tipos vigentes en España.</p>
+        </a>
+        <a href="/calculadora-irpf.html" class="info-card" style="text-decoration: none; display: block; transition: transform 0.2s; border: 1px solid var(--border-color, #2a2a4a);">
+          <h3>Calculadora de IRPF</h3>
+          <p>Calcula la retención de IRPF y conoce el neto que cobrarás tras la retención.</p>
+        </a>
+        <a href="/calculadora-cuota-autonomos.html" class="info-card" style="text-decoration: none; display: block; transition: transform 0.2s; border: 1px solid var(--border-color, #2a2a4a);">
+          <h3>Calculadora Cuota de Autónomos</h3>
+          <p>Descubre cuánto pagarás de Seguridad Social según tus ingresos reales en 2026.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding" style="background: var(--bg-card, #1a1a2e);">
+    <div class="container">
+      <div class="author-box" style="display: flex; gap: 24px; align-items: flex-start; max-width: 700px; margin: 0 auto; padding: 32px; background: var(--bg-main, #0f0f23); border-radius: 12px; border: 1px solid var(--border-color, #2a2a4a);">
+        <div class="author-avatar" style="width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, var(--gold, #D4A843), #f0d060); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; flex-shrink: 0;">DN</div>
+        <div class="author-info">
+          <h3 style="margin: 0 0 4px;">David Navas</h3>
+          <p style="margin: 0; opacity: 0.7; font-size: 0.9rem;">Creador de FacturaIA · Desarrollador Java Backend</p>
+          <p style="margin-top: 8px; font-size: 0.95rem;">Ingeniero de software y creador de contenido sobre desarrollo y finanzas para autónomos. Construí FacturaIA porque creo que las herramientas de facturación deberían ser accesibles para todos, sin coste y con la máxima transparencia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo"><span class="nav-logo-dot"></span>FacturaIA</a>
+        <p class="footer-tagline">Software de facturación VeriFactu 100% gratis y open source para autónomos españoles.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Producto</h4>
+        <a href="/#features">Funcionalidades</a>
+        <a href="/#comparison">Comparativa</a>
+        <a href="/blog/">Blog</a>
+        <a href="/herramientas/">Herramientas</a>
+      </div>
+      <div class="footer-col">
+        <h4>Recursos</h4>
+        <a href="/verifactu-autonomos.html">VeriFactu Autónomos</a>
+        <a href="/blog/guia-verifactu-2027.html">Guía VeriFactu 2027</a>
+        <a href="/calculadora-iva.html">Calculadora IVA</a>
+        <a href="/calculadora-irpf.html">Calculadora IRPF</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="/aviso-legal.html">Aviso Legal</a>
+        <a href="/privacidad.html">Privacidad</a>
+        <a href="/terminos.html">Términos</a>
+        <a href="https://github.com/facturaia" class="external">GitHub</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 FacturaIA. Open Source MIT. 100% gratis para siempre.</p>
+      <a href="https://ko-fi.com/facturaia" target="_blank" rel="noopener" class="footer-donate">Apoyar el proyecto</a>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-banner-inner">
+    <p>Usamos cookies mínimas para funcionar. No vendemos tus datos. <a href="/privacidad.html">Más info</a></p>
+    <button class="btn-accept" id="acceptCookies">Aceptar</button>
+  </div>
+</div>
+
+<button class="scroll-top" id="scrollTop" aria-label="Volver arriba">&#8593;</button>
+
+<script src="seo/js/main.js" defer></script>
+</body>
+</html>

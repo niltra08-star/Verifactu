@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="El codigo QR es obligatorio en las facturas Verifactu. Descubre que informacion contiene, como se genera automaticamente y como verificarlo en la sede electronica de la AEAT.">
+  <meta name="keywords" content="codigo qr verifactu, qr factura electronica, verificar factura qr, codigo qr aeat, facturae qr">
+  <meta name="author" content="FacturaIA">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://facturaia.com/blog/codigo-qr-verifactu-factura.html">
+  <meta property="og:title" content="Codigo QR en Facturas Verifactu: Para Que Sirve y Como Generarlo | FacturaIA">
+  <meta property="og:description" content="El codigo QR es obligatorio en las facturas Verifactu. Descubre que informacion contiene, como se genera automaticamente y como verificarlo en la sede electronica de la AEAT.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://facturaia.com/blog/codigo-qr-verifactu-factura.html">
+  <meta property="og:image" content="https://facturaia.com/seo/img/og-qr-verifactu.png">
+  <meta property="og:site_name" content="FacturaIA">
+  <meta property="og:locale" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Codigo QR en Facturas Verifactu: Para Que Sirve y Como Generarlo | FacturaIA">
+  <meta name="twitter:description" content="El codigo QR es obligatorio en las facturas Verifactu. Descubre que informacion contiene, como se genera automaticamente y como verificarlo.">
+  <meta name="twitter:image" content="https://facturaia.com/seo/img/og-qr-verifactu.png">
+  <title>Codigo QR en Facturas Verifactu: Para Que Sirve y Como Generarlo | FacturaIA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../seo/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Codigo QR en Facturas Verifactu: Para Que Sirve y Como Generarlo",
+    "description": "El codigo QR es obligatorio en las facturas Verifactu. Descubre que informacion contiene, como se genera automaticamente y como verificarlo en la sede electronica de la AEAT.",
+    "image": "https://facturaia.com/seo/img/og-qr-verifactu.png",
+    "author": {
+      "@type": "Organization",
+      "name": "Equipo FacturaIA",
+      "url": "https://facturaia.com"
+    },
+    "datePublished": "2026-05-27T10:00:00+02:00",
+    "dateModified": "2026-05-27T10:00:00+02:00",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FacturaIA",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://facturaia.com/seo/img/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://facturaia.com/blog/codigo-qr-verifactu-factura.html"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://facturaia.com" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://facturaia.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Codigo QR Verifactu", "item": "https://facturaia.com/blog/codigo-qr-verifactu-factura.html" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Es obligatorio incluir el codigo QR en todas las facturas Verifactu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Si. El RD 1007/2023 establece que todas las facturas emitidas con software homologado Verifactu deben incluir un codigo QR que permita la verificacion de su autenticidad. No hay excepciones por volumen de facturacion ni por tipo de cliente. Cualquier factura que no incluya el codigo QR no se considera conforme a la normativa Verifactu."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Que pasa si el codigo QR de mi factura no se puede escanear?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Un codigo QR ilegible invalida la funcion de verificacion inmediata de la factura. Las causas mas comunes son un tamano de impresion demasiado pequeno (inferior a 2x2 cm), baja resolucion de la impresora, o danos fisicos en el papel. La factura sigue siendo valida fiscalmente si los datos impresos son correctos, pero pierde la capacidad de verificacion instantanea que exige la normativa. Lo recomendable es reemitir la factura con un QR correctamente generado e impreso."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puedo generar el codigo QR de Verifactu con cualquier herramienta online?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. El codigo QR de Verifactu no es un simple QR que codifica texto libre. Debe seguir un formato de codificacion especifico definido por la AEAT, con parametros concretos en un orden determinado y codificados en UTF-8. Usar un generador de QR generico producira un codigo que la sede electronica de la AEAT no reconocera como valido. Necesitas un software de facturacion homologado que genere el QR automaticamente con el formato correcto."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿El codigo QR contiene todos los datos de la factura?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. El codigo QR no contiene el XML completo de la factura ni todos sus datos. Contiene unicamente los datos esenciales de verificacion: numero de factura y serie, fecha de expedicion, NIF del emisor y receptor, importe total, el hash del registro de facturacion, la URL del portal de verificacion de la AEAT y la firma electronica. Es decir, contiene lo necesario para que la AEAT pueda contrastar la factura con sus registros, no la factura completa en si."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Que diferencia hay entre el QR de Verifactu y el QR de FacturaE?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Aunque ambos son codigos QR en facturas electronicas, tienen propositos distintos. El QR de Verifactu esta disenado para la verificacion de autenticidad ante la AEAT y contiene el hash encadenado del registro de facturacion. El QR de FacturaE, definido en la Orden HAC/1177/2024, contiene informacion estructurada de la factura para facilitar su lectura automatica por parte del receptor (como datos del emisor, importes, impuestos). Son complementarios y una factura puede incluir ambos codigos QR si cumple simultaneamente con Verifactu y FacturaE."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <nav class="nav" id="navbar">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><span class="nav-logo-dot"></span>FacturaIA</a>
+      <div class="nav-links">
+        <a href="/#features" class="nav-link">Funcionalidades</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+        <a href="/herramientas/" class="nav-link">Herramientas</a>
+        <a href="/#faq" class="nav-link">FAQ</a>
+        <a href="/app" class="nav-cta">Probar gratis</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="blog-hero">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="/">Inicio</a> <span class="breadcrumb-sep">/</span>
+          <a href="/blog/">Blog</a> <span class="breadcrumb-sep">/</span>
+          <span>Codigo QR Verifactu</span>
+        </div>
+        <div class="blog-hero-content">
+          <span class="blog-category">Verifactu</span>
+          <h1>Codigo QR en Facturas <span class="highlight">Verifactu</span>: Para Que Sirve y Como Generarlo</h1>
+          <p class="blog-hero-subtitle">El codigo QR no es solo un dibujo bonito en tu factura. Es la llave que permite a cualquiera verificar que tu factura es autentica. Descubre como funciona.</p>
+          <div class="blog-meta">
+            <span class="blog-date">Publicado: 27 de mayo de 2026</span>
+            <span class="blog-read-time">9 min de lectura</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="blog-layout">
+        <article class="blog-content">
+          <div class="author-box">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 56'%3E%3Crect width='56' height='56' fill='%231E3254'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter,sans-serif' font-weight='800' font-size='22' fill='%23D4A843'%3EF%3C/text%3E%3C/svg%3E" alt="FacturaIA" width="56" height="56">
+            <div>
+              <div class="author-name">Equipo FacturaIA</div>
+              <div class="author-bio">Creamos herramientas gratuitas y open source para que los autonomos espanoles puedan facturar sin pagar un euro. Creemos en la transparencia, la privacidad y el software libre.</div>
+            </div>
+          </div>
+
+          <nav class="toc" aria-label="Tabla de contenidos">
+            <h2 class="toc-title">Indice de contenidos</h2>
+            <ol class="toc-list">
+              <li><a href="#que-es">Que es el codigo QR de Verifactu y para que sirve</a></li>
+              <li><a href="#informacion">Que informacion contiene el codigo QR de la factura</a></li>
+              <li><a href="#verificar">Como verificar una factura con el codigo QR en la AEAT</a></li>
+              <li><a href="#generar">Como se genera el codigo QR automaticamente</a></li>
+              <li><a href="#facturaia">Como FacturaIA incluye el QR en cada factura</a></li>
+              <li><a href="#errores">Errores comunes con el codigo QR Verifactu</a></li>
+              <li><a href="#faq-section">Preguntas frecuentes</a></li>
+            </ol>
+          </nav>
+
+          <div class="prose">
+            <h2 id="que-es">1. Que es el codigo QR de Verifactu y para que sirve</h2>
+
+            <p>El codigo QR de Verifactu es mucho mas que un simple cuadradito con pixeles en la esquina de tu factura. Es la <strong>puerta de verificacion</strong> que conecta el documento fisico o PDF que recibe tu cliente con los registros oficiales de la Agencia Tributaria. Cuando alguien escanea ese codigo, esta accediendo directamente al portal de verificacion de la AEAT para comprobar que la factura es autentica y no ha sido manipulada.</p>
+
+            <p>El proposito fundamental de este codigo QR es triple: <strong>transparencia, confianza y verificacion inmediata</strong>. Transparencia porque cualquier persona puede comprobar la autenticidad de una factura sin necesidad de ser experto en fiscalidad. Confianza porque el receptor sabe que el documento que tiene delante no es un fraude. Y verificacion inmediata porque en cuestion de segundos, la AEAT confirma o niega la validez del documento.</p>
+
+            <p>La obligatoriedad de incluir este codigo QR viene establecida en el <strong>articulo 14 del Real Decreto 1007/2023</strong>, que desarrolla los requisitos tecnicos de los sistemas informaticos de facturacion. Este articulo especifica que toda factura emitida por un software homologado Verifactu debe incorporar un codigo QR que permita el acceso inmediato a la informacion de verificacion del registro de facturacion correspondiente.</p>
+
+            <p>En la practica, el codigo QR funciona como un "puente" entre el mundo fisico (el papel o PDF que tienes delante) y el mundo digital de la AEAT. Escaneas el QR con tu movil, se abre una URL de la sede electronica, y en pantalla aparecen los datos de verificacion que puedes contrastar con la factura impresa. Si los datos coinciden, la factura es autentica. Si no coinciden, algo no cuadra.</p>
+
+            <div class="info-card">
+              <strong>Dato clave:</strong> El codigo QR no es opcional ni decorativo. Es un requisito tecnico obligatorio del sistema Verifactu. Una factura sin codigo QR, o con un QR que no siga el formato oficial de la AEAT, no se considera conforme a la normativa, lo que puede acarrear sanciones tanto para el emisor como para el receptor.
+            </div>
+
+            <p>Para entender mejor el contexto normativo en el que se enmarca este requisito, te recomendamos leer nuestra <a href="/blog/guia-verifactu-2027.html">Guia Definitiva de Verifactu 2027</a>, donde explicamos todos los plazos, requisitos y sanciones del nuevo sistema de facturacion electronica.</p>
+
+            <h2 id="informacion">2. Que informacion contiene el codigo QR de la factura</h2>
+
+            <p>Uno de los errores mas extendidos es pensar que el codigo QR contiene la factura entera o el XML completo del registro de facturacion. Nada mas lejos de la realidad. El QR de Verifactu contiene <strong>exclusivamente los datos esenciales de verificacion</strong>, ni mas ni menos. Es un resumen cifrado y firmado digitalmente que permite a la AEAT identificar el registro concreto y contrastarlo.</p>
+
+            <p>Los datos que estan codificados dentro del codigo QR son los siguientes:</p>
+
+            <ul>
+              <li><strong>Numero de factura y serie:</strong> El identificador unico de la factura dentro de la serie correspondiente. Es el dato principal que permite localizar el registro en la base de datos de la AEAT.</li>
+              <li><strong>Fecha de expedicion:</strong> La fecha en que se emitio la factura, en formato estructurado. Fundamental para ubicar el registro en el tiempo y verificar que coincide con el documento fisico.</li>
+              <li><strong>NIF del emisor:</strong> El numero de identificacion fiscal de quien emite la factura. La AEAT utiliza este dato para cruzar la informacion con el registro de facturacion del emisor.</li>
+              <li><strong>NIF del receptor:</strong> El numero de identificacion fiscal de quien recibe la factura. Permite verificar que la factura fue efectivamente emitida para ese destinatario concreto.</li>
+              <li><strong>Importe total de la factura:</strong> La cuantia economica total del documento, incluyendo todos los impuestos aplicables. Es el dato que cualquier receptor puede contrastar de un simple vistazo con el documento impreso.</li>
+              <li><strong>Hash del registro de facturacion (huella digital):</strong> Es el elemento mas tecnico e importante. Se trata de una cadena alfanumerica generada mediante el algoritmo SHA-256 que actua como "huella digital" unica e irreversible del registro de facturacion. Si alguien modifica un solo caracter de la factura, el hash cambia por completo. Este hash forma parte de la cadena de hash encadenado que explicamos en nuestro articulo sobre el <a href="/blog/hash-encadenado-verifactu.html">hash encadenado de Verifactu</a>.</li>
+              <li><strong>URL del portal de verificacion de la AEAT:</strong> La direccion web de la sede electronica donde se realiza la verificacion. Al escanear el QR, el movil abre automaticamente esta URL con los parametros de la factura ya incluidos.</li>
+              <li><strong>Firma electronica del registro:</strong> Una firma criptografica generada por el software de facturacion que garantiza que el contenido del QR no ha sido alterado desde su generacion y que proviene de un software homologado.</li>
+            </ul>
+
+            <div class="info-card">
+              <strong>Importante:</strong> El codigo QR NO contiene el desglose de lineas de la factura, ni los conceptos, ni las descripciones de productos o servicios, ni los datos bancarios, ni ninguna otra informacion que no sea estrictamente necesaria para la verificacion. Esos datos estan en el PDF o papel de la factura, pero no en el QR.
+            </div>
+
+            <p>La codificacion de estos datos se realiza en <strong>formato UTF-8</strong> siguiendo un <strong>orden de parametros especifico</strong> definido por la AEAT en la documentacion tecnica del sistema Verifactu. Cualquier alteracion en el orden de los parametros o en la codificacion produce un QR que el portal de verificacion no reconoce como valido. De ahi la importancia de utilizar software homologado que implemente correctamente esta codificacion.</p>
+
+            <h2 id="verificar">3. Como verificar una factura con el codigo QR en la AEAT</h2>
+
+            <p>Verificar una factura con el codigo QR es un proceso sorprendentemente sencillo que cualquier persona puede hacer en menos de un minuto. No necesitas certificado digital, ni Cl@ve PIN, ni estar dado de alta en ningun servicio de la AEAT. Basta con tener un telefono movil con camara y conexion a internet. Este es el proceso paso a paso:</p>
+
+            <div class="steps-list">
+              <div class="step-item">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h4>Abre la camara de tu movil o una app de escaneo QR</h4>
+                  <p>La mayoria de los telefonos modernos (tanto Android como iPhone) permiten escanear codigos QR directamente desde la aplicacion de camara, sin necesidad de instalar ninguna app adicional. Si tu telefono no lo soporta de forma nativa, puedes usar cualquier aplicacion gratuita de escaneo QR disponible en Google Play o App Store.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h4>Enfoca el codigo QR de la factura</h4>
+                  <p>Apunta con la camara al codigo QR impreso en la factura o visible en el PDF. Asegurate de que el QR este bien iluminado y que la imagen no este borrosa. Si el QR es demasiado pequeno o la impresion es de baja calidad, puede que necesites acercar la camara o mejorar las condiciones de luz. El codigo QR debe tener un tamano minimo recomendado de 2x2 cm en la factura impresa para garantizar una lectura fiable.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h4>El movil abre automaticamente la URL de verificacion de la AEAT</h4>
+                  <p>Al detectar el codigo QR, el movil mostrara una notificacion o abrira directamente el navegador con la URL del portal de verificacion de la AEAT. Esta URL ya incluye codificados los parametros de la factura (numero de factura, NIF del emisor, importe, hash, etc.), por lo que no necesitas introducir ningun dato manualmente.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <h4>Compara los datos mostrados por la AEAT con los de la factura impresa</h4>
+                  <p>La pagina de la AEAT mostrara en pantalla los datos de verificacion extraidos del QR: numero de factura, fecha, emisor, receptor, importe total y el estado del registro (valido/no valido). Compara estos datos con los que aparecen impresos en la factura fisica o en el PDF. Presta especial atencion al importe total, la fecha y el NIF del emisor.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                  <h4>La AEAT confirma o deniega la autenticidad</h4>
+                  <p>Si todos los datos coinciden y el hash es correcto, la AEAT mostrara un mensaje de confirmacion indicando que el registro de facturacion es valido y que la factura es autentica. Si hay alguna discrepancia (datos que no coinciden, hash invalido, factura no encontrada en los registros), la AEAT lo indicara claramente, y en ese caso deberias ponerte en contacto con el emisor para aclarar la situacion.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <strong>Consejo practico:</strong> Como receptor de facturas, adquiere el habito de escanear el codigo QR de las facturas que recibes, especialmente las de importes elevados o de proveedores nuevos. Es un gesto que apenas lleva unos segundos y te protege frente a posibles facturas fraudulentas.
+            </div>
+
+            <p>Este proceso de verificacion es la razon de ser del codigo QR. Sin el, la unica forma de verificar una factura seria solicitar una comprobacion formal a la AEAT, un tramite que puede llevar semanas. Con el QR, la verificacion es inmediata y esta al alcance de cualquiera.</p>
+
+            <h2 id="generar">4. Como se genera el codigo QR automaticamente</h2>
+
+            <p>La generacion del codigo QR de Verifactu no es algo que el autonomo o la empresa deba hacer manualmente. Es un proceso <strong>completamente automatico</strong> que realiza el software de facturacion homologado en el momento de emitir la factura. El flujo tecnico es el siguiente:</p>
+
+            <p>En primer lugar, el software calcula el <strong>hash SHA-256 del registro de facturacion</strong> que se acaba de crear. Este hash es una cadena de 64 caracteres hexadecimales que actua como huella digital unica e irreversible del contenido del registro. Cualquier modificacion, por minima que sea, produce un hash completamente distinto.</p>
+
+            <p>A continuacion, el software construye una <strong>cadena de texto estructurada</strong> que contiene todos los parametros de verificacion en el orden exacto definido por la AEAT. Esta cadena incluye el numero de factura, la serie, la fecha de expedicion, los NIF del emisor y receptor, el importe total, el hash calculado y la URL base del portal de verificacion de la AEAT.</p>
+
+            <p>Una vez construida la cadena, el software aplica una <strong>firma electronica</strong> sobre el contenido para garantizar su integridad y autenticidad. Esta firma se incorpora como un parametro adicional en la cadena de datos.</p>
+
+            <p>Finalmente, el software codifica toda esta cadena en <strong>formato UTF-8</strong> y genera la imagen del codigo QR utilizando un algoritmo estandar de generacion de codigos QR (como el definido en la norma ISO/IEC 18004). La imagen resultante se incrusta automaticamente en el PDF de la factura, normalmente en una posicion fija (esquina superior derecha o inferior izquierda) junto con el resto de elementos graficos del documento.</p>
+
+            <div class="info-card">
+              <strong>Atencion:</strong> No puedes generar el codigo QR de Verifactu con cualquier herramienta online de generacion de QR. Estos servicios genericos no conocen el formato especifico de parametros que exige la AEAT, no calculan el hash SHA-256 del registro de facturacion, y no incluyen la firma electronica. El resultado seria un QR que la sede electronica de la AEAT no reconoceria como valido. Necesitas obligatoriamente un software de facturacion homologado.
+            </div>
+
+            <p>El proceso completo ocurre en fracciones de segundo y es transparente para el usuario. Cuando pulsas "Emitir factura" en tu software de facturacion homologado, el sistema genera simultaneamente el PDF, el XML del registro de facturacion, el hash encadenado con la factura anterior y el codigo QR. Todo ello sin que tengas que hacer nada adicional.</p>
+
+            <p>Para entender en profundidad como funciona el hash encadenado que da integridad a todo el sistema, te recomendamos nuestro articulo sobre el <a href="/blog/hash-encadenado-verifactu.html">hash encadenado de Verifactu</a>.</p>
+
+            <h2 id="facturaia">5. Como FacturaIA incluye el QR en cada factura</h2>
+
+            <p>En <strong>FacturaIA</strong> nos tomamos muy en serio el cumplimiento normativo. El codigo QR de Verifactu se genera de forma <strong>completamente automatica</strong> en cada factura que emites a traves de nuestra plataforma. Tu no tienes que preocuparte de nada: no hay que marcar ninguna casilla, no hay que configurar ningun parametro, no hay que revisar que el QR se ha generado correctamente. Simplemente creas tu factura como siempre y el sistema se encarga de todo lo demas.</p>
+
+            <p>El QR generado por FacturaIA se incrusta directamente en el PDF de la factura, en una posicion claramente visible, con un tamano optimo que garantiza su legibilidad tanto en pantalla como en impresion fisica. Ademas, el QR se genera en formato vectorial dentro del PDF, lo que significa que no se pixela al hacer zoom o al imprimir en alta resolucion.</p>
+
+            <p>Estas son las caracteristicas del codigo QR generado por FacturaIA:</p>
+
+            <ul>
+              <li><strong>Formato de codificacion correcto:</strong> Seguimos estrictamente la especificacion tecnica de la AEAT en cuanto al orden de parametros, codificacion UTF-8 y estructura de la cadena de datos.</li>
+              <li><strong>Hash SHA-256 integrado:</strong> Cada QR incluye el hash del registro de facturacion, que a su vez forma parte de la cadena de hash encadenado de todas tus facturas.</li>
+              <li><strong>Firma electronica incluida:</strong> El QR incorpora la firma electronica que garantiza la autenticidad e integridad de los datos.</li>
+              <li><strong>URL de verificacion correcta:</strong> El QR apunta siempre a la URL oficial del portal de verificacion de la AEAT, no a ninguna pagina intermedia ni de terceros.</li>
+              <li><strong>Tamano y posicion optimizados:</strong> El QR se coloca en una posicion estandar dentro del PDF, con un tamano que garantiza su facil escaneo.</li>
+              <li><strong>Formato vectorial (SVG):</strong> A diferencia de otros software que generan el QR como imagen rasterizada (PNG, JPG), FacturaIA lo genera como grafico vectorial, lo que asegura una nitidez perfecta a cualquier tamano de impresion.</li>
+            </ul>
+
+            <div class="info-card">
+              <strong>Open source y verificable:</strong> FacturaIA es 100% open source. Esto significa que puedes revisar el codigo que genera el codigo QR, comprobar que sigue la especificacion de la AEAT, y verificar por ti mismo que no hay trucos ni atajos. La transparencia es uno de nuestros pilares fundamentales. Todo el codigo esta disponible publicamente en nuestro repositorio de GitHub.
+            </div>
+
+            <p>Si aun no utilizas FacturaIA, crear una factura con su correspondiente codigo QR Verifactu te llevara literalmente dos minutos. No necesitas instalar nada, no necesitas configurar nada, y no necesitas saber nada de hashes, firmas electronicas ni formatos de codificacion. Solo tienes que rellenar los datos de tu factura y el sistema hace el resto.</p>
+
+            <h2 id="errores">6. Errores comunes con el codigo QR Verifactu</h2>
+
+            <p>Aunque el concepto del codigo QR es sencillo, en la practica se cometen errores con mas frecuencia de la que cabria esperar. Estos son los fallos mas habituales que detectamos y como evitarlos:</p>
+
+            <ul>
+              <li><strong>QR demasiado pequeno para ser escaneado:</strong> Es el error mas frecuente. Si el codigo QR se imprime con un tamano inferior a 2x2 cm, muchos telefonos moviles no consiguen enfocarlo correctamente y el escaneo falla. Asegurate de que tu software de facturacion genere el QR con un tamano adecuado. En FacturaIA, el QR se genera siempre con un tamano optimo para su lectura.</li>
+              <li><strong>Codificacion incorrecta de los datos:</strong> Utilizar herramientas no homologadas que generan un QR con los datos en un orden incorrecto, con una codificacion que no es UTF-8, o sin incluir todos los parametros obligatorios. El resultado es un QR que el portal de la AEAT no reconoce.</li>
+              <li><strong>Falta de parametros obligatorios:</strong> Algunos software generan codigos QR que no incluyen todos los datos exigidos por la AEAT, como el hash del registro de facturacion o la firma electronica. Un QR incompleto es tan invalido como no tener QR.</li>
+              <li><strong>QR danado o borroso en facturas impresas:</strong> Las impresoras de baja calidad, el papel termico que se degrada con el tiempo, o las manchas de humedad pueden dejar el codigo QR ilegible. Si emites facturas en papel, utiliza una impresora de calidad minima de 300 DPI y conserva las facturas en un lugar seco. Mejor aun: envia siempre el PDF por email y guarda una copia digital.</li>
+              <li><strong>QR que no incluye la URL de verificacion:</strong> Un QR que solo contiene los datos de la factura pero no la URL del portal de verificacion de la AEAT no sirve para nada. El proposito del QR es precisamente abrir esa URL. Sin ella, el QR es un simple contenedor de datos que no permite la verificacion inmediata.</li>
+              <li><strong>Usar generadores de QR genericos:</strong> Muchos autonomos, ante la falta de un software homologado, intentan generar el QR con herramientas online gratuitas de generacion de codigos QR. Esto no funciona. El formato especifico de Verifactu no es un simple texto libre metido en un QR. Solo el software homologado produce QR validos.</li>
+              <li><strong>QR estatico identico en todas las facturas:</strong> Algunos software mal implementados generan siempre el mismo QR para todas las facturas, o un QR que solo cambia en el numero de factura pero no recalcula el hash. Esto es un fallo grave que invalida todo el sistema de verificacion.</li>
+            </ul>
+
+            <div class="info-card">
+              <strong>Recomendacion:</strong> La unica forma de estar seguro de que el codigo QR de tus facturas es correcto es utilizar un software de facturacion homologado que se mantenga actualizado con las especificaciones tecnicas de la AEAT. No te la juegues con soluciones caseras o herramientas no certificadas. Las consecuencias de emitir facturas con QR invalidos pueden ser sanciones economicas significativas.
+            </div>
+
+            <p>Si ya estas utilizando un software homologado y aun asi tienes dudas sobre si el QR se esta generando correctamente, haz la prueba tu mismo: descarga el PDF de una de tus facturas, escanea el codigo QR con tu movil y comprueba que te lleva al portal de verificacion de la AEAT y que los datos mostrados coinciden con los de la factura. Es la mejor forma de verificar que todo funciona correctamente.</p>
+
+            <h2 id="faq-section">7. Preguntas frecuentes sobre el codigo QR Verifactu</h2>
+
+            <div class="faq">
+              <div class="faq-item">
+                <h3>¿Es obligatorio incluir el codigo QR en todas las facturas Verifactu?</h3>
+                <p>Si, es absolutamente obligatorio. El RD 1007/2023 establece que todas las facturas emitidas con software homologado Verifactu deben incluir un codigo QR que permita la verificacion de su autenticidad. No existen excepciones por volumen de facturacion, por tipo de cliente (particular o empresa), ni por el importe de la factura. Cualquier factura que no incluya el codigo QR en el formato correcto no se considera conforme a la normativa Verifactu, lo que puede derivar en sanciones tanto para el emisor como para el receptor que pretenda deducirse el IVA soportado.</p>
+              </div>
+              <div class="faq-item">
+                <h3>¿Que pasa si el codigo QR de mi factura no se puede escanear?</h3>
+                <p>Un codigo QR ilegible es un problema porque invalida la funcion de verificacion inmediata de la factura, que es precisamente uno de los propositos fundamentales del sistema Verifactu. Las causas mas habituales son un tamano de impresion demasiado reducido (por debajo de los 2x2 cm recomendados), una baja resolucion de la impresora utilizada, o danos fisicos en el papel como manchas, arrugas o decoloracion por exposicion al sol. Aunque la factura sigue siendo valida fiscalmente si los datos impresos son correctos, pierde la capacidad de verificacion instantanea que exige la normativa. Lo mas recomendable en estos casos es reemitir la factura con un QR correctamente generado e impreso, o enviar el PDF original por email al cliente.</p>
+              </div>
+              <div class="faq-item">
+                <h3>¿Puedo generar el codigo QR de Verifactu con cualquier herramienta online?</h3>
+                <p>No, rotundamente no. El codigo QR de Verifactu no es un codigo QR convencional que simplemente codifica un texto o una URL cualquiera. Debe seguir un formato de codificacion muy especifico definido por la AEAT, con parametros concretos en un orden determinado, codificados en UTF-8, e incluyendo elementos como el hash SHA-256 del registro de facturacion y la firma electronica. Las herramientas genericas de generacion de QR online no conocen este formato, no calculan hashes ni firmas, y produciran un codigo que la sede electronica de la AEAT no reconocera como valido. La unica forma de generar un QR valido es utilizando un software de facturacion homologado Verifactu.</p>
+              </div>
+              <div class="faq-item">
+                <h3>¿El codigo QR contiene todos los datos de la factura?</h3>
+                <p>No, el codigo QR no contiene el desglose completo de la factura ni su XML integro. Contiene exclusivamente los datos esenciales para la verificacion: numero de factura y serie, fecha de expedicion, NIF del emisor, NIF del receptor, importe total, el hash SHA-256 del registro de facturacion, la URL del portal de verificacion de la AEAT y la firma electronica. Es decir, contiene lo necesario para que la AEAT pueda identificar el registro concreto en su base de datos, contrastarlo y confirmar su autenticidad, pero no contiene los conceptos, las lineas de detalle, los datos bancarios ni ninguna otra informacion adicional de la factura. Esos datos estan en el PDF o en el papel, no en el QR.</p>
+              </div>
+              <div class="faq-item">
+                <h3>¿Que diferencia hay entre el QR de Verifactu y el QR de FacturaE?</h3>
+                <p>Aunque ambos son codigos QR que aparecen en facturas electronicas, tienen propositos, formatos y contenidos diferentes. El QR de Verifactu esta disenado para la verificacion de autenticidad ante la AEAT: contiene el hash encadenado del registro de facturacion, la firma electronica, y apunta al portal de verificacion de la Agencia Tributaria. Su funcion es permitir que cualquiera compruebe que la factura es autentica y no ha sido manipulada. El QR de FacturaE, por su parte, esta definido en la Orden HAC/1177/2024 y contiene informacion estructurada de la factura (datos del emisor, receptor, importes, impuestos, etc.) en un formato pensado para facilitar la lectura automatica y la contabilizacion por parte del receptor. Son complementarios y no excluyentes: una misma factura puede incluir ambos codigos QR si cumple simultaneamente con los requisitos de Verifactu y de FacturaE.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta-box">
+            <h2 class="cta-title">Genera facturas con <span class="highlight">QR Verifactu</span> correcto, 100% gratis</h2>
+            <p class="cta-text">FacturaIA genera automaticamente el codigo QR con el formato exacto que exige la AEAT. Sin configuracion, sin errores, sin coste.</p>
+            <form class="cta-form" id="waitlistForm">
+              <input type="email" class="cta-input" placeholder="tu@email.com" required aria-label="Tu email">
+              <button type="submit" class="cta-button">Acceder gratis</button>
+            </form>
+            <p class="cta-disclaimer">Sin tarjeta de credito. Acceso inmediato. Codigo abierto en GitHub.</p>
+          </div>
+
+          <div class="related-posts">
+            <h3 class="related-title">Articulos relacionados</h3>
+            <div class="related-grid">
+              <a href="/blog/guia-verifactu-2027.html" class="related-article">
+                <span class="related-category">Verifactu</span>
+                <h4>Guia Definitiva Verifactu 2027</h4>
+                <p>Todo lo que necesitas saber sobre plazos, sanciones y software homologado.</p>
+              </a>
+              <a href="/blog/hash-encadenado-verifactu.html" class="related-article">
+                <span class="related-category">Tecnico</span>
+                <h4>Hash Encadenado Verifactu</h4>
+                <p>Como funciona la cadena de hashes que garantiza la inalterabilidad de tus facturas.</p>
+              </a>
+              <a href="/blog/rd-1007-2023-autonomos.html" class="related-article">
+                <span class="related-category">Verifactu</span>
+                <h4>RD 1007/2023 para Autonomos</h4>
+                <p>Lo que el Real Decreto significa para tu dia a dia como autonomo.</p>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="footer-logo"><span class="nav-logo-dot"></span>FacturaIA</a>
+          <p class="footer-tagline">Software de facturacion VeriFactu 100% gratis y open source para autonomos espanoles.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Producto</h4>
+          <a href="/#features">Funcionalidades</a>
+          <a href="/#comparison">Comparativa</a>
+          <a href="/blog/">Blog</a>
+          <a href="/herramientas/">Herramientas</a>
+        </div>
+        <div class="footer-col">
+          <h4>Recursos</h4>
+          <a href="/verifactu-autonomos.html">Verifactu Autonomos</a>
+          <a href="/blog/guia-verifactu-2027.html">Guia Verifactu 2027</a>
+          <a href="/calculadora-iva.html">Calculadora IVA</a>
+          <a href="/calculadora-irpf.html">Calculadora IRPF</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/aviso-legal.html">Aviso Legal</a>
+          <a href="/privacidad.html">Privacidad</a>
+          <a href="/terminos.html">Terminos</a>
+          <a href="https://github.com/facturaia" class="external">GitHub</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 FacturaIA. Open Source MIT. 100% gratis para siempre.</p>
+        <a href="https://ko-fi.com/facturaia" target="_blank" rel="noopener" class="footer-donate">Apoyar el proyecto</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">&#8593;</button>
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-banner-inner">
+      <p>Usamos cookies minimas para funcionar. No vendemos tus datos. <a href="/privacidad.html">Mas info</a></p>
+      <button class="btn-accept" id="acceptCookies">Aceptar</button>
+    </div>
+  </div>
+
+  <script src="../seo/js/main.js" defer></script>
+</body>
+</html>

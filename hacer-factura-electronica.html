@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Como Hacer una Factura Electronica Valida | Guia Practica | FacturaIA</title>
+<meta name="description" content="Aprende a hacer facturas electronicas validas para la AEAT. Todos los campos obligatorios, formato FacturaE, codigo QR y requisitos Verifactu explicados paso a paso.">
+<meta name="keywords" content="como hacer factura electronica, factura electronica valida, crear factura electronica, facturae, factura digital aeae, factura electronica requisitos, factura electronica paso a paso">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://facturaia.app/hacer-factura-electronica.html">
+<meta property="og:title" content="Como Hacer una Factura Electronica Valida | Guia Practica | FacturaIA">
+<meta property="og:description" content="Aprende a hacer facturas electronicas validas para la AEAT. Campos obligatorios, formato FacturaE, codigo QR y requisitos Verifactu explicados paso a paso.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://facturaia.app/hacer-factura-electronica.html">
+<meta property="og:site_name" content="FacturaIA">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Como Hacer una Factura Electronica Valida | Guia Practica | FacturaIA">
+<meta name="twitter:description" content="Aprende a hacer facturas electronicas validas para la AEAT paso a paso. Formato FacturaE, QR y Verifactu.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230A1628'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Inter,sans-serif' font-weight='800' font-size='18' fill='%23D4A843'>F</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="seo/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://facturaia.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Como Hacer Factura Electronica", "item": "https://facturaia.app/hacer-factura-electronica.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "FacturaIA",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web, Android, iOS",
+  "description": "Software de facturacion VeriFactu 100% gratis y open source con IA para autonomos espanoles.",
+  "url": "https://facturaia.app",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+  "author": { "@type": "Organization", "name": "FacturaIA", "url": "https://facturaia.app" }
+}
+</script>
+</head>
+<body>
+
+<nav class="nav" id="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><span class="nav-logo-dot"></span>FacturaIA</a>
+    <div class="nav-links">
+      <a href="/#features" class="nav-link">Funcionalidades</a>
+      <a href="/blog/" class="nav-link">Blog</a>
+      <a href="/herramientas/" class="nav-link">Herramientas</a>
+      <a href="/#faq" class="nav-link">FAQ</a>
+      <a href="/app" class="nav-cta">Probar gratis</a>
+    </div>
+  </div>
+</nav>
+
+<div class="breadcrumbs">
+  <div class="container">
+    <a href="/">Inicio</a> <span>/</span> <span>Como Hacer Factura Electronica</span>
+  </div>
+</div>
+
+<main>
+  <section class="section-padding">
+    <div class="container">
+      <div class="page-header">
+        <h1>Como Hacer una <span class="highlight">Factura Electronica</span></h1>
+        <p>Guia practica para crear facturas electronicas validas para la AEAT. Conoce el formato FacturaE, el codigo QR Verifactu y todos los requisitos legales.</p>
+      </div>
+      <div class="prose">
+        <h2>Que hace que una factura sea realmente "electronica"</h2>
+        <p>No toda factura digital es una factura electronica a efectos legales. Un PDF enviado por email no es una factura electronica valida para la AEAT. Tampoco lo es una imagen escaneada de una factura en papel, ni un documento de Word convertido a PDF.</p>
+        <p>Para que una factura sea considerada <strong>factura electronica</strong> segun la legislacion espanola, debe estar generada en un <strong>formato estructurado</strong> que permita el procesamiento automatizado de los datos. El formato oficial en Espana es <strong>FacturaE</strong>, un estandar publico basado en XML definido por la Administracion General del Estado.</p>
+        <p>El formato FacturaE contiene todos los datos de la factura organizados en campos estructurados que pueden ser leidos y procesados automaticamente por sistemas informaticos. Esto permite a la AEAT, a tu cliente y a tu gestoria procesar la factura sin necesidad de intervencion manual, eliminando errores de transcripcion y agilizando los procesos administrativos.</p>
+
+        <h2>Diferencia entre factura digital (PDF) y factura electronica (FacturaE)</h2>
+        <p>Esta es una confusion muy comun entre autonomos. Veamos la diferencia:</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Tipo</th>
+              <th>Formato</th>
+              <th>Procesable automaticamente</th>
+              <th>Valida para AEAT</th>
+              <th>VeriFactu compatible</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Factura en PDF</td>
+              <td>PDF, imagen</td>
+              <td>No</td>
+              <td>No (a partir de 2027)</td>
+              <td>No</td>
+            </tr>
+            <tr>
+              <td>Factura electronica</td>
+              <td>FacturaE XML</td>
+              <td>Si</td>
+              <td>Si</td>
+              <td>Si</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>Con la entrada en vigor de la normativa VeriFactu en enero de 2027, <strong>el PDF dejara de ser suficiente como unico formato de factura</strong>. Necesitaras emitir tus facturas en formato FacturaE 3.2 o superior, con codigo QR verificable y hash encadenado SHA-256. FacturaIA genera automaticamente ambos formatos: FacturaE XML para la AEAT y PDF profesional para enviar a tu cliente.</p>
+
+        <h2>Campos obligatorios de una factura electronica segun la AEAT</h2>
+        <p>La Agencia Tributaria establece una serie de campos que toda factura electronica debe contener obligatoriamente. Estos son los datos que FacturaE estructura y que FacturaIA incluye automaticamente en cada factura que generas:</p>
+
+        <div class="info-card">
+          <h3>Datos del emisor (tu como autonomo)</h3>
+          <ul>
+            <li><strong>Nombre o razon social:</strong> Tu nombre completo si eres autonomo persona fisica, o la razon social de tu sociedad</li>
+            <li><strong>NIF:</strong> Tu numero de identificacion fiscal</li>
+            <li><strong>Direccion fiscal completa:</strong> Calle, numero, codigo postal, municipio y provincia</li>
+            <li><strong>Actividad economica:</strong> Epigrafe del IAE (Impuesto de Actividades Economicas) que corresponda a tu actividad</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h3>Datos del receptor (tu cliente)</h3>
+          <ul>
+            <li><strong>Nombre o razon social:</strong> Del cliente al que facturas</li>
+            <li><strong>NIF:</strong> Numero de identificacion fiscal del cliente (obligatorio para facturas B2B)</li>
+            <li><strong>Direccion fiscal:</strong> Direccion completa del cliente</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h3>Datos de la factura</h3>
+          <ul>
+            <li><strong>Numero de factura:</strong> Unico, correlativo y sin saltos. Debe formar parte de una serie (ej: F2026-001, F2026-002...)</li>
+            <li><strong>Fecha de emision:</strong> Fecha en la que se emite la factura</li>
+            <li><strong>Fecha de operacion:</strong> Fecha en la que se realiza la prestacion del servicio o entrega del bien (si es distinta a la de emision)</li>
+            <li><strong>Descripcion de los bienes o servicios:</strong> Detalle suficiente de cada concepto facturado</li>
+            <li><strong>Base imponible:</strong> Importe sin impuestos de cada linea y total</li>
+            <li><strong>Tipo impositivo de IVA:</strong> Porcentaje aplicado (21%, 10%, 4% o exento)</li>
+            <li><strong>Cuota de IVA:</strong> Importe resultante de aplicar el tipo a la base</li>
+            <li><strong>Retencion de IRPF:</strong> Si procede, el porcentaje y la cuota retenida</li>
+            <li><strong>Total de la factura:</strong> Suma de la base imponible mas IVA menos IRPF</li>
+            <li><strong>Forma de pago:</strong> Transferencia, domiciliacion, efectivo, etc.</li>
+            <li><strong>Fecha de vencimiento:</strong> Si procede, plazo de pago</li>
+          </ul>
+        </div>
+
+        <h2>Campos opcionales que pueden ayudarte</h2>
+        <p>Ademas de los campos obligatorios, FacturaE permite incluir informacion adicional que puede ser util tanto para ti como para tu cliente:</p>
+        <ul>
+          <li><strong>Numero de orden o pedido:</strong> Para vincular la factura a un pedido concreto de tu cliente</li>
+          <li><strong>Referencia del contrato:</strong> Util si facturas en el marco de un contrato especifico</li>
+          <li><strong>Descuentos y recargos:</strong> Aplicables por linea o al total de la factura</li>
+          <li><strong>Gastos suplidos:</strong> Importes que has pagado en nombre de tu cliente y que le repercutes</li>
+          <li><strong>IBAN y SWIFT:</strong> Datos bancarios para facilitar el pago por transferencia</li>
+        </ul>
+
+        <h2>El codigo QR y el hash encadenado: los pilares de VeriFactu</h2>
+        <p>Una factura electronica VeriFactu no solo esta en formato FacturaE. Ademas, debe incorporar dos elementos de seguridad criptografica que garantizan su autenticidad e integridad:</p>
+
+        <div class="info-card">
+          <h3>Codigo QR VeriFactu</h3>
+          <p>Cada factura incluye un codigo QR que contiene informacion cifrada sobre la transaccion: datos del emisor, receptor, importe, IVA, hash de la factura y enlace a la cadena de verificacion. Cualquier persona (incluido un inspector de Hacienda) puede escanear este QR con su movil y verificar que la factura es autentica y no ha sido modificada. El QR no es un simple enlace a una web: contiene datos criptograficos que permiten la verificacion incluso sin conexion a Internet.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>Hash encadenado SHA-256</h3>
+          <p>Cada factura que emites contiene un hash (una huella digital unica calculada con el algoritmo SHA-256) de la factura anterior. Esto crea una cadena inmutable: si alguien intenta modificar una factura antigua, el hash de esa factura cambia, rompiendo la cadena y haciendo evidente la manipulacion. Es el mismo principio que utiliza la tecnologia blockchain para garantizar la inalterabilidad de los datos. FacturaIA genera y mantiene esta cadena automaticamente sin que tengas que preocuparte de nada.</p>
+        </div>
+
+        <h2>Como hacer una factura electronica paso a paso con FacturaIA</h2>
+        <p>Ahora que ya conoces la teoria, veamos la practica. Hacer una factura electronica valida con FacturaIA es sorprendentemente sencillo. El sistema se encarga de toda la complejidad tecnica (FacturaE XML, QR, hash chain) y tu solo tienes que preocuparte de los datos de negocio:</p>
+
+        <div class="steps-list">
+          <ol>
+            <li>
+              <h4>Registrate y configura tu perfil</h4>
+              <p>Accede a FacturaIA, crea tu cuenta gratuita e introduce tus datos fiscales. Esto incluye tu nombre o razon social, NIF, direccion y actividad economica. Estos datos se usaran en todas tus facturas. Solo tienes que hacerlo una vez.</p>
+            </li>
+            <li>
+              <h4>Selecciona o crea un cliente</h4>
+              <p>Elige el cliente de tu base de datos o crea uno nuevo introduciendo su nombre, NIF, direccion e email. Los clientes quedan guardados para futuras facturas.</p>
+            </li>
+            <li>
+              <h4>Anade los conceptos a facturar</h4>
+              <p>Introduce cada producto o servicio con su descripcion, cantidad, precio unitario y tipo de IVA. El sistema calcula automaticamente la base imponible, el IVA y el IRPF.</p>
+            </li>
+            <li>
+              <h4>Confirma y genera la factura</h4>
+              <p>Revisa el resumen y haz clic en "Generar Factura". FacturaIA crea automaticamente el archivo FacturaE XML con todos los requisitos de VeriFactu, ademas del PDF para enviar a tu cliente y el codigo QR verificable.</p>
+            </li>
+          </ol>
+        </div>
+
+        <h2>Errores comunes al hacer facturas electronicas</h2>
+        <p>Estos son los errores mas frecuentes que cometen los autonomos al iniciarse en la facturacion electronica y como evitarlos:</p>
+        <ul>
+          <li><strong>Creer que un PDF es una factura electronica:</strong> Como hemos explicado, el PDF no cumple con los requisitos de la AEAT. Necesitas el formato estructurado FacturaE.</li>
+          <li><strong>Olvidar el NIF del cliente:</strong> Para facturas entre empresas (B2B), el NIF del receptor es obligatorio. Sin el, la factura no es valida.</li>
+          <li><strong>Numeracion incorrecta o con saltos:</strong> La numeracion de facturas debe ser correlativa. Los saltos sin justificar pueden llamar la atencion de Hacienda.</li>
+          <li><strong>No conservar las facturas electronicas:</strong> La ley obliga a conservar las facturas electronicas durante al menos 6 anos. Con FacturaIA, todas tus facturas quedan almacenadas en la nube de forma segura.</li>
+          <li><strong>Aplicar mal el tipo de IVA:</strong> Cada producto o servicio tiene un tipo de IVA especifico. Aplicar el tipo incorrecto puede generar problemas en una inspeccion.</li>
+          <li><strong>Confundir fecha de emision con fecha de operacion:</strong> Si prestaste el servicio en una fecha distinta a la de emision, debes reflejar ambas.</li>
+        </ul>
+
+        <h2>Preguntas frecuentes sobre facturas electronicas</h2>
+        <div class="faq-item">
+          <h3>1. ¿Desde cuando es obligatoria la factura electronica en Espana?</h3>
+          <p>La obligacion de emitir facturas electronicas en formato FacturaE compatible con VeriFactu entra en vigor escalonadamente: julio de 2026 para nuevos sistemas de facturacion y enero de 2027 como plazo limite para todos los autonomos y empresas. A partir de enero de 2027, no podras usar sistemas que solo generen PDF. Te recomendamos adaptarte cuanto antes para evitar prisas de ultima hora y posibles sanciones.</p>
+        </div>
+        <div class="faq-item">
+          <h3>2. ¿Que diferencia hay entre FacturaE y VeriFactu?</h3>
+          <p>FacturaE es el <strong>formato de archivo</strong> (XML estructurado) de la factura electronica en Espana. VeriFactu es el <strong>sistema de verificacion</strong> que incluye requisitos adicionales como el hash encadenado SHA-256, el codigo QR verificable y el registro de eventos inalterable. Una factura puede estar en formato FacturaE pero no cumplir con VeriFactu. FacturaIA genera facturas que cumplen con ambos: el formato FacturaE y los requisitos de verificacion de VeriFactu.</p>
+        </div>
+        <div class="faq-item">
+          <h3>3. ¿Tengo que enviar las facturas electronicas a la AEAT manualmente?</h3>
+          <p>En la fase inicial de VeriFactu, no es obligatorio enviar las facturas a la AEAT de forma automatica. Sin embargo, tu software debe ser capaz de generar las facturas con todos los elementos de verificacion y los registros deben estar disponibles para ser remitidos si la AEAT los requiere. La obligacion de envio automatico se ira implantando progresivamente. FacturaIA esta preparado para adaptarse a cada fase de la implantacion.</p>
+        </div>
+        <div class="faq-item">
+          <h3>4. ¿Mi cliente necesita algun software especial para recibir una factura electronica?</h3>
+          <p>No necesariamente. Tu cliente recibe la factura en PDF como siempre, que puede visualizar en cualquier dispositivo. El archivo FacturaE XML es para uso de la AEAT y de sistemas contables automatizados. Si tu cliente tiene un software de gestion que acepta FacturaE, puedes enviarle el XML para que lo procese automaticamente. Si no, el PDF es suficiente para el cliente, y tu conservas el XML para cumplir con tus obligaciones fiscales.</p>
+        </div>
+      </div>
+
+      <div class="related-posts">
+        <h3>Tambien te puede interesar</h3>
+        <div class="related-grid">
+          <a href="/facturae-gratis.html" class="related-card">
+            <h4>FacturaE Gratis: Genera Facturas sin Pagar</h4>
+            <p>Que es FacturaE y como generarlo sin coste alguno</p>
+          </a>
+          <a href="/verifactu-software.html" class="related-card">
+            <h4>Software Verifactu Gratis y Homologado</h4>
+            <p>Requisitos tecnicos del software de facturacion VeriFactu</p>
+          </a>
+          <a href="/crear-factura-online-gratis.html" class="related-card">
+            <h4>Crear Factura Online Gratis en 2 Minutos</h4>
+            <p>Tutorial practico para crear tu primera factura online</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding" style="background:var(--bg-primary);">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Empieza a hacer facturas electronicas gratis</h2>
+        <p>Sin limites. Sin tarjeta de credito. Sin trampas.</p>
+        <form class="cta-form js-waitlist-form">
+          <input type="email" placeholder="tu@email.com" required>
+          <button type="submit" class="btn-primary">Probar gratis</button>
+        </form>
+        <p class="cta-footnote"><a href="/privacidad.html">Sin spam. Sin tarjeta.</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo"><span class="nav-logo-dot"></span>FacturaIA</a>
+        <p class="footer-tagline">Software de facturacion VeriFactu 100% gratis y open source para autonomos espanoles.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Producto</h4>
+        <a href="/#features">Funcionalidades</a>
+        <a href="/#comparison">Comparativa</a>
+        <a href="/blog/">Blog</a>
+        <a href="/herramientas/">Herramientas</a>
+      </div>
+      <div class="footer-col">
+        <h4>Recursos</h4>
+        <a href="/verifactu-autonomos.html">Verifactu Autonomos</a>
+        <a href="/blog/guia-verifactu-2027.html">Guia Verifactu 2027</a>
+        <a href="/calculadora-iva.html">Calculadora IVA</a>
+        <a href="/calculadora-irpf.html">Calculadora IRPF</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="/aviso-legal.html">Aviso Legal</a>
+        <a href="/privacidad.html">Privacidad</a>
+        <a href="/terminos.html">Terminos</a>
+        <a href="https://github.com/facturaia" class="external">GitHub</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 FacturaIA. Open Source MIT. 100% gratis para siempre.</p>
+      <a href="https://ko-fi.com/facturaia" target="_blank" rel="noopener" class="footer-donate">Apoyar el proyecto</a>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Volver arriba">&#8593;</button>
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-banner-inner">
+    <p>Usamos cookies minimas para funcionar. No vendemos tus datos. <a href="/privacidad.html">Mas info</a></p>
+    <button class="btn-accept" id="acceptCookies">Aceptar</button>
+  </div>
+</div>
+
+<script src="seo/js/main.js" defer></script>
+</body>
+</html>

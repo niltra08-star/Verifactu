@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aprende a usar el entorno de pruebas de la AEAT (preportal.aeat.es) para testear tus facturas Verifactu. Guía completa sobre registro, envío de facturas de prueba y errores comunes.">
+  <meta name="keywords" content="verifactu entorno pruebas, aeat test verificatu, preportal aeat facturas, probar facturas verificatu, sandbox verificatu, test verificatu aeat">
+  <meta name="author" content="FacturaIA">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://facturaia.com/blog/verifactu-entorno-pruebas-aeat.html">
+  <meta property="og:title" content="Verifactu Entorno de Pruebas: Cómo Probar tus Facturas en la AEAT | FacturaIA">
+  <meta property="og:description" content="Aprende a usar el entorno de pruebas de la AEAT para testear tus facturas Verifactu. Guía completa sobre registro, envío y errores comunes.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://facturaia.com/blog/verifactu-entorno-pruebas-aeat.html">
+  <meta property="og:image" content="https://facturaia.com/seo/img/og-verifactu-entorno-pruebas-aeat.png">
+  <meta property="og:site_name" content="FacturaIA">
+  <meta property="og:locale" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Verifactu Entorno de Pruebas en la AEAT | FacturaIA">
+  <meta name="twitter:description" content="Guía para probar tus facturas Verifactu en el sandbox de la AEAT.">
+  <meta name="twitter:image" content="https://facturaia.com/seo/img/og-verifactu-entorno-pruebas-aeat.png">
+  <title>Verifactu Entorno de Pruebas: Cómo Probar tus Facturas en la AEAT | FacturaIA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../seo/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Verifactu Entorno de Pruebas: Cómo Probar tus Facturas en la AEAT",
+    "description": "Aprende a usar el entorno de pruebas de la AEAT (preportal.aeat.es) para testear tus facturas Verifactu. Guía completa sobre registro, envío de facturas de prueba y errores comunes.",
+    "image": "https://facturaia.com/seo/img/og-verifactu-entorno-pruebas-aeat.png",
+    "author": { "@type": "Organization", "name": "Equipo FacturaIA", "url": "https://facturaia.com" },
+    "datePublished": "2026-05-27T10:00:00+02:00",
+    "dateModified": "2026-05-27T10:00:00+02:00",
+    "publisher": { "@type": "Organization", "name": "FacturaIA", "logo": { "@type": "ImageObject", "url": "https://facturaia.com/seo/img/logo.png" } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://facturaia.com/blog/verifactu-entorno-pruebas-aeat.html" }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://facturaia.com" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://facturaia.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Entorno de Pruebas Verifactu", "item": "https://facturaia.com/blog/verifactu-entorno-pruebas-aeat.html" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Dónde está el entorno de pruebas de Verifactu?",
+        "acceptedAnswer": { "@type": "Answer", "text": "El entorno de pruebas de la AEAT para Verifactu está disponible en el portal de pruebas de la Agencia Tributaria (preportal.aeat.es). Necesitas registrarte con tu certificado digital y solicitar acceso al servicio de pruebas de Verifactu." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Necesito un certificado digital para el entorno de pruebas?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Sí, necesitas un certificado digital válido (FNMT o Camerfirma) para acceder al entorno de pruebas de la AEAT. El sistema verifica tu identidad incluso en el entorno de test." }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Las facturas enviadas al entorno de pruebas tienen validez real?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. El entorno de pruebas es un sandbox aislado. Las facturas enviadas allí no tienen validez fiscal ni se registran en los sistemas reales de la AEAT. Solo sirven para verificar que tu software funciona correctamente antes de usarlo en producción." }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <nav class="nav" id="navbar">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><span class="nav-logo-dot"></span>FacturaIA</a>
+      <div class="nav-links">
+        <a href="/#features" class="nav-link">Funcionalidades</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+        <a href="/herramientas/" class="nav-link">Herramientas</a>
+        <a href="/#faq" class="nav-link">FAQ</a>
+        <a href="/app" class="nav-cta">Probar gratis</a>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <section class="blog-hero">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="/">Inicio</a> <span class="breadcrumb-sep">/</span>
+          <a href="/blog/">Blog</a> <span class="breadcrumb-sep">/</span>
+          <span>Entorno de Pruebas Verifactu</span>
+        </div>
+        <div class="blog-hero-content">
+          <span class="blog-category">Verifactu</span>
+          <h1><span class="highlight">Verifactu Entorno de Pruebas:</span> Cómo Probar tus Facturas en la AEAT</h1>
+          <p class="blog-hero-subtitle">La AEAT ofrece un sandbox para que puedas probar tu software de facturación antes de usarlo en producción. Descubre cómo registrarte, enviar facturas de prueba y evitar errores comunes.</p>
+          <div class="blog-meta">
+            <span class="blog-date">Publicado: 27 de mayo de 2026</span>
+            <span class="blog-read-time">13 min de lectura</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container">
+      <div class="blog-layout">
+        <article class="blog-content">
+          <div class="author-box">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 56'%3E%3Crect width='56' height='56' fill='%231E3254'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter,sans-serif' font-weight='800' font-size='22' fill='%23D4A843'%3EF%3C/text%3E%3C/svg%3E" alt="FacturaIA" width="56" height="56">
+            <div>
+              <div class="author-name">Equipo FacturaIA</div>
+              <div class="author-bio">Creamos herramientas gratuitas y open source para que los autónomos españoles puedan facturar sin pagar un euro. Creemos en la transparencia, la privacidad y el software libre.</div>
+            </div>
+          </div>
+          <nav class="toc" aria-label="Tabla de contenidos">
+            <h2 class="toc-title">Índice de contenidos</h2>
+            <ol class="toc-list">
+              <li><a href="#que-es">Qué es el entorno de pruebas de la AEAT</a></li>
+              <li><a href="#para-que-sirve">Para qué sirve probar tus facturas</a></li>
+              <li><a href="#registro">Cómo registrarse en el entorno de pruebas</a></li>
+              <li><a href="#envio">Cómo enviar facturas de prueba</a></li>
+              <li><a href="#verificacion">Proceso de verificación paso a paso</a></li>
+              <li><a href="#errores-comunes">Errores comunes y cómo solucionarlos</a></li>
+              <li><a href="#facturaia">Cómo FacturaIA maneja las pruebas</a></li>
+              <li><a href="#faq">Preguntas frecuentes</a></li>
+            </ol>
+          </nav>
+          <div class="prose">
+            <h2 id="que-es">1. Qué es el entorno de pruebas de la AEAT</h2>
+            <p>El <strong>entorno de pruebas de la AEAT</strong> (también llamado <strong>sandbox</strong> o <strong>preportal</strong>) es una réplica del sistema real de Verifactu donde puedes enviar facturas de prueba sin que tengan consecuencias fiscales. Está disponible en <strong>preportal.aeat.es</strong> y funciona exactamente igual que el sistema de producción, pero con datos de prueba que no se registran en Hacienda.</p>
+            <p>Piensa en ello como un "campo de entrenamiento": puedes equivocarte, probar diferentes formatos, ver los errores que devuelve el sistema y corregirlos, todo sin miedo a sanciones ni a meter datos incorrectos en tu historial fiscal.</p>
+
+            <h2 id="para-que-sirve">2. Para qué sirve probar tus facturas</h2>
+            <p>Probar tus facturas en el entorno de pruebas tiene varias ventajas fundamentales:</p>
+            <ul>
+              <li><strong>Validar que tu software funciona correctamente:</strong> Antes de emitir facturas reales, puedes comprobar que tu programa genera los XML en el formato correcto, que los hash SHA-256 se encadenan bien y que la firma electrónica es válida.</li>
+              <li><strong>Detectar errores antes de que sea tarde:</strong> El entorno de pruebas te dice exactamente qué falla en tu factura (un NIF mal formateado, un campo obligatorio vacío, un hash incorrecto). Corriges y vuelves a probar.</li>
+              <li><strong>Familiarizarte con el sistema:</strong> Aprendes cómo funciona el envío, qué respuesta da la AEAT y cómo interpretar los mensajes de aceptación o rechazo, sin el estrés de estar usando datos reales.</li>
+              <li><strong>Certificación de software:</strong> Para que un software sea homologado como Verifactu compliant, debe demostrar su funcionamiento en este entorno de pruebas.</li>
+            </ul>
+
+            <h2 id="registro">3. Cómo registrarse en el entorno de pruebas</h2>
+            <div class="steps-list">
+              <div class="step-item">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h4>Accede al portal de pruebas</h4>
+                  <p>Entra en <strong>preportal.aeat.es</strong> con tu navegador. Necesitarás tu <strong>certificado digital</strong> instalado. Haz clic en "Acceder con certificado" y selecciona tu certificado personal o de representante.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h4>Solicita el alta en el servicio Verifactu</h4>
+                  <p>Una vez dentro, busca la sección de "Verifactu" o "Suministro de registros de facturación". Solicita el alta en el servicio de pruebas. La AEAT te asignará un identificador de prueba.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h4>Configura tu software con los datos del sandbox</h4>
+                  <p>Tu software de facturación necesita configurarse con la URL del endpoint de pruebas (que es diferente al de producción) y tu identificador. En FacturaIA, esto se hace desde el panel de configuración seleccionando "Modo pruebas AEAT".</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <h4>Genera facturas de prueba</h4>
+                  <p>Crea facturas con datos ficticios (NIFs de prueba, importes inventados) y envíalas al sandbox. La AEAT recomienda usar NIFs de prueba que empiecen por "X" o los NIFs de ejemplo que proporciona en su documentación.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <strong>NIFs de prueba recomendados por la AEAT:</strong><br><br>
+              Para tus pruebas, usa NIFs como X1234567X (persona física ficticia) o B99999999 (empresa ficticia). No uses tu NIF real ni el de clientes reales en el entorno de pruebas.
+            </div>
+
+            <h2 id="envio">4. Cómo enviar facturas de prueba</h2>
+            <p>El envío de facturas al entorno de pruebas sigue el mismo protocolo que en producción:</p>
+            <ol>
+              <li><strong>Generas la factura</strong> en tu software de facturación con todos los datos requeridos (emisor, receptor, líneas, impuestos, hash, firma).</li>
+              <li><strong>El software empaqueta</strong> los registros de facturación en un archivo ZIP con los XMLs correspondientes.</li>
+              <li><strong>El software se conecta</strong> al servicio web de la AEAT (endpoint de pruebas) usando SOAP o REST, autenticándose con tu certificado digital.</li>
+              <li><strong>La AEAT procesa</strong> el envío y devuelve un acuse de recibo indicando qué facturas han sido aceptadas y cuáles rechazadas, con los motivos del rechazo.</li>
+              <li><strong>Revisas el resultado</strong> y corriges los errores antes de hacer el envío en producción.</li>
+            </ol>
+
+            <h2 id="verificacion">5. Proceso de verificación paso a paso</h2>
+            <p>Una vez que has enviado facturas de prueba, la AEAT devuelve una respuesta detallada. Esto es lo que debes verificar:</p>
+            <ul>
+              <li><strong>Hash encadenado correcto:</strong> Cada factura debe incluir el hash de la factura anterior. Si hay un error en el encadenamiento, la AEAT lo detecta y rechaza el lote.</li>
+              <li><strong>Firma electrónica válida:</strong> La firma XAdES de cada registro debe corresponder al certificado del emisor y cubrir todos los datos obligatorios.</li>
+              <li><strong>Formato FacturaE correcto:</strong> El XML debe validar contra el esquema oficial de FacturaE 4.0. Cualquier campo mal formateado provoca un rechazo.</li>
+              <li><strong>Datos del emisor y receptor:</strong> NIFs, nombres y direcciones deben estar presentes y en el formato correcto.</li>
+              <li><strong>Cálculo de impuestos:</strong> Las bases imponibles y las cuotas de IVA/IRPF deben cuadrar matemáticamente.</li>
+              <li><strong>Código QR:</strong> La URL de verificación incluida en el QR debe ser accesible y contener los parámetros correctos.</li>
+            </ul>
+            <p>Si todo está bien, la respuesta de la AEAT será un <strong>acuse de recibo con estado "Aceptado"</strong> para cada factura del lote. Si hay errores, recibirás un código de error y una descripción del problema.</p>
+
+            <h2 id="errores-comunes">6. Errores comunes y cómo solucionarlos</h2>
+            <ul>
+              <li><strong>Error de autenticación:</strong> Tu certificado digital no es válido o ha caducado. Asegúrate de que está instalado correctamente y que no ha expirado. Prueba a acceder a cualquier otro servicio de la AEAT para verificar que el certificado funciona.</li>
+              <li><strong>Hash encadenado roto:</strong> El hash de una factura no coincide con el esperado porque falta alguna factura en la cadena o porque se ha modificado una factura anterior. Asegúrate de enviar los registros en orden cronológico y sin saltos en la numeración.</li>
+              <li><strong>XML mal formado:</strong> El archivo no cumple el esquema FacturaE 4.0. Revisa que todos los campos obligatorios estén presentes y que los tipos de datos sean correctos (fechas en formato ISO, importes con dos decimales, NIFs válidos).</li>
+              <li><strong>Firma inválida:</strong> La firma XAdES no cubre todos los datos obligatorios o el algoritmo de firma no es el aceptado. Revisa la configuración de firma en tu software.</li>
+              <li><strong>Conexión rechazada:</strong> El endpoint de pruebas puede no estar disponible puntualmente. La AEAT suele anunciar ventanas de mantenimiento. Inténtalo de nuevo más tarde.</li>
+            </ul>
+
+            <h2 id="facturaia">7. Cómo FacturaIA maneja las pruebas</h2>
+            <p>FacturaIA incluye un <strong>modo sandbox integrado</strong> que simplifica todo el proceso de pruebas:</p>
+            <ul>
+              <li><strong>Activación con un clic:</strong> En el panel de configuración, activas "Modo de pruebas AEAT" y FacturaIA redirige automáticamente todos los envíos al endpoint de sandbox en lugar del de producción.</li>
+              <li><strong>Generación de datos de prueba:</strong> El sistema puede generar automáticamente facturas con datos ficticios para que puedas probar sin comprometer información real.</li>
+              <li><strong>Visualización de respuestas:</strong> El panel de control te muestra los acuses de recibo de la AEAT con el estado de cada factura (aceptada o rechazada) y el detalle de los errores.</li>
+              <li><strong>Corrección guiada:</strong> Si una factura es rechazada, FacturaIA te indica qué campo tiene el error y te sugiere cómo corregirlo.</li>
+            </ul>
+            <div class="info-card">
+              <strong>Prueba FacturaIA en sandbox:</strong><br><br>
+              Puedes empezar a probar FacturaIA en el entorno de pruebas de la AEAT hoy mismo. <a href="/app">Regístrate gratis</a>, activa el modo sandbox y envía tus primeras facturas de prueba. Sin compromiso, sin coste y sin riesgos.
+            </div>
+
+            <h2 id="faq">8. Preguntas frecuentes</h2>
+            <div class="faq">
+              <div class="faq-item">
+                <h3>¿Dónde está el entorno de pruebas de Verifactu?</h3>
+                <p>El entorno de pruebas de la AEAT para Verifactu está disponible en el portal de pruebas de la Agencia Tributaria (preportal.aeat.es). Necesitas registrarte con tu certificado digital y solicitar acceso al servicio de pruebas de facturación Verifactu.</p>
+              </div>
+              <div class="faq-item">
+                <h3>¿Necesito un certificado digital para el entorno de pruebas?</h3>
+                <p>Sí, necesitas un certificado digital cualificado válido (FNMT o Camerfirma) para acceder al entorno de pruebas de la AEAT. El sistema verifica tu identidad incluso en el sandbox. Si aún no tienes tu certificado, consulta nuestra <a href="/blog/certificado-digital-verifactu-aeat.html">guía para obtenerlo</a>.</p>
+              </div>
+              <div class="faq-item">
+                <h3>¿Las facturas enviadas al entorno de pruebas tienen validez real?</h3>
+                <p>No. El entorno de pruebas es un sandbox aislado del sistema de producción. Las facturas que envíes allí no tienen validez fiscal ni se registran en los sistemas reales de la AEAT. Solo sirven para verificar que tu software funciona correctamente.</p>
+              </div>
+              <div class="faq-item">
+                <h3>¿Cuántas facturas puedo enviar al entorno de pruebas?</h3>
+                <p>No hay un límite explícito de facturas, pero el entorno de pruebas está dimensionado para volúmenes de test razonables. La AEAT recomienda probar con lotes pequeños (10-20 facturas) para verificar el funcionamiento antes de pasar a producción. No uses el sandbox para pruebas de carga masiva.</p>
+              </div>
+              <div class="faq-item">
+                <h3>¿Cuándo estará disponible el entorno de producción de Verifactu?</h3>
+                <p>El entorno de producción de Verifactu estará disponible antes del 1 de julio de 2027, fecha en que la normativa entra en vigor. El entorno de pruebas ya está disponible para que los fabricantes de software puedan preparar y certificar sus aplicaciones con antelación.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta-box">
+            <h2 class="cta-title">Prueba <span class="highlight">FacturaIA</span> en el sandbox de la AEAT</h2>
+            <p class="cta-text">Activa el modo de pruebas en FacturaIA y envía facturas al entorno sandbox de la AEAT. Verifica que todo funciona antes de usarlo en producción. 100% gratis.</p>
+            <form class="cta-form" id="waitlistForm">
+              <input type="email" class="cta-input" placeholder="tu@email.com" required aria-label="Tu email">
+              <button type="submit" class="cta-button">Probar gratis</button>
+            </form>
+            <p class="cta-disclaimer">Sin coste. Sin límites. Modo sandbox integrado para pruebas con la AEAT.</p>
+          </div>
+
+          <div class="related-posts">
+            <h3 class="related-title">Artículos relacionados</h3>
+            <div class="related-grid">
+              <a href="/blog/certificado-digital-verifactu-aeat.html" class="related-article">
+                <span class="related-category">Verifactu</span>
+                <h4>Certificado Digital para Verifactu: Cómo Obtenerlo</h4>
+                <p>Guía paso a paso para obtener tu certificado digital de la FNMT.</p>
+              </a>
+              <a href="/blog/verifactu-requisitos-obligatorios.html" class="related-article">
+                <span class="related-category">Verifactu</span>
+                <h4>Requisitos del Software Verifactu Homologado</h4>
+                <p>Checklist completa de lo que necesita un software Verifactu compliant.</p>
+              </a>
+              <a href="/blog/verifactu-vs-facturae-diferencias.html" class="related-article">
+                <span class="related-category">Verifactu</span>
+                <h4>Verifactu vs FacturaE: Diferencias Clave</h4>
+                <p>Entiende qué es cada uno y cómo se relacionan entre sí.</p>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="footer-logo"><span class="nav-logo-dot"></span>FacturaIA</a>
+          <p class="footer-tagline">Software de facturación VeriFactu 100% gratis y open source para autónomos españoles.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Producto</h4>
+          <a href="/#features">Funcionalidades</a>
+          <a href="/#comparison">Comparativa</a>
+          <a href="/blog/">Blog</a>
+          <a href="/herramientas/">Herramientas</a>
+        </div>
+        <div class="footer-col">
+          <h4>Recursos</h4>
+          <a href="/verifactu-autonomos.html">Verifactu Autónomos</a>
+          <a href="/blog/guia-verifactu-2027.html">Guía Verifactu 2027</a>
+          <a href="/calculadora-iva.html">Calculadora IVA</a>
+          <a href="/calculadora-irpf.html">Calculadora IRPF</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/aviso-legal.html">Aviso Legal</a>
+          <a href="/privacidad.html">Privacidad</a>
+          <a href="/términos.html">Términos</a>
+          <a href="https://github.com/facturaia" class="external">GitHub</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 FacturaIA. Open Source MIT. 100% gratis para siempre.</p>
+        <a href="https://ko-fi.com/facturaia" target="_blank" rel="noopener" class="footer-donate">Apoyar el proyecto</a>
+      </div>
+    </div>
+  </footer>
+  <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">&#8593;</button>
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-banner-inner">
+      <p>Usamos cookies mínimas para funcionar. No vendemos tus datos. <a href="/privacidad.html">Más info</a></p>
+      <button class="btn-accept" id="acceptCookies">Aceptar</button>
+    </div>
+  </div>
+  <script src="../seo/js/main.js" defer></script>
+</body>
+</html>

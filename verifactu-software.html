@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Software Verifactu Gratis y Homologado para Autonomos | FacturaIA</title>
+<meta name="description" content="Software Verifactu 100% gratis, open source y compatible con la AEAT. Genera facturas con QR, hash encadenado SHA-256 y XML FacturaE. Para autonomos y pymes.">
+<meta name="keywords" content="software verificatu, programa verificatu gratis, software facturacion verificatu, verificatu homologado, verificatu autonomos, verificatu certificado, software aeae">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://facturaia.app/verifactu-software.html">
+<meta property="og:title" content="Software Verifactu Gratis y Homologado para Autonomos | FacturaIA">
+<meta property="og:description" content="Software Verifactu 100% gratis, open source y compatible con la AEAT. Facturas con QR, hash SHA-256 y XML FacturaE. Para autonomos y pymes.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://facturaia.app/verifactu-software.html">
+<meta property="og:site_name" content="FacturaIA">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Software Verifactu Gratis y Homologado para Autonomos | FacturaIA">
+<meta name="twitter:description" content="Software Verifactu 100% gratis, open source y compatible con la AEAT. QR, hash SHA-256 y FacturaE.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230A1628'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Inter,sans-serif' font-weight='800' font-size='18' fill='%23D4A843'>F</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="seo/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://facturaia.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Software Verifactu", "item": "https://facturaia.app/verifactu-software.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "FacturaIA",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web, Android, iOS",
+  "description": "Software de facturacion VeriFactu 100% gratis y open source con IA para autonomos espanoles.",
+  "url": "https://facturaia.app",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+  "author": { "@type": "Organization", "name": "FacturaIA", "url": "https://facturaia.app" }
+}
+</script>
+</head>
+<body>
+
+<nav class="nav" id="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><span class="nav-logo-dot"></span>FacturaIA</a>
+    <div class="nav-links">
+      <a href="/#features" class="nav-link">Funcionalidades</a>
+      <a href="/blog/" class="nav-link">Blog</a>
+      <a href="/herramientas/" class="nav-link">Herramientas</a>
+      <a href="/#faq" class="nav-link">FAQ</a>
+      <a href="/app" class="nav-cta">Probar gratis</a>
+    </div>
+  </div>
+</nav>
+
+<div class="breadcrumbs">
+  <div class="container">
+    <a href="/">Inicio</a> <span>/</span> <span>Software Verifactu</span>
+  </div>
+</div>
+
+<main>
+  <section class="section-padding">
+    <div class="container">
+      <div class="page-header">
+        <h1>Software <span class="highlight">Verifactu</span> Gratis</h1>
+        <p>Que hace que un software de facturacion sea compatible con VeriFactu. Requisitos tecnicos, proceso de certificacion y como FacturaIA los cumple todos.</p>
+      </div>
+      <div class="prose">
+        <h2>Que significa que un software sea "VeriFactu compliant"</h2>
+        <p>Que un software de facturacion sea compatible con VeriFactu no es una etiqueta comercial que cualquier empresa pueda ponerse. Significa que el software cumple con un conjunto muy concreto de <strong>requisitos tecnicos y funcionales</strong> establecidos por la Agencia Tributaria en el Reglamento que desarrolla la Ley 11/2021 de lucha contra el fraude fiscal.</p>
+        <p>Estos requisitos no son orientativos ni recomendaciones: son de obligado cumplimiento. El Reglamento de VeriFactu especifica al detalle que mecanismos debe implementar el software, como debe estructurar los datos, que algoritmos criptograficos debe usar y que informacion debe incluir cada factura para ser considerada valida.</p>
+        <p>Un software VeriFactu compliant debe garantizar, como minimo, la <strong>integridad, conservacion, accesibilidad, legibilidad, trazabilidad e inalterabilidad</strong> de los registros de facturacion. Esto no se consigue con un simple programa que genere PDFs con un QR bonito. Requiere una arquitectura de software disenada especificamente para cumplir con estos requisitos.</p>
+
+        <h2>Requisitos tecnicos que debe cumplir un software VeriFactu</h2>
+        <p>El Reglamento de VeriFactu detalla los siguientes requisitos tecnicos que todo software de facturacion debe implementar:</p>
+
+        <div class="info-card">
+          <h3>1. Encadenamiento de hashes (hash chain) SHA-256</h3>
+          <p>Cada factura debe incluir la huella digital (hash) de la factura inmediatamente anterior, calculada mediante el algoritmo SHA-256. Esto crea una cadena criptografica donde cada eslabon depende del anterior. Si se modifica una factura antigua, su hash cambia y la cadena se rompe, haciendo detectable cualquier manipulacion. El software debe generar y mantener esta cadena automaticamente, sin intervencion del usuario. No se puede desactivar.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>2. Codigo QR verificable</h3>
+          <p>Cada factura debe incluir un codigo QR que contenga, como minimo: el NIF del emisor, el numero de factura, la fecha de emision, el importe total y el hash de verificacion. Opcionalmente puede incluir mas datos. La AEAT debe poder verificar la autenticidad de la factura escaneando este QR, incluso sin acceso al sistema del emisor. El formato del QR sigue la especificacion publicada por la AEAT.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>3. Formato FacturaE 3.2 o superior</h3>
+          <p>Las facturas deben generarse en el formato electronico estructurado FacturaE, version 3.2 o superior. Este formato XML es el estandar publico espanol de factura electronica. El software debe incluir en el FacturaE los campos especificos de VeriFactu: hash de la factura anterior, hash de la factura actual, datos para el QR y marca de tiempo de generacion.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>4. Firma digital (opcional pero recomendable)</h3>
+          <p>Aunque no es estrictamente obligatorio en la fase inicial para facturas B2B, la firma electronica avanzada (XAdES) anade una capa adicional de seguridad y autenticidad. Un software VeriFactu completo debe ser capaz de firmar electronicamente las facturas. FacturaIA soporta la firma electronica de facturas para quienes deseen este nivel adicional de seguridad.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>5. Registro de eventos inalterable</h3>
+          <p>El software debe mantener un registro cronologico (log) de todas las operaciones relacionadas con la facturacion: creacion de facturas, anulaciones, rectificaciones, modificaciones de datos maestros. Este registro debe ser inalterable y auditable. En caso de inspeccion, la AEAT puede solicitar este registro para verificar la trazabilidad de todas las operaciones. El registro no puede ser editado ni eliminado por el usuario.</p>
+        </div>
+
+        <div class="info-card">
+          <h3>6. Numeracion correlativa y sin saltos</h3>
+          <p>Cada factura debe tener un numero unico y correlativo dentro de su serie. El software debe garantizar que no se pueden producir saltos en la numeracion, duplicados ni huecos. Las facturas anuladas deben mantener su registro con la marca de anulacion, pero el numero no se reutiliza. La AEAT cruza la numeracion para detectar facturas no declaradas.</p>
+        </div>
+
+        <h2>Como FacturaIA cumple con todos los requisitos de VeriFactu</h2>
+        <p>FacturaIA fue disenado desde el primer dia para cumplir integramente con la normativa VeriFactu. No es una adaptacion apresurada de un software antiguo: toda la arquitectura se construyo pensando en los requisitos del Reglamento. Estos son los detalles de implementacion:</p>
+        <ul>
+          <li><strong>Hash chain SHA-256:</strong> El backend de FacturaIA, desarrollado en Java con Spring Boot, calcula el hash SHA-256 de cada factura utilizando la libreria criptografica estandar de Java (MessageDigest). El hash de la factura N se almacena y se incrusta en la factura N+1. La cadena se mantiene incluso si anulas una factura: la anulacion tambien genera un registro en la cadena.</li>
+          <li><strong>QR verificable:</strong> El codigo QR se genera en el frontend utilizando la libreria qrcode.js, con los datos estructurados segun la especificacion de la AEAT. El QR incluye el NIF, numero de factura, fecha, importe y hash.</li>
+          <li><strong>FacturaE 3.2:</strong> El XML FacturaE se construye cumpliendo estrictamente el esquema oficial publicado por el Ministerio de Hacienda. Los campos VeriFactu (hash chain, QR data) se mapean a las extensiones correspondientes del esquema 3.2.</li>
+          <li><strong>Registro de eventos:</strong> Todas las operaciones de facturacion quedan registradas en la base de datos con marca de tiempo y hash. El registro no puede ser editado ni eliminado por el usuario. En la version open source, el registro se almacena en PostgreSQL con triggers que impiden modificaciones.</li>
+          <li><strong>Numeracion garantizada:</strong> El sistema utiliza secuencias atomicas de base de datos para garantizar la numeracion correlativa sin posibilidad de duplicados ni saltos, incluso en condiciones de alta concurrencia.</li>
+        </ul>
+
+        <h2>El proceso de certificacion de software VeriFactu</h2>
+        <p>La AEAT ha establecido un proceso de certificacion para el software de facturacion. Aunque los detalles finales pueden variar cuando se publique el reglamento definitivo, el procedimiento general es el siguiente:</p>
+        <ol>
+          <li><strong>Desarrollo conforme a especificaciones:</strong> El software se desarrolla siguiendo estrictamente las especificaciones tecnicas publicadas por la AEAT</li>
+          <li><strong>Pruebas de conformidad:</strong> La AEAT publicara un conjunto de pruebas (test suite) que el software debe superar para demostrar que cumple con los requisitos</li>
+          <li><strong>Auto-declaracion responsable:</strong> El fabricante del software emite una declaracion responsable afirmando que su producto cumple con la normativa VeriFactu</li>
+          <li><strong>Registro en el censo de software:</strong> La AEAT mantendra un registro publico de software certificado. Los programas que no figuren en este registro no podran ser utilizados para facturar</li>
+          <li><strong>Auditorias periodicas:</strong> La AEAT puede realizar auditorias tecnicas para verificar que el software sigue cumpliendo los requisitos</li>
+        </ol>
+        <p>FacturaIA, al ser open source, ofrece una ventaja adicional en el proceso de certificacion: <strong>el codigo fuente es publico y auditable</strong>. Cualquier persona, incluida la propia AEAT, puede examinar el codigo para verificar que los mecanismos de hash chain, generacion de QR y construccion del FacturaE se implementan correctamente. No hay cajas negras.</p>
+
+        <h2>Por que elegir un software VeriFactu open source</h2>
+        <p>Que el software de facturacion sea open source no es solo una cuestion de precio (que tambien, al ser gratuito). Hay razones de fondo por las que el codigo abierto es la mejor opcion para cumplir con VeriFactu:</p>
+        <ul>
+          <li><strong>Transparencia total:</strong> Puedes ver exactamente como se calculan los hashes, como se genera el QR y como se construye el XML. No dependes de la palabra de un comercial.</li>
+          <li><strong>Auditabilidad:</strong> Tu asesoria fiscal o un perito informatico puede auditar el codigo para verificar que cumple con la normativa. Con software propietario, esto es imposible.</li>
+          <li><strong>Independencia del fabricante:</strong> Si la empresa que fabrica tu software de facturacion cierra o decide triplicar sus precios, con software propietario estas atrapado. Con open source, el codigo es tuyo y de la comunidad. Siempre podras migrar o contratar a alguien para que lo mantenga.</li>
+          <li><strong>Seguridad reforzada:</strong> Al ser el codigo publico, mas ojos lo examinan y los fallos de seguridad se detectan y corrigen mas rapidamente que en el software cerrado.</li>
+          <li><strong>Sin coste de licencia:</strong> No pagas por usar el software, ni por actualizaciones, ni por nuevas versiones. El unico coste es el de la infraestructura si decides alojarlo tu mismo, o cero si usas la version en la nube de FacturaIA.</li>
+        </ul>
+
+        <h2>Preguntas frecuentes sobre software VeriFactu</h2>
+        <div class="faq-item">
+          <h3>1. ¿Mi software de facturacion actual cumplira con VeriFactu?</h3>
+          <p>Depende del software. Muchos programas de facturacion tradicionales (especialmente los de escritorio y los basados en Excel) no cumpliran porque su arquitectura no esta disenada para implementar hash chains, QR VeriFactu ni FacturaE. Los grandes proveedores de software (Holded, Quipu, Anfix, Sage) estan adaptando sus productos, pero en muchos casos las funcionalidades VeriFactu solo estaran disponibles en sus planes de pago superiores. Con FacturaIA no tienes ese problema: VeriFactu esta integrado desde la primera version y siempre sera gratuito.</p>
+        </div>
+        <div class="faq-item">
+          <h3>2. ¿Puedo usar FacturaIA aunque ya tenga otro software?</h3>
+          <p>Si. Muchos autonomos utilizan FacturaIA como complemento o sustituto de su software actual. Como es completamente gratuito, no hay riesgo en probarlo. Puedes empezar creando algunas facturas en paralelo con tu sistema actual para comparar y decidir cual te convence mas. Si decides migrar por completo, puedes exportar tus datos de tu antiguo software e importarlos en FacturaIA.</p>
+        </div>
+        <div class="faq-item">
+          <h3>3. ¿Como se que FacturaIA seguira cumpliendo la normativa en el futuro?</h3>
+          <p>FacturaIA es un proyecto open source mantenido activamente por una comunidad de desarrolladores. Las actualizaciones normativas se implementan de forma colaborativa, a menudo mas rapido que en el software comercial. Ademas, al ser open source, si en el futuro la comunidad dejara de mantenerlo (algo improbable, pero posible), cualquier desarrollador podria tomar el codigo y continuar con las actualizaciones. No dependes de una unica empresa.</p>
+        </div>
+        <div class="faq-item">
+          <h3>4. ¿El software VeriFactu tiene que enviar las facturas a la AEAT automaticamente?</h3>
+          <p>En la fase inicial de implantacion de VeriFactu, el envio automatico de facturas a la AEAT no es obligatorio para todos los casos. Sin embargo, el software si debe ser capaz de generar las facturas con todos los elementos de verificacion y los registros deben estar disponibles para su remision si la AEAT los solicita. La obligacion de envio automatico se ira implantando de forma progresiva en fases posteriores. FacturaIA esta preparado tanto para la situacion actual como para las futuras fases de implantacion.</p>
+        </div>
+      </div>
+
+      <div class="trust-badges">
+        <div class="trust-badge">
+          <span class="trust-badge-icon">&#10003;</span>
+          <span>VeriFactu 100%</span>
+        </div>
+        <div class="trust-badge">
+          <span class="trust-badge-icon">&#10003;</span>
+          <span>Open Source MIT</span>
+        </div>
+        <div class="trust-badge">
+          <span class="trust-badge-icon">&#10003;</span>
+          <span>Gratis para siempre</span>
+        </div>
+        <div class="trust-badge">
+          <span class="trust-badge-icon">&#10003;</span>
+          <span>Hash SHA-256</span>
+        </div>
+        <div class="trust-badge">
+          <span class="trust-badge-icon">&#10003;</span>
+          <span>QR Verificable</span>
+        </div>
+      </div>
+
+      <div class="related-posts">
+        <h3>Tambien te puede interesar</h3>
+        <div class="related-grid">
+          <a href="/verifactu-autonomos.html" class="related-card">
+            <h4>VeriFactu para Autonomos: Guia Completa</h4>
+            <p>Plazos, obligaciones y como cumplir sin pagar</p>
+          </a>
+          <a href="/facturae-gratis.html" class="related-card">
+            <h4>FacturaE Gratis: Genera Facturas sin Pagar</h4>
+            <p>Que es y como generar facturas FacturaE 3.2</p>
+          </a>
+          <a href="/hacer-factura-electronica.html" class="related-card">
+            <h4>Como Hacer una Factura Electronica Valida</h4>
+            <p>Guia practica con todos los requisitos</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding" style="background:var(--bg-primary);">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Usa el unico software VeriFactu 100% gratis</h2>
+        <p>Sin limites. Sin tarjeta de credito. Sin trampas. Open source.</p>
+        <form class="cta-form js-waitlist-form">
+          <input type="email" placeholder="tu@email.com" required>
+          <button type="submit" class="btn-primary">Probar gratis</button>
+        </form>
+        <p class="cta-footnote"><a href="/privacidad.html">Sin spam. Sin tarjeta.</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo"><span class="nav-logo-dot"></span>FacturaIA</a>
+        <p class="footer-tagline">Software de facturacion VeriFactu 100% gratis y open source para autonomos espanoles.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Producto</h4>
+        <a href="/#features">Funcionalidades</a>
+        <a href="/#comparison">Comparativa</a>
+        <a href="/blog/">Blog</a>
+        <a href="/herramientas/">Herramientas</a>
+      </div>
+      <div class="footer-col">
+        <h4>Recursos</h4>
+        <a href="/verifactu-autonomos.html">Verifactu Autonomos</a>
+        <a href="/blog/guia-verifactu-2027.html">Guia Verifactu 2027</a>
+        <a href="/calculadora-iva.html">Calculadora IVA</a>
+        <a href="/calculadora-irpf.html">Calculadora IRPF</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="/aviso-legal.html">Aviso Legal</a>
+        <a href="/privacidad.html">Privacidad</a>
+        <a href="/terminos.html">Terminos</a>
+        <a href="https://github.com/facturaia" class="external">GitHub</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 FacturaIA. Open Source MIT. 100% gratis para siempre.</p>
+      <a href="https://ko-fi.com/facturaia" target="_blank" rel="noopener" class="footer-donate">Apoyar el proyecto</a>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" aria-label="Volver arriba">&#8593;</button>
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-banner-inner">
+    <p>Usamos cookies minimas para funcionar. No vendemos tus datos. <a href="/privacidad.html">Mas info</a></p>
+    <button class="btn-accept" id="acceptCookies">Aceptar</button>
+  </div>
+</div>
+
+<script src="seo/js/main.js" defer></script>
+</body>
+</html>

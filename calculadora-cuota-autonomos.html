@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora Cuota de Autónomos 2026 | Tarifa Plana y Cuota Normal | FacturaIA</title>
+  <meta name="description" content="Calcula lo que pagarás de cuota de autónomos en 2026. Introduce tus ingresos netos y descubre tu cuota mensual de la Seguridad Social. Incluye tarifa plana de 80€.">
+  <meta name="keywords" content="cuota autonomos, calcular cuota autonomos, cuota autonomos 2026, seguridad social autonomos, tarifa plana autonomos, cuota autonomos ingresos reales, pagar menos autonomos">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://facturaia.app/calculadora-cuota-autonomos.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="seo/css/style.css">
+  <meta property="og:title" content="Calculadora Cuota de Autónomos 2026 | Tarifa Plana y Cuota Normal | FacturaIA">
+  <meta property="og:description" content="Calcula lo que pagarás de cuota de autónomos en 2026. Introduce tus ingresos netos y descubre tu cuota mensual de la Seguridad Social. Incluye tarifa plana de 80€.">
+  <meta property="og:url" content="https://facturaia.app/calculadora-cuota-autonomos.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FacturaIA">
+  <meta property="og:locale" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculadora Cuota de Autónomos 2026 | Tarifa Plana y Cuota Normal | FacturaIA">
+  <meta name="twitter:description" content="Calcula lo que pagarás de cuota de autónomos en 2026 según tus ingresos netos. Tarifa plana de 80€ incluida.">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://facturaia.app/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Herramientas",
+        "item": "https://facturaia.app/herramientas/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Calculadora Cuota de Autónomos",
+        "item": "https://facturaia.app/calculadora-cuota-autonomos.html"
+      }
+    ]
+  }
+  </script>
+  <style>
+    .tramos-table-wrapper {
+      overflow-x: auto;
+      margin: 32px 0;
+      border-radius: 12px;
+      border: 1px solid var(--border-color, #2a2a4a);
+    }
+    .tramos-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.93rem;
+      min-width: 700px;
+    }
+    .tramos-table thead th {
+      background: rgba(212,168,67,0.15);
+      color: var(--gold, #D4A843);
+      padding: 14px 16px;
+      text-align: left;
+      font-weight: 600;
+      border-bottom: 2px solid var(--border-color, #2a2a4a);
+      white-space: nowrap;
+    }
+    .tramos-table tbody td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border-color, #2a2a4a);
+    }
+    .tramos-table tbody tr:hover {
+      background: rgba(255,255,255,0.03);
+    }
+    .tramos-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+    .tramo-highlight {
+      background: rgba(212,168,67,0.12) !important;
+    }
+    .cuota-selector {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .cuota-selector select {
+      padding: 14px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--border-color, #2a2a4a);
+      background: var(--bg-input, #0f0f23);
+      color: #fff;
+      font-family: inherit;
+      font-size: 1rem;
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23D4A843' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+    }
+    .cuota-selector select:focus {
+      outline: none;
+      border-color: var(--gold, #D4A843);
+    }
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 8px;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+    .checkbox-group input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      accent-color: var(--gold, #D4A843);
+      cursor: pointer;
+    }
+    .cuota-result-box {
+      background: rgba(212,168,67,0.08);
+      border: 1px solid rgba(212,168,67,0.3);
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 24px;
+      text-align: center;
+    }
+    .cuota-result-box h3 {
+      color: var(--gold, #D4A843);
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+    .cuota-result-box .big-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--gold, #D4A843);
+    }
+    .cuota-result-box .big-number-sub {
+      font-size: 1rem;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav" id="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><span class="nav-logo-dot"></span>FacturaIA</a>
+    <div class="nav-links">
+      <a href="/#features" class="nav-link">Funcionalidades</a>
+      <a href="/blog/" class="nav-link">Blog</a>
+      <a href="/herramientas/" class="nav-link">Herramientas</a>
+      <a href="/#faq" class="nav-link">FAQ</a>
+      <a href="/app" class="nav-cta">Probar gratis</a>
+    </div>
+  </div>
+</nav>
+
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <div class="container">
+    <ol>
+      <li><a href="/">Inicio</a></li>
+      <li><a href="/herramientas/">Herramientas</a></li>
+      <li>Calculadora Cuota de Autónomos</li>
+    </ol>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="container">
+    <h1>Calculadora Cuota de <span class="highlight">Autónomos</span> 2026</h1>
+    <p class="page-subtitle">Calcula cuánto pagarás de Seguridad Social según tus ingresos. Tarifa plana incluida.</p>
+  </div>
+</header>
+
+<main>
+  <section class="section-padding">
+    <div class="container">
+      <div class="prose">
+        <p>Desde el 1 de enero de 2023, España implantó un <strong>nuevo sistema de cotización para autónomos basado en los ingresos reales</strong>. Esto significa que la cuota que pagas cada mes a la Seguridad Social ya no es fija (la antigua cuota mínima de ~294 €), sino que depende directamente de tus <strong>rendimientos netos mensuales</strong>. La reforma, que se despliega de forma progresiva hasta 2025, establece 15 tramos de cotización con cuotas mínimas y máximas para cada nivel de ingresos.</p>
+        <p>Esta calculadora te ayuda a identificar tu tramo y conocer exactamente cuánto pagarás de Seguridad Social en 2026. Además, incluimos información sobre la <strong>tarifa plana de 80 €</strong> para nuevos autónomos y las bonificaciones disponibles.</p>
+      </div>
+
+      <div class="calc-card">
+        <h2 class="calc-title">Calcular Cuota de Autónomos 2026</h2>
+
+        <div class="cuota-selector">
+          <div class="calc-field">
+            <label for="tramoSelect">Selecciona tu tramo de rendimientos netos mensuales</label>
+            <select id="tramoSelect" onchange="mostrarCuota()">
+              <option value="">-- Selecciona tu tramo --</option>
+              <option value="0">Tramo 1: Menos de 670 €</option>
+              <option value="1">Tramo 2: Entre 670 € y 900 €</option>
+              <option value="2">Tramo 3: Entre 900 € y 1.166,70 €</option>
+              <option value="3">Tramo 4: Entre 1.166,70 € y 1.300 €</option>
+              <option value="4">Tramo 5: Entre 1.300 € y 1.500 €</option>
+              <option value="5">Tramo 6: Entre 1.500 € y 1.700 €</option>
+              <option value="6">Tramo 7: Entre 1.700 € y 1.850 €</option>
+              <option value="7">Tramo 8: Entre 1.850 € y 2.030 €</option>
+              <option value="8">Tramo 9: Entre 2.030 € y 2.330 €</option>
+              <option value="9">Tramo 10: Entre 2.330 € y 2.760 €</option>
+              <option value="10">Tramo 11: Entre 2.760 € y 3.190 €</option>
+              <option value="11">Tramo 12: Entre 3.190 € y 3.620 €</option>
+              <option value="12">Tramo 13: Entre 3.620 € y 4.050 €</option>
+              <option value="13">Tramo 14: Entre 4.050 € y 6.000 €</option>
+              <option value="14">Tramo 15: Más de 6.000 €</option>
+            </select>
+          </div>
+
+          <label class="checkbox-group">
+            <input type="checkbox" id="tarifaPlana" onchange="mostrarCuota()">
+            <span>Tengo derecho a tarifa plana (80 €/mes durante los primeros 12 meses)</span>
+          </label>
+        </div>
+
+        <div class="cuota-result-box" id="cuotaResultado">
+          <h3>Tu cuota mensual estimada</h3>
+          <div class="big-number">-- €</div>
+          <p class="big-number-sub" style="margin-top: 4px;">Selecciona tu tramo de ingresos para ver el resultado</p>
+        </div>
+      </div>
+
+      <div class="tramos-table-wrapper" style="margin-top: 48px;">
+        <h2 style="text-align: center; margin-bottom: 24px;">Tabla completa de <span class="highlight">tramos de cotización</span> 2026</h2>
+        <p style="text-align: center; margin-bottom: 24px; opacity: 0.7; max-width: 700px; margin-left: auto; margin-right: auto;">Estos son los 15 tramos del nuevo sistema de cotización por ingresos reales. Las cuotas mostradas corresponden al año 2026, último año de despliegue completo de la reforma.</p>
+        <table class="tramos-table">
+          <thead>
+            <tr>
+              <th>Tramo</th>
+              <th>Rendimientos netos (€/mes)</th>
+              <th>Base mínima (€)</th>
+              <th>Base máxima (€)</th>
+              <th>Cuota mínima (€/mes)</th>
+              <th>Cuota máxima (€/mes)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1</strong></td>
+              <td>Hasta 670 €</td>
+              <td>653,59</td>
+              <td>718,95</td>
+              <td><strong>200,00 €</strong></td>
+              <td>220,00 €</td>
+            </tr>
+            <tr>
+              <td><strong>2</strong></td>
+              <td>670 € - 900 €</td>
+              <td>718,96</td>
+              <td>900,00</td>
+              <td><strong>220,00 €</strong></td>
+              <td>275,00 €</td>
+            </tr>
+            <tr>
+              <td><strong>3</strong></td>
+              <td>900 € - 1.166,70 €</td>
+              <td>849,67</td>
+              <td>900,00</td>
+              <td><strong>260,00 €</strong></td>
+              <td>275,00 €</td>
+            </tr>
+            <tr>
+              <td><strong>4</strong></td>
+              <td>1.166,70 € - 1.300 €</td>
+              <td>950,98</td>
+              <td>1.143,79</td>
+              <td><strong>291,00 €</strong></td>
+              <td>350,00 €</td>
+            </tr>
+            <tr>
+              <td><strong>5</strong></td>
+              <td>1.300 € - 1.500 €</td>
+              <td>960,78</td>
+              <td>1.209,15</td>
+              <td><strong>294,00 €</strong></td>
+              <td>370,00 €</td>
+            </tr>
+            <tr>
+              <td><strong>6</strong></td>
+              <td>1.500 € - 1.700 €</td>
+              <td>960,78</td>
+              <td>1.372,05</td>
+              <td><strong>294,00 €</strong></td>
+              <td>420,00 €</td>
+            </tr>
+            <tr>
+              <td><strong>7</strong></td>
+              <td>1.700 € - 1.850 €</td>
+              <td>991,04</td>
+              <td>1.535,00</td>
+              <td><strong>303,23 €</strong></td>
+              <td>470,00 €</td>
+            </tr>
+            <tr>
+              <td><strong>8</strong></td>
+              <td>1.850 € - 2.030 €</td>
+              <td>1.045,75</td>
+              <td>1.698,00</td>
+              <td><strong>320,00 €</strong></td>
+              <td>520,00 €</td>
+            </tr>
+            <tr>
+              <td><strong>9</strong></td>
+              <td>2.030 € - 2.330 €</td>
+              <td>1.143,79</td>
+              <td>1.927,50</td>
+              <td><strong>350,00 €</strong></td>
+              <td>590,00 €</td>
+            </tr>
+            <tr>
+              <td><strong>10</strong></td>
+              <td>2.330 € - 2.760 €</td>
+              <td>1.209,15</td>
+              <td>2.223,00</td>
+              <td><strong>370,00 €</strong></td>
+              <td>680,00 €</td>
+            </tr>
+            <tr>
+              <td><strong>11</strong></td>
+              <td>2.760 € - 3.190 €</td>
+              <td>1.274,40</td>
+              <td>2.387,00</td>
+              <td><strong>390,00 €</strong></td>
+              <td>730,00 €</td>
+            </tr>
+            <tr>
+              <td><strong>12</strong></td>
+              <td>3.190 € - 3.620 €</td>
+              <td>1.372,05</td>
+              <td>2.615,40</td>
+              <td><strong>420,00 €</strong></td>
+              <td>800,00 €</td>
+            </tr>
+            <tr>
+              <td><strong>13</strong></td>
+              <td>3.620 € - 4.050 €</td>
+              <td>1.437,75</td>
+              <td>2.843,70</td>
+              <td><strong>440,00 €</strong></td>
+              <td>870,00 €</td>
+            </tr>
+            <tr>
+              <td><strong>14</strong></td>
+              <td>4.050 € - 6.000 €</td>
+              <td>1.535,00</td>
+              <td>4.139,40</td>
+              <td><strong>470,00 €</strong></td>
+              <td>1.267,00 €</td>
+            </tr>
+            <tr>
+              <td><strong>15</strong></td>
+              <td>Más de 6.000 €</td>
+              <td>1.732,00</td>
+              <td>4.139,40</td>
+              <td><strong>530,00 €</strong></td>
+              <td>1.267,00 €</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="text-align: center; margin-top: 16px; font-size: 0.85rem; opacity: 0.6;">Datos basados en el Real Decreto-ley 13/2022 y actualizaciones de los PGE. Las cuotas incluyen contingencias comunes, profesionales, cese de actividad y formación profesional. Verifica siempre con tu gestor o la Seguridad Social para tu caso concreto.</p>
+      </div>
+
+      <div class="info-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 48px;">
+        <div class="info-card">
+          <h3>¿Cómo funciona la nueva cuota de autónomos?</h3>
+          <p>El sistema, en vigor desde enero de 2023 con despliegue progresivo hasta 2025, vincula tu cotización a la Seguridad Social con tus <strong>rendimientos netos reales</strong> (ingresos menos gastos deducibles). El objetivo es que pagues en función de lo que realmente ganas, no una cuota fija elegida a voluntad.</p>
+          <p>Se establecen 15 tramos de rendimientos netos. Dentro de cada tramo, puedes elegir libremente tu base de cotización entre la mínima y la máxima establecida. La cuota se calcula aplicando el <strong>30,6%</strong> (tipo de cotización que incluye todas las contingencias) sobre la base elegida. A mayor base, mayor cuota pero también mayor protección social (jubilación, baja por enfermedad, cese de actividad, etc.).</p>
+        </div>
+        <div class="info-card">
+          <h3>¿Qué es la tarifa plana?</h3>
+          <p>La <strong>tarifa plana de 80 €</strong> (que incluye todas las contingencias) es una bonificación para nuevos autónomos que se dan de alta por primera vez en el RETA o que no han estado de alta en los dos años anteriores (tres años si ya disfrutaron de la tarifa plana). Características principales:</p>
+          <ul>
+            <li><strong>Duración:</strong> 12 meses con cuota fija de 80 €.</li>
+            <li><strong>Prorrogable:</strong> otros 12 meses adicionales si los ingresos netos no superan el SMI y la comunidad autónoma lo contempla.</li>
+            <li><strong>Bonificaciones adicionales:</strong> algunas CCAA ofrecen cuota cero o tarifa plana extendida como incentivo al emprendimiento.</li>
+            <li><strong>Compatibilidad:</strong> puedes tener tarifa plana aunque trabajes por cuenta ajena (pluriactividad), siempre que cumplas los requisitos.</li>
+          </ul>
+          <p>Es una de las medidas más atractivas para empezar a facturar como autónomo con costes reducidos durante el arranque de la actividad.</p>
+        </div>
+        <div class="info-card">
+          <h3>Tramos de cotización 2026 explicados</h3>
+          <p>La reforma se despliega gradualmente. Las cuotas de 2026 representan el <strong>escenario definitivo</strong> tras tres años de transición. Estos son los puntos clave:</p>
+          <ul>
+            <li><strong>Tramos 1-3 (bajos ingresos):</strong> cuotas reducidas de 200 a 260 € para quienes menos ganan.</li>
+            <li><strong>Tramos 4-8 (ingresos medios-bajos):</strong> cuotas entre 291 y 320 €, el rango donde se sitúan la mayoría de autónomos españoles.</li>
+            <li><strong>Tramos 9-12 (ingresos medios-altos):</strong> cuotas de 350 a 420 € para rendimientos entre 2.030 y 3.620 €.</li>
+            <li><strong>Tramos 13-15 (ingresos altos):</strong> cuotas de 440 a 530 € para quienes superan los 3.620 € mensuales.</li>
+          </ul>
+          <p>Las bases máximas de los tramos superiores están topadas en 4.139,40 € mensuales (2026), lo que equivale a una cuota máxima de aproximadamente 1.267 €.</p>
+        </div>
+        <div class="info-card">
+          <h3>¿Cómo se calculan los rendimientos netos?</h3>
+          <p>Los rendimientos netos se calculan restando a tus ingresos mensuales todos los <strong>gastos deducibles</strong> fiscalmente relacionados con tu actividad:</p>
+          <ul>
+            <li>Ingresos íntegros de tu actividad profesional</li>
+            <li>Menos gastos deducibles (material, alquiler, suministros, servicios profesionales, etc.)</li>
+            <li>Más la deducción por gastos genéricos del <strong>7%</strong> (3% para autónomos societarios) que aplica automáticamente la Seguridad Social</li>
+          </ul>
+          <p>Es decir: <strong style="color: var(--gold, #D4A843);">Rendimiento neto = Ingresos - Gastos deducibles + 7% (o 3%) de deducción genérica</strong></p>
+          <p>Debes comunicar a la Seguridad Social tu previsión de rendimientos netos. Cada dos meses, la TGSS cruza tus datos con Hacienda y ajusta tu tramo si hay desviaciones. Si has cotizado de menos, deberás pagar la diferencia; si has cotizado de más, recibirás la devolución correspondiente.</p>
+        </div>
+      </div>
+
+      <div class="prose" style="margin-top: 48px;">
+        <h2>Consejos para elegir tu base de cotización</h2>
+        <p>Dentro de tu tramo, tienes libertad para elegir la base de cotización entre la mínima y la máxima. Esta decisión es importante porque afecta directamente a tus <strong>prestaciones futuras</strong>:</p>
+        <ul>
+          <li><strong>Jubilación:</strong> tu pensión se calcula sobre las bases de cotización de los últimos años. Elegir siempre la base mínima puede reducir significativamente tu pensión futura.</li>
+          <li><strong>Baja por enfermedad o accidente:</strong> la prestación por incapacidad temporal se calcula sobre tu base de cotización. Una base baja implica una prestación baja si caes enfermo.</li>
+          <li><strong>Cese de actividad (el "paro" del autónomo):</strong> también depende de tu base de cotización. Si prevés inestabilidad en tus ingresos, una base más alta te dará mejor cobertura.</li>
+          <li><strong>Maternidad/paternidad:</strong> la prestación se basa en tu base de cotización del mes anterior al inicio del descanso.</li>
+        </ul>
+        <p>Nuestra recomendación: elige una base de cotización que equilibre tu capacidad de pago actual con tus necesidades de protección futura. No siempre la mínima es la mejor opción, especialmente si tus ingresos te permiten cotizar un poco más. La diferencia entre cotizar 320 € o 370 € al mes puede parecer pequeña ahora, pero marca una diferencia significativa en tu pensión de jubilación.</p>
+
+        <h2>La regla de los dos meses: liquidación definitiva</h2>
+        <p>Un aspecto crucial del nuevo sistema es que cada dos meses, la <strong>Tesorería General de la Seguridad Social (TGSS)</strong> cruza información con la AEAT para verificar tus ingresos reales. Si detecta que tus rendimientos netos corresponden a un tramo diferente al que declaraste inicialmente, se produce la <strong>regularización</strong>:</p>
+        <ul>
+          <li>Si <strong>cotizaste de menos</strong> (tus ingresos reales fueron mayores), deberás abonar la diferencia.</li>
+          <li>Si <strong>cotizaste de más</strong> (tus ingresos fueron menores), la TGSS te devolverá el exceso de oficio.</li>
+        </ul>
+        <p>Este mecanismo garantiza que al final del año hayas cotizado exactamente según tus ingresos reales. Es importante guardar un colchón financiero para afrontar posibles regularizaciones al alza si tu facturación crece durante el año.</p>
+      </div>
+
+      <div class="trust-badges" style="margin-top: 48px; display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; text-align: center;">
+        <div class="trust-badge">
+          <span style="font-size: 2rem;">&#128274;</span>
+          <p>Sin registro</p>
+        </div>
+        <div class="trust-badge">
+          <span style="font-size: 2rem;">&#128202;</span>
+          <p>Tabla completa de tramos</p>
+        </div>
+        <div class="trust-badge">
+          <span style="font-size: 2rem;">&#127758;</span>
+          <p>100% gratis</p>
+        </div>
+        <div class="trust-badge">
+          <span style="font-size: 2rem;">&#9989;</span>
+          <p>Datos actualizados 2026</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding" style="background: var(--bg-card, #1a1a2e);">
+    <div class="container">
+      <div class="cta-box" style="text-align: center; max-width: 600px; margin: 0 auto;">
+        <h2>Controla tus gastos de autónomo con FacturaIA</h2>
+        <p>Lleva el control de tus ingresos y gastos para conocer tus rendimientos netos en tiempo real. Cumple con VeriFactu sin esfuerzo.</p>
+        <form class="waitlist-form" style="display: flex; gap: 12px; max-width: 450px; margin: 24px auto 0;" id="ctaForm" onsubmit="event.preventDefault(); alert('¡Gracias! Te avisaremos cuando esté disponible.'); this.reset();">
+          <input type="email" placeholder="tu@email.com" required style="flex: 1; padding: 12px 16px; border-radius: 8px; border: 1px solid var(--border-color, #2a2a4a); background: var(--bg-input, #0f0f23); color: #fff; font-family: inherit;">
+          <button type="submit" class="btn-primary">Unirme</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 32px;">También te puede interesar</h2>
+      <div class="related-links" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+        <a href="/calculadora-iva.html" class="info-card" style="text-decoration: none; display: block; transition: transform 0.2s; border: 1px solid var(--border-color, #2a2a4a);">
+          <h3>Calculadora de IVA</h3>
+          <p>Calcula el IVA de tus facturas al instante con los tipos vigentes en España.</p>
+        </a>
+        <a href="/calculadora-irpf.html" class="info-card" style="text-decoration: none; display: block; transition: transform 0.2s; border: 1px solid var(--border-color, #2a2a4a);">
+          <h3>Calculadora de IRPF</h3>
+          <p>Calcula la retención de IRPF y conoce el neto que cobrarás tras la retención.</p>
+        </a>
+        <a href="/calculadora-factura.html" class="info-card" style="text-decoration: none; display: block; transition: transform 0.2s; border: 1px solid var(--border-color, #2a2a4a);">
+          <h3>Calculadora de Factura Completa</h3>
+          <p>Calcula el total de tu factura con IVA e IRPF en un solo paso.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding" style="background: var(--bg-card, #1a1a2e);">
+    <div class="container">
+      <div class="author-box" style="display: flex; gap: 24px; align-items: flex-start; max-width: 700px; margin: 0 auto; padding: 32px; background: var(--bg-main, #0f0f23); border-radius: 12px; border: 1px solid var(--border-color, #2a2a4a);">
+        <div class="author-avatar" style="width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, var(--gold, #D4A843), #f0d060); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; flex-shrink: 0;">DN</div>
+        <div class="author-info">
+          <h3 style="margin: 0 0 4px;">David Navas</h3>
+          <p style="margin: 0; opacity: 0.7; font-size: 0.9rem;">Creador de FacturaIA · Desarrollador Java Backend</p>
+          <p style="margin-top: 8px; font-size: 0.95rem;">Ingeniero de software y creador de contenido sobre desarrollo y finanzas para autónomos. Construí FacturaIA porque creo que las herramientas de facturación deberían ser accesibles para todos, sin coste y con la máxima transparencia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo"><span class="nav-logo-dot"></span>FacturaIA</a>
+        <p class="footer-tagline">Software de facturación VeriFactu 100% gratis y open source para autónomos españoles.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Producto</h4>
+        <a href="/#features">Funcionalidades</a>
+        <a href="/#comparison">Comparativa</a>
+        <a href="/blog/">Blog</a>
+        <a href="/herramientas/">Herramientas</a>
+      </div>
+      <div class="footer-col">
+        <h4>Recursos</h4>
+        <a href="/verifactu-autonomos.html">VeriFactu Autónomos</a>
+        <a href="/blog/guia-verifactu-2027.html">Guía VeriFactu 2027</a>
+        <a href="/calculadora-iva.html">Calculadora IVA</a>
+        <a href="/calculadora-irpf.html">Calculadora IRPF</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="/aviso-legal.html">Aviso Legal</a>
+        <a href="/privacidad.html">Privacidad</a>
+        <a href="/terminos.html">Términos</a>
+        <a href="https://github.com/facturaia" class="external">GitHub</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 FacturaIA. Open Source MIT. 100% gratis para siempre.</p>
+      <a href="https://ko-fi.com/facturaia" target="_blank" rel="noopener" class="footer-donate">Apoyar el proyecto</a>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-banner-inner">
+    <p>Usamos cookies mínimas para funcionar. No vendemos tus datos. <a href="/privacidad.html">Más info</a></p>
+    <button class="btn-accept" id="acceptCookies">Aceptar</button>
+  </div>
+</div>
+
+<button class="scroll-top" id="scrollTop" aria-label="Volver arriba">&#8593;</button>
+
+<script>
+  function mostrarCuota() {
+    var select = document.getElementById('tramoSelect');
+    var tarifaPlana = document.getElementById('tarifaPlana').checked;
+    var resultado = document.getElementById('cuotaResultado');
+    var idx = select.value;
+
+    if (idx === '') {
+      resultado.innerHTML = '<h3>Tu cuota mensual estimada</h3><div class="big-number">-- €</div><p class="big-number-sub" style="margin-top:4px;">Selecciona tu tramo de ingresos para ver el resultado</p>';
+      return;
+    }
+
+    var cuotasMin = [200, 220, 260, 291, 294, 294, 303.23, 320, 350, 370, 390, 420, 440, 470, 530];
+    var cuotasMax = [220, 275, 275, 350, 370, 420, 470, 520, 590, 680, 730, 800, 870, 1267, 1267];
+    var tramosNombres = [
+      'Menos de 670 €',
+      'Entre 670 € y 900 €',
+      'Entre 900 € y 1.166,70 €',
+      'Entre 1.166,70 € y 1.300 €',
+      'Entre 1.300 € y 1.500 €',
+      'Entre 1.500 € y 1.700 €',
+      'Entre 1.700 € y 1.850 €',
+      'Entre 1.850 € y 2.030 €',
+      'Entre 2.030 € y 2.330 €',
+      'Entre 2.330 € y 2.760 €',
+      'Entre 2.760 € y 3.190 €',
+      'Entre 3.190 € y 3.620 €',
+      'Entre 3.620 € y 4.050 €',
+      'Entre 4.050 € y 6.000 €',
+      'Más de 6.000 €'
+    ];
+
+    var i = parseInt(idx, 10);
+    var cuotaMin = cuotasMin[i];
+    var cuotaMax = cuotasMax[i];
+    var tramoNombre = tramosNombres[i];
+
+    if (tarifaPlana) {
+      resultado.innerHTML =
+        '<h3>&#127881; ¡Tarifa plana activada!</h3>' +
+        '<div class="big-number">80,00 €</div>' +
+        '<p class="big-number-sub" style="margin-top:4px;">/mes durante los primeros 12 meses</p>' +
+        '<p style="margin-top:12px;font-size:0.9rem;opacity:0.7;">Tramo seleccionado: <strong>' + tramoNombre + '</strong></p>' +
+        '<p style="font-size:0.85rem;opacity:0.6;">Tras la tarifa plana, tu cuota estaría entre <strong>' + cuotaMin.toFixed(2).replace('.', ',') + ' €</strong> y <strong>' + cuotaMax.toFixed(2).replace('.', ',') + ' €</strong></p>';
+    } else {
+      resultado.innerHTML =
+        '<h3>Tu cuota mensual estimada</h3>' +
+        '<div class="big-number">' + cuotaMin.toFixed(2).replace('.', ',') + ' €</div>' +
+        '<p class="big-number-sub" style="margin-top:4px;">Cuota mínima para tu tramo (puedes cotizar más)</p>' +
+        '<p style="margin-top:12px;font-size:0.9rem;opacity:0.7;">Tramo seleccionado: <strong>' + tramoNombre + '</strong></p>' +
+        '<p style="font-size:0.95rem;">Rango de cuota: <strong>' + cuotaMin.toFixed(2).replace('.', ',') + ' €</strong> - <strong>' + cuotaMax.toFixed(2).replace('.', ',') + ' €</strong></p>' +
+        '<p style="font-size:0.85rem;opacity:0.6;">Elige tu base de cotización entre la mínima y máxima según la protección que necesites</p>';
+    }
+  }
+</script>
+
+<script src="seo/js/main.js" defer></script>
+</body>
+</html>

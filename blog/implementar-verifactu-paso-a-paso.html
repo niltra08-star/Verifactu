@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como Implementar Verifactu Paso a Paso: Guia Practica para Autonomos | FacturaIA</title>
+  <meta name="description" content="Guia practica paso a paso para implementar Verifactu como autonomo: certificado digital, configuracion del software, pruebas con la AEAT y cumplimiento continuo.">
+  <meta name="keywords" content="verifactu, implementar verificatu, guia verificatu, certificado digital, aeae, facturacion electronica, software facturacion gratis, autonomos">
+  <meta property="og:title" content="Como Implementar Verifactu Paso a Paso: Guia Practica para Autonomos | FacturaIA">
+  <meta property="og:description" content="Guia practica paso a paso para implementar Verifactu como autonomo: certificado digital, configuracion del software, pruebas con la AEAT y cumplimiento continuo.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://facturaia.app/blog/implementar-verifactu-paso-a-paso.html">
+  <meta property="og:image" content="https://facturaia.app/seo/img/og-verifactu-paso-a-paso.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Como Implementar Verifactu Paso a Paso: Guia para Autonomos | FacturaIA">
+  <meta name="twitter:description" content="Guia practica paso a paso: certificado digital, configuracion, pruebas con AEAT y cumplimiento continuo.">
+  <link rel="canonical" href="https://facturaia.app/blog/implementar-verifactu-paso-a-paso.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../seo/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://facturaia.app/"},
+      {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://facturaia.app/blog/"},
+      {"@type": "ListItem", "position": 3, "name": "Implementar Verifactu Paso a Paso", "item": "https://facturaia.app/blog/implementar-verifactu-paso-a-paso.html"}
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Como Implementar Verifactu Paso a Paso: Guia Practica para Autonomos",
+    "description": "Guia practica paso a paso para implementar Verifactu como autonomo: certificado digital, configuracion del software, pruebas con la AEAT y cumplimiento continuo.",
+    "author": {"@type": "Organization", "name": "FacturaIA"},
+    "datePublished": "2026-05-15",
+    "dateModified": "2026-05-15",
+    "publisher": {"@type": "Organization", "name": "FacturaIA"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "¿Necesito un certificado digital para emitir facturas Verifactu?", "acceptedAnswer": {"@type": "Answer", "text": "Si. El certificado digital de persona fisica o representante de entidad emitido por la FNMT es necesario para firmar electronicamente las facturas y para comunicarte con la sede electronica de la AEAT. Puedes obtenerlo gratuitamente en la pagina de la Fabrica Nacional de Moneda y Timbre."}},
+      {"@type": "Question", "name": "¿Puedo usar cualquier software de facturacion con Verifactu?", "acceptedAnswer": {"@type": "Answer", "text": "No. Necesitas un software de facturacion certificado que cumpla con las especificaciones tecnicas de Verifactu: generacion de hash encadenado, codigo QR, formato FacturaE 3.2 y capacidad de envio a la AEAT. Programas como Excel o Word no son validos."}},
+      {"@type": "Question", "name": "¿Cuanto tiempo lleva implementar Verifactu?", "acceptedAnswer": {"@type": "Answer", "text": "Con un software ya preparado como FacturaIA, la implementacion puede llevar entre 1 y 3 dias. Esto incluye obtener el certificado digital, configurar el software, hacer pruebas en el entorno sandbox de la AEAT y empezar a emitir facturas reales. Si tu software actual no esta preparado, el proceso puede extenderse varias semanas."}},
+      {"@type": "Question", "name": "¿Que es el sandbox de la AEAT?", "acceptedAnswer": {"@type": "Answer", "text": "El sandbox o entorno de pruebas de la AEAT es un sistema que simula la plataforma real de Verifactu donde puedes enviar facturas de prueba sin que tengan validez legal. Sirve para verificar que tu software esta correctamente configurado antes de empezar a emitir facturas reales."}},
+      {"@type": "Question", "name": "¿Que pasa si no implemento Verifactu a tiempo?", "acceptedAnswer": {"@type": "Answer", "text": "A partir de enero de 2027, todos los autonomos y empresas deben usar software certificado Verifactu. Si no cumples, te expones a sanciones que pueden alcanzar los 50.000 euros por ejercicio economico. Ademas, tus facturas podrian no ser consideradas validas por la AEAT."}}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <nav class="nav" id="navbar">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><span class="nav-logo-dot"></span>FacturaIA</a>
+      <div class="nav-links">
+        <a href="/#features" class="nav-link">Funcionalidades</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+        <a href="/herramientas/" class="nav-link">Herramientas</a>
+        <a href="/#faq" class="nav-link">FAQ</a>
+        <a href="/app" class="nav-cta">Probar gratis</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li aria-current="page">Implementar Verifactu Paso a Paso</li>
+      </ol>
+    </nav>
+
+    <section class="page-header section-padding">
+      <div class="container">
+        <h1>Como Implementar Verifactu <span class="highlight">Paso a Paso</span></h1>
+        <p class="page-subtitle">Guia practica para autonomos: desde el certificado digital hasta la emision de tu primera factura Verifactu, sin errores y sin pagar de mas.</p>
+        <div class="page-meta">
+          <span class="page-date">Actualizado: Mayo 2026</span>
+          <span class="page-reading-time">Tiempo de lectura: 11 min</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container">
+        <div class="prose">
+          <h2>Por que necesitas implementar Verifactu cuanto antes</h2>
+          <p>Implementar Verifactu no es simplemente instalar un programa nuevo. Es adaptar todo tu flujo de facturacion a los requisitos tecnicos y legales que exige la Agencia Tributaria. La buena noticia es que, con la preparacion adecuada, el proceso es mas sencillo de lo que parece. En esta guia te llevamos de la mano por cada paso, desde la obtencion del certificado digital hasta la emision de tu primera factura Verifactu completamente valida.</p>
+          <p>El plazo final es enero de 2027, pero empezar antes tiene ventajas importantes: evitas las prisas de ultima hora, puedes hacer pruebas con tranquilidad en el entorno sandbox de la AEAT y, sobre todo, transmites confianza a tus clientes al estar al dia con la normativa desde el primer momento. Muchos autonomos estan posponiendo este cambio por miedo a la complejidad tecnica, pero con herramientas como FacturaIA, que ya incorpora todos los requisitos de Verifactu de forma nativa, la transicion es directa y sin fricciones.</p>
+          <p>En esta guia practica cubrimos los 6 pasos esenciales para implementar Verifactu correctamente. No asumimos conocimientos tecnicos previos: explicamos cada paso como si estuvieras empezando desde cero, porque sabemos que la mayoria de los autonomos no son expertos en informatica ni en tramites electronicos con la AEAT.</p>
+        </div>
+
+        <div class="info-card" style="margin-top:3rem;">
+          <div class="info-card-icon">&#9888;</div>
+          <div class="info-card-content">
+            <h3>Resumen de los 6 pasos para implementar Verifactu</h3>
+            <ul>
+              <li><strong>Paso 1:</strong> Obtener el certificado digital de la FNMT</li>
+              <li><strong>Paso 2:</strong> Elegir e instalar un software de facturacion certificado</li>
+              <li><strong>Paso 3:</strong> Configurar los datos fiscales de tu actividad</li>
+              <li><strong>Paso 4:</strong> Probar el sistema en el sandbox de la AEAT</li>
+              <li><strong>Paso 5:</strong> Emitir tu primera factura Verifactu real</li>
+              <li><strong>Paso 6:</strong> Mantener el cumplimiento continuo</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding" style="background:rgba(212,168,67,0.03);">
+      <div class="container">
+        <div class="prose">
+          <h2>Paso 1: Obtener el certificado digital de la FNMT</h2>
+          <p>El certificado digital es la piedra angular de todo el sistema Verifactu. Sin el, no puedes firmar electronicamente tus facturas ni comunicarte con la sede electronica de la AEAT. El certificado que necesitas es el <strong>Certificado de Persona Fisica</strong> emitido por la Fabrica Nacional de Moneda y Timbre (FNMT). Si facturas como persona juridica (sociedad), necesitaras el Certificado de Representante de Persona Juridica.</p>
+          <p>El proceso de obtencion tiene cuatro fases y es completamente gratuito. La primera es la solicitud via web en la sede electronica de la FNMT. Necesitaras tu NIF, un correo electronico y generar un codigo de solicitud que el sistema te proporcionara. Este codigo es fundamental: guardalo bien, lo necesitaras en pasos posteriores.</p>
+          <p>La segunda fase es la acreditacion de identidad. Tienes que personarte fisicamente en una oficina de acreditacion. Las mas comunes son las oficinas de la AEAT, algunas comisarias de policia y las oficinas de la Seguridad Social. Lleva tu DNI o NIE original y el codigo de solicitud que generaste en el paso anterior. No necesitas cita previa en la mayoria de los casos, pero consulta antes los horarios de la oficina que elijas.</p>
+          <p>La tercera fase es la descarga del certificado. Debes hacerla desde el mismo ordenador y el mismo navegador donde realizaste la solicitud inicial, ya que el certificado se vincula al equipo. Accede a la sede de la FNMT con tu NIF y el codigo de solicitud, y descarga e instala el certificado en tu navegador. El sistema te guiara en el proceso de instalacion.</p>
+          <p>La cuarta y ultima fase, muy importante, es hacer una copia de seguridad del certificado. Exportalo desde tu navegador a un archivo .pfx o .p12 protegido con contrasena y guardalo en un lugar seguro, preferiblemente en dos dispositivos diferentes (un USB y tu disco duro, por ejemplo). Si pierdes el certificado y no tienes copia, tendras que repetir todo el proceso desde cero.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container">
+        <div class="prose">
+          <h2>Paso 2: Elegir e instalar un software de facturacion certificado Verifactu</h2>
+          <p>Una vez que tienes tu certificado digital, el siguiente paso es elegir el software de facturacion que utilizara para generar las facturas Verifactu. Este es un punto critico: no cualquier programa sirve. El software debe estar especificamente disenado para cumplir con las especificaciones tecnicas de Verifactu, que incluyen la generacion de hash encadenado (hash chain), la inclusion de codigos QR verificables y la capacidad de generar facturas en formato FacturaE 3.2.</p>
+          <p>Al evaluar opciones, ten en cuenta estos criterios fundamentales. Primero, la certificacion: el software debe declarar explicitamente que cumple con Verifactu. Desconfia de aquellos que dicen "estar trabajando en ello" o "lo tendremos pronto". Segundo, el coste: muchos programas de facturacion tradicionales estan aprovechando Verifactu para subir precios o mover esta funcionalidad a sus planes mas caros. Tercero, la facilidad de uso: si el programa es demasiado complejo, acabaras perdiendo mas tiempo del que ahorras.</p>
+          <p>FacturaIA es una opcion que cumple con los tres criterios y ademas es completamente gratuita. Al ser open source, puedes inspeccionar el codigo y verificar tu mismo que implementa correctamente los requisitos de Verifactu. La instalacion es inmediata: al ser una aplicacion web, no necesitas instalar nada en tu ordenador. Simplemente creas tu cuenta, configuras tus datos fiscales y empiezas a facturar.</p>
+          <p>Independientemente del software que elijas, asegurate de que te permite importar tus datos historicos (clientes, facturas anteriores) para no empezar desde cero. FacturaIA incluye herramientas de importacion desde CSV y Excel para facilitar esta migracion.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding" style="background:rgba(212,168,67,0.03);">
+      <div class="container">
+        <div class="prose">
+          <h2>Paso 3: Configurar los datos fiscales de tu actividad</h2>
+          <p>La configuracion correcta de tus datos fiscales es esencial para que las facturas Verifactu sean validas. Un error en este paso puede provocar que tus facturas sean rechazadas por la AEAT o, peor aun, que pasen desapercibidas hasta que llegue una inspeccion. Dedicale el tiempo necesario y revisa cada campo dos veces.</p>
+          <p>Los datos que necesitas configurar son: tu NIF, nombre y apellidos o razon social completa, direccion fiscal y el epigrafe del IAE (Impuesto de Actividades Economicas) que corresponde a tu actividad. El epigrafe IAE es especialmente importante porque determina el tipo de actividad que realizas y afecta a ciertas obligaciones fiscales. Si no estas seguro de cual es tu epigrafe, puedes consultarlo en las declaraciones censales que presentaste al darte de alta como autonomo (modelo 036 o 037).</p>
+          <p>Tambien debes configurar los tipos impositivos que aplicas habitualmente: IVA general (21%), reducido (10%) o superreducido (4%), segun tu actividad, y el porcentaje de retencion de IRPF que corresponda (generalmente 7% para autonomos en estimacion directa, que se redujo del 15% anterior). El software debe permitirte crear plantillas de producto o servicio con estos tipos ya predefinidos para agilizar la creacion de facturas.</p>
+          <p>Un detalle que muchos autonomos pasan por alto: la serie de numeracion de facturas. Verifactu exige que las series sean consecutivas y sin saltos. Define desde el principio que formato de numeracion vas a usar (por ejemplo, 2026/0001, 2026/0002, etc.) y asegurate de que el software respeta esa secuencia automaticamente.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container">
+        <div class="prose">
+          <h2>Paso 4: Probar el sistema en el sandbox de la AEAT</h2>
+          <p>El entorno sandbox o entorno de pruebas de la AEAT es una replica de la plataforma real de Verifactu donde puedes enviar facturas de prueba sin que tengan validez legal. Es un paso que muchos autonomos se saltan por las prisas, pero hacer pruebas previas te ahorrara dolores de cabeza y posibles rechazos cuando empieces a emitir facturas reales.</p>
+          <p>Para acceder al sandbox, necesitas tu certificado digital instalado en el navegador. La URL del entorno de pruebas la proporciona la AEAT en su sede electronica. Una vez dentro, el sistema te permite enviar facturas en formato FacturaE 3.2 y verificar que todos los campos son correctos: los datos del emisor, del receptor, los importes, los tipos impositivos y, muy importante, la cadena de hash que garantiza la integridad de la factura.</p>
+          <p>Te recomendamos hacer al menos estas pruebas: emitir una factura simplificada (sin desglose de IVA por tipo), una factura completa con varios tipos de IVA, una factura con retencion de IRPF, una factura rectificativa y una factura para un cliente intracomunitario (si aplica a tu actividad). Comprueba en cada caso que el sistema del sandbox acepta la factura sin errores.</p>
+          <p>El software que uses debe facilitarte este proceso. Con FacturaIA, el envio al sandbox esta integrado en la interfaz: simplemente marcas la factura como "prueba" y el sistema la envia al entorno de pruebas. Si hay algun error, la aplicacion te indica exactamente que campo debes corregir y por que. Este feedback inmediato acelera muchisimo el proceso de validacion.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding" style="background:rgba(212,168,67,0.03);">
+      <div class="container">
+        <div class="prose">
+          <h2>Paso 5: Emitir tu primera factura Verifactu real</h2>
+          <p>Una vez que has superado todas las pruebas en el sandbox, estas listo para emitir tu primera factura Verifactu real. Aunque el proceso es similar al de las pruebas, hay una diferencia psicologica importante: esta factura tiene validez legal y fiscal. Es normal sentir cierto nerviosismo la primera vez, pero si has seguido los pasos anteriores correctamente, no deberia haber problemas.</p>
+          <p>El flujo de trabajo para emitir una factura Verifactu es el siguiente: primero, creas un nuevo cliente en el sistema o seleccionas uno existente de tu base de datos. Es fundamental que los datos del cliente sean correctos: NIF, nombre o razon social y direccion completa. Un error en el NIF del cliente puede invalidar la factura.</p>
+          <p>A continuacion, anades los conceptos o lineas de la factura: descripcion del producto o servicio, cantidad, precio unitario y tipo de IVA aplicable. El software calcula automaticamente la base imponible, la cuota de IVA, la retencion de IRPF si aplica y el total. Revisa que los importes coinciden con lo acordado con el cliente.</p>
+          <p>Antes de emitir definitivamente, el sistema genera una vista previa de la factura donde puedes comprobar todos los datos. Verifica especialmente: que el numero de factura sigue la secuencia correcta, que los datos del cliente son exactos, que los importes y los impuestos son correctos, y que aparece el codigo QR y la referencia del hash de la cadena. Estos dos ultimos elementos son la prueba visible de que la factura cumple con Verifactu.</p>
+          <p>Al confirmar la emision, el software genera el archivo FacturaE 3.2, lo firma electronicamente con tu certificado digital, calcula el hash y lo encadena con la factura anterior, y queda registrado en el sistema listo para ser remitido a la AEAT si esta lo requiere. En FacturaIA, todo este proceso ocurre en menos de un segundo de forma transparente para ti.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container">
+        <div class="prose">
+          <h2>Paso 6: Mantener el cumplimiento continuo</h2>
+          <p>Implementar Verifactu no es un evento unico, sino un estado continuo que debes mantener en el tiempo. El cumplimiento normativo requiere que sigas ciertas practicas en tu dia a dia como autonomo. La mas importante es no romper la cadena de numeracion de facturas: cada factura que emitas debe tener el numero que le corresponde en la serie, sin huecos ni saltos.</p>
+          <p>Otro aspecto del cumplimiento continuo es la conservacion de las facturas. La ley exige que conserves copia de todas las facturas emitidas y recibidas durante al menos 6 anos. Con el sistema Verifactu, esta obligacion se extiende tambien a los registros de eventos del sistema de facturacion (los logs que demuestran que las facturas se generaron correctamente con su hash y su firma). Asegurate de que tu software mantiene copias de seguridad automaticas y de que puedes recuperar facturas antiguas cuando las necesites.</p>
+          <p>Tambien debes estar atento a las actualizaciones normativas. La AEAT puede publicar nuevas especificaciones tecnicas o modificar las existentes. Tu software de facturacion debe actualizarse para reflejar estos cambios. Con FacturaIA, al ser una aplicacion web, las actualizaciones se aplican automaticamente sin que tengas que hacer nada. Pero si usas un software de escritorio, tendras que estar pendiente de instalar las nuevas versiones.</p>
+          <p>Por ultimo, recuerda que la facturacion Verifactu no sustituye a tus otras obligaciones fiscales. Sigues teniendo que presentar tus declaraciones trimestrales de IVA (modelo 303) y de IRPF (modelo 130), tu resumen anual de IVA (modelo 390) y tu declaracion de la renta. Lo que cambia es que ahora la AEAT tiene mucha mas informacion sobre tus facturas y puede cruzar datos con mas facilidad. Llevar una contabilidad ordenada y coherente con lo declarado es mas importante que nunca.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container">
+        <div class="prose">
+          <h2>Preguntas frecuentes sobre la implementacion de Verifactu</h2>
+          <div class="faq-item" style="margin-bottom:2rem;">
+            <h3>1. ¿Necesito un certificado digital para emitir facturas Verifactu?</h3>
+            <p>Si. El certificado digital de persona fisica o representante de entidad emitido por la FNMT es necesario para firmar electronicamente las facturas y para comunicarte con la sede electronica de la AEAT. Puedes obtenerlo gratuitamente en la pagina de la Fabrica Nacional de Moneda y Timbre.</p>
+          </div>
+          <div class="faq-item" style="margin-bottom:2rem;">
+            <h3>2. ¿Puedo usar cualquier software de facturacion con Verifactu?</h3>
+            <p>No. Necesitas un software de facturacion certificado que cumpla con las especificaciones tecnicas de Verifactu: generacion de hash encadenado, codigo QR, formato FacturaE 3.2 y capacidad de envio a la AEAT. Programas como Excel o Word no son validos.</p>
+          </div>
+          <div class="faq-item" style="margin-bottom:2rem;">
+            <h3>3. ¿Cuanto tiempo lleva implementar Verifactu?</h3>
+            <p>Con un software ya preparado como FacturaIA, la implementacion puede llevar entre 1 y 3 dias. Esto incluye obtener el certificado digital, configurar el software, hacer pruebas en el entorno sandbox de la AEAT y empezar a emitir facturas reales. Si tu software actual no esta preparado, el proceso puede extenderse varias semanas.</p>
+          </div>
+          <div class="faq-item" style="margin-bottom:2rem;">
+            <h3>4. ¿Que es el sandbox de la AEAT?</h3>
+            <p>El sandbox o entorno de pruebas de la AEAT es un sistema que simula la plataforma real de Verifactu donde puedes enviar facturas de prueba sin que tengan validez legal. Sirve para verificar que tu software esta correctamente configurado antes de empezar a emitir facturas reales.</p>
+          </div>
+          <div class="faq-item" style="margin-bottom:2rem;">
+            <h3>5. ¿Que pasa si no implemento Verifactu a tiempo?</h3>
+            <p>A partir de enero de 2027, todos los autonomos y empresas deben usar software certificado Verifactu. Si no cumples, te expones a sanciones que pueden alcanzar los 50.000 euros por ejercicio economico. Ademas, tus facturas podrian no ser consideradas validas por la AEAT.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container">
+        <div class="trust-badges">
+          <div class="trust-badge">
+            <span class="trust-badge-icon">&#10003;</span>
+            <span>VeriFactu 100%</span>
+          </div>
+          <div class="trust-badge">
+            <span class="trust-badge-icon">&#10003;</span>
+            <span>Open Source MIT</span>
+          </div>
+          <div class="trust-badge">
+            <span class="trust-badge-icon">&#10003;</span>
+            <span>Gratis para siempre</span>
+          </div>
+          <div class="trust-badge">
+            <span class="trust-badge-icon">&#10003;</span>
+            <span>FacturaE 3.2</span>
+          </div>
+          <div class="trust-badge">
+            <span class="trust-badge-icon">&#10003;</span>
+            <span>Hash SHA-256</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container">
+        <div class="author-box">
+          <div class="author-box-avatar">&#9997;</div>
+          <div class="author-box-content">
+            <h4>Sobre el autor</h4>
+            <p>El equipo de FacturaIA esta formado por desarrolladores y asesores fiscales especializados en facturacion electronica para autonomos espanoles. Nuestra mision es democratizar el cumplimiento fiscal con herramientas 100% gratuitas y open source.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container">
+        <h2 class="section-title">Articulos relacionados</h2>
+        <div class="related-posts">
+          <article class="related-post">
+            <h3><a href="/verifactu-autonomos.html">Guia Completa de VeriFactu para Autonomos 2027</a></h3>
+            <p>Todo lo que necesitas saber sobre la nueva normativa de facturacion electronica: plazos, obligaciones y como cumplir sin pagar.</p>
+          </article>
+          <article class="related-post">
+            <h3><a href="/blog/factura-electronica-obligatoria-2026.html">Factura Electronica Obligatoria 2026: Lo que Debes Saber</a></h3>
+            <p>Quien debe cumplir, plazos, sanciones y como hacer la transicion desde el papel sin complicaciones.</p>
+          </article>
+          <article class="related-post">
+            <h3><a href="/blog/como-elegir-software-facturacion.html">Como Elegir el Mejor Software de Facturacion: 10 Criterios Clave</a></h3>
+            <p>Guia con checklist para evaluar y elegir el software de facturacion que mejor se adapta a tu actividad como autonomo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container">
+        <div class="cta-box">
+          <h2>Empieza con Verifactu gratis hoy</h2>
+          <p>No esperes a enero de 2027. Implementa Verifactu ahora con el unico software de facturacion 100% gratuito para autonomos espanoles. Sin limite de facturas. Sin costes ocultos. Open source.</p>
+          <form class="cta-form">
+            <input type="email" placeholder="tu@email.com" required aria-label="Email">
+            <button type="submit" class="btn-primary">Unirme a la lista de espera</button>
+          </form>
+          <p class="cta-note">Sin spam. Solo te avisamos cuando la app este lista. Acceso anticipado gratuito.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="footer-logo"><span class="nav-logo-dot"></span>FacturaIA</a>
+          <p class="footer-tagline">Software de facturacion VeriFactu 100% gratis y open source para autonomos espanoles.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Producto</h4>
+          <a href="/#features">Funcionalidades</a>
+          <a href="/#comparison">Comparativa</a>
+          <a href="/blog/">Blog</a>
+          <a href="/herramientas/">Herramientas</a>
+        </div>
+        <div class="footer-col">
+          <h4>Recursos</h4>
+          <a href="/verifactu-autonomos.html">Verifactu Autonomos</a>
+          <a href="/blog/guia-verifactu-2027.html">Guia Verifactu 2027</a>
+          <a href="/calculadora-iva.html">Calculadora IVA</a>
+          <a href="/calculadora-irpf.html">Calculadora IRPF</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/aviso-legal.html">Aviso Legal</a>
+          <a href="/privacidad.html">Privacidad</a>
+          <a href="/terminos.html">Terminos</a>
+          <a href="https://github.com/facturaia" class="external">GitHub</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 FacturaIA. Open Source MIT. 100% gratis para siempre.</p>
+        <a href="https://ko-fi.com/facturaia" target="_blank" rel="noopener" class="footer-donate">Apoyar el proyecto</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">&#8593;</button>
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-banner-inner">
+      <p>Usamos cookies minimas para funcionar. No vendemos tus datos. <a href="/privacidad.html">Mas info</a></p>
+      <button class="btn-accept" id="acceptCookies">Aceptar</button>
+    </div>
+  </div>
+
+  <script src="../seo/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de IVA para Autónomos | FacturaIA</title>
+  <meta name="description" content="Calcula el IVA de tus facturas al instante. Calculadora gratuita con IVA general (21%), reducido (10%) y superreducido (4%). Para autónomos y empresas en España.">
+  <meta name="keywords" content="calculadora iva, calcular iva, iva autonomos, iva factura, calcular iva factura, iva 21%, iva 10%, iva 4%">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://facturaia.app/calculadora-iva.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="seo/css/style.css">
+  <meta property="og:title" content="Calculadora de IVA para Autónomos | FacturaIA">
+  <meta property="og:description" content="Calcula el IVA de tus facturas al instante. Calculadora gratuita con IVA general (21%), reducido (10%) y superreducido (4%). Para autónomos y empresas en España.">
+  <meta property="og:url" content="https://facturaia.app/calculadora-iva.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FacturaIA">
+  <meta property="og:locale" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculadora de IVA para Autónomos | FacturaIA">
+  <meta name="twitter:description" content="Calcula el IVA de tus facturas al instante. Calculadora gratuita con IVA general (21%), reducido (10%) y superreducido (4%).">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://facturaia.app/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Herramientas",
+        "item": "https://facturaia.app/herramientas/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Calculadora de IVA",
+        "item": "https://facturaia.app/calculadora-iva.html"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Calculadora de IVA",
+    "url": "https://facturaia.app/calculadora-iva.html",
+    "description": "Calcula el IVA de tus facturas al instante. IVA general (21%), reducido (10%) y superreducido (4%).",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "FacturaIA"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<nav class="nav" id="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><span class="nav-logo-dot"></span>FacturaIA</a>
+    <div class="nav-links">
+      <a href="/#features" class="nav-link">Funcionalidades</a>
+      <a href="/blog/" class="nav-link">Blog</a>
+      <a href="/herramientas/" class="nav-link">Herramientas</a>
+      <a href="/#faq" class="nav-link">FAQ</a>
+      <a href="/app" class="nav-cta">Probar gratis</a>
+    </div>
+  </div>
+</nav>
+
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <div class="container">
+    <ol>
+      <li><a href="/">Inicio</a></li>
+      <li><a href="/herramientas/">Herramientas</a></li>
+      <li>Calculadora de IVA</li>
+    </ol>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="container">
+    <h1>Calculadora de <span class="highlight">IVA</span></h1>
+    <p class="page-subtitle">Calcula el IVA de tus facturas al instante. Gratis y sin registro.</p>
+  </div>
+</header>
+
+<main>
+  <section class="section-padding">
+    <div class="container">
+      <div class="prose">
+        <p>El <strong>IVA (Impuesto sobre el Valor Añadido)</strong> es un impuesto indirecto que grava el consumo de bienes y servicios en España. Como autónomo o empresa, estás obligado a repercutir el IVA en tus facturas y luego liquidarlo trimestralmente ante la AEAT con el modelo 303. Saber calcular correctamente el IVA de tus facturas es fundamental para evitar errores que puedan derivar en sanciones.</p>
+        <p>Nuestra calculadora de IVA gratuita te permite obtener al instante el importe del IVA y el total de la factura a partir de la base imponible. Solo tienes que introducir el importe y seleccionar el tipo de IVA que corresponda según la actividad o producto.</p>
+      </div>
+
+      <div class="calc-card" id="calcIVA">
+        <h2 class="calc-title">Calcular IVA</h2>
+        <div class="calc-field">
+          <label for="ivaBase">Base imponible (€)</label>
+          <input type="number" id="ivaBase" placeholder="Ej: 1000" min="0" step="0.01">
+        </div>
+        <div class="calc-field">
+          <label for="ivaTipo">Tipo de IVA</label>
+          <select id="ivaTipo">
+            <option value="21">21% - IVA General</option>
+            <option value="10">10% - IVA Reducido</option>
+            <option value="4">4% - IVA Superreducido</option>
+            <option value="0">0% - Exento de IVA</option>
+          </select>
+        </div>
+        <div class="calc-result" id="ivaResultado">
+          <div class="result-item">
+            <span class="result-label">Base imponible</span>
+            <span class="result-value" id="ivaBaseResult">0,00 €</span>
+          </div>
+          <div class="result-item">
+            <span class="result-label">IVA</span>
+            <span class="result-value" id="ivaImporteResult">0,00 €</span>
+          </div>
+          <div class="result-item result-total">
+            <span class="result-label">Total factura</span>
+            <span class="result-value" id="ivaTotalResult">0,00 €</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 48px;">
+        <div class="info-card">
+          <h3>¿Qué es el IVA?</h3>
+          <p>El Impuesto sobre el Valor Añadido (IVA) es un tributo de naturaleza indirecta que recae sobre el consumo de bienes y servicios. Fue introducido en España en 1986 con la entrada en la Comunidad Económica Europea. Como autónomo, actúas como recaudador: cobras el IVA a tus clientes y luego lo ingresas en Hacienda. La diferencia entre el IVA repercutido (cobrado) y el IVA soportado (pagado en tus gastos) es lo que liquidas trimestralmente.</p>
+        </div>
+        <div class="info-card">
+          <h3>Tipos de IVA en España</h3>
+          <p>Existen tres tipos impositivos de IVA en España peninsular y Baleares:</p>
+          <ul>
+            <li><strong>IVA General (21%):</strong> Aplica a la mayoría de bienes y servicios. Es el tipo por defecto para la mayoría de actividades profesionales y empresariales.</li>
+            <li><strong>IVA Reducido (10%):</strong> Se aplica a alimentos en general, transporte de viajeros, servicios de hostelería, espectáculos, viviendas y ciertos productos sanitarios.</li>
+            <li><strong>IVA Superreducido (4%):</strong> Para bienes de primera necesidad como pan, leche, huevos, frutas, verduras, libros, periódicos, medicamentos y vehículos para personas con movilidad reducida.</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h3>¿Cuándo se paga el IVA?</h3>
+          <p>Los autónomos deben presentar la declaración trimestral del IVA mediante el modelo 303 de la AEAT. Los plazos son:</p>
+          <ul>
+            <li><strong>Primer trimestre:</strong> 1 al 20 de abril</li>
+            <li><strong>Segundo trimestre:</strong> 1 al 20 de julio</li>
+            <li><strong>Tercer trimestre:</strong> 1 al 20 de octubre</li>
+            <li><strong>Cuarto trimestre:</strong> 1 al 30 de enero del año siguiente</li>
+          </ul>
+          <p>Además, existe un resumen anual (modelo 390) y, para operaciones intracomunitarias, el modelo 349. Recuerda que los regímenes especiales como el de franquicia pueden eximirte de presentar estas declaraciones si tu facturación no supera ciertos límites.</p>
+        </div>
+        <div class="info-card">
+          <h3>¿Cómo se calcula el IVA?</h3>
+          <p>El cálculo es sencillo. Partiendo de la base imponible (precio sin IVA), se aplica el porcentaje correspondiente:</p>
+          <p style="background: var(--bg-card, #1a1a2e); padding: 16px; border-radius: 8px; font-family: monospace; margin: 12px 0;">
+            IVA = Base imponible × (Tipo de IVA / 100)
+          </p>
+          <p>El total de la factura será la base imponible más el importe del IVA calculado. Por ejemplo, para una base de 1.000 € con IVA general del 21%, el IVA sería 210 € y el total 1.210 €.</p>
+          <p>Para calcular el IVA incluido en un precio (extraer el IVA), la fórmula sería:</p>
+          <p style="background: var(--bg-card, #1a1a2e); padding: 16px; border-radius: 8px; font-family: monospace; margin: 12px 0;">
+            Base imponible = Total / (1 + Tipo de IVA / 100)
+          </p>
+        </div>
+      </div>
+
+      <div class="prose" style="margin-top: 48px;">
+        <h2>IVA en Canarias, Ceuta y Melilla</h2>
+        <p>Es importante destacar que en <strong>Canarias</strong> no se aplica el IVA, sino el <strong>IGIC (Impuesto General Indirecto Canario)</strong>, con tipos diferentes. En <strong>Ceuta y Melilla</strong> se aplica el <strong>IPSI (Impuesto sobre la Producción, los Servicios y la Importación)</strong>. Si operas en estos territorios, consulta la normativa específica aplicable.</p>
+        <h2>Consejos para gestionar el IVA como autónomo</h2>
+        <p>Llevar un control riguroso del IVA es esencial. Te recomendamos mantener todas tus facturas emitidas y recibidas organizadas, utilizar un software de facturación que calcule automáticamente los impuestos, y reservar el importe del IVA cobrado en una cuenta separada para evitar problemas de liquidez cuando llegue el momento de liquidarlo. Un error común entre nuevos autónomos es gastar el IVA cobrado como si fuera ingreso propio, lo que genera tensiones de tesorería al cierre del trimestre.</p>
+      </div>
+
+      <div class="trust-badges" style="margin-top: 48px; display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; text-align: center;">
+        <div class="trust-badge">
+          <span style="font-size: 2rem;">&#128274;</span>
+          <p>Sin registro</p>
+        </div>
+        <div class="trust-badge">
+          <span style="font-size: 2rem;">&#9889;</span>
+          <p>Cálculo instantáneo</p>
+        </div>
+        <div class="trust-badge">
+          <span style="font-size: 2rem;">&#127758;</span>
+          <p>100% gratis</p>
+        </div>
+        <div class="trust-badge">
+          <span style="font-size: 2rem;">&#9989;</span>
+          <p>Datos actualizados</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding" style="background: var(--bg-card, #1a1a2e);">
+    <div class="container">
+      <div class="cta-box" style="text-align: center; max-width: 600px; margin: 0 auto;">
+        <h2>Crea facturas con IVA automático en FacturaIA</h2>
+        <p>Nuestro software calcula el IVA automáticamente en cada factura. VeriFactu compatible, open source y 100% gratis. Únete a la lista de espera.</p>
+        <form class="waitlist-form" style="display: flex; gap: 12px; max-width: 450px; margin: 24px auto 0;" id="ctaForm" onsubmit="event.preventDefault(); alert('¡Gracias! Te avisaremos cuando esté disponible.'); this.reset();">
+          <input type="email" placeholder="tu@email.com" required style="flex: 1; padding: 12px 16px; border-radius: 8px; border: 1px solid var(--border-color, #2a2a4a); background: var(--bg-input, #0f0f23); color: #fff; font-family: inherit;">
+          <button type="submit" class="btn-primary">Unirme</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 32px;">También te puede interesar</h2>
+      <div class="related-links" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+        <a href="/calculadora-irpf.html" class="info-card" style="text-decoration: none; display: block; transition: transform 0.2s; border: 1px solid var(--border-color, #2a2a4a);">
+          <h3>Calculadora de IRPF</h3>
+          <p>Calcula la retención de IRPF de tus facturas y conoce el neto que cobrarás.</p>
+        </a>
+        <a href="/calculadora-factura.html" class="info-card" style="text-decoration: none; display: block; transition: transform 0.2s; border: 1px solid var(--border-color, #2a2a4a);">
+          <h3>Calculadora de Factura Completa</h3>
+          <p>Calcula el total de tu factura con IVA e IRPF en un solo paso.</p>
+        </a>
+        <a href="/calculadora-cuota-autonomos.html" class="info-card" style="text-decoration: none; display: block; transition: transform 0.2s; border: 1px solid var(--border-color, #2a2a4a);">
+          <h3>Calculadora Cuota de Autónomos</h3>
+          <p>Descubre cuánto pagarás de Seguridad Social según tus ingresos reales en 2026.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding" style="background: var(--bg-card, #1a1a2e);">
+    <div class="container">
+      <div class="author-box" style="display: flex; gap: 24px; align-items: flex-start; max-width: 700px; margin: 0 auto; padding: 32px; background: var(--bg-main, #0f0f23); border-radius: 12px; border: 1px solid var(--border-color, #2a2a4a);">
+        <div class="author-avatar" style="width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, var(--gold, #D4A843), #f0d060); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; flex-shrink: 0;">DN</div>
+        <div class="author-info">
+          <h3 style="margin: 0 0 4px;">David Navas</h3>
+          <p style="margin: 0; opacity: 0.7; font-size: 0.9rem;">Creador de FacturaIA · Desarrollador Java Backend</p>
+          <p style="margin-top: 8px; font-size: 0.95rem;">Ingeniero de software y creador de contenido sobre desarrollo y finanzas para autónomos. Construí FacturaIA porque creo que las herramientas de facturación deberían ser accesibles para todos, sin coste y con la máxima transparencia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo"><span class="nav-logo-dot"></span>FacturaIA</a>
+        <p class="footer-tagline">Software de facturación VeriFactu 100% gratis y open source para autónomos españoles.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Producto</h4>
+        <a href="/#features">Funcionalidades</a>
+        <a href="/#comparison">Comparativa</a>
+        <a href="/blog/">Blog</a>
+        <a href="/herramientas/">Herramientas</a>
+      </div>
+      <div class="footer-col">
+        <h4>Recursos</h4>
+        <a href="/verifactu-autonomos.html">VeriFactu Autónomos</a>
+        <a href="/blog/guia-verifactu-2027.html">Guía VeriFactu 2027</a>
+        <a href="/calculadora-iva.html">Calculadora IVA</a>
+        <a href="/calculadora-irpf.html">Calculadora IRPF</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="/aviso-legal.html">Aviso Legal</a>
+        <a href="/privacidad.html">Privacidad</a>
+        <a href="/terminos.html">Términos</a>
+        <a href="https://github.com/facturaia" class="external">GitHub</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 FacturaIA. Open Source MIT. 100% gratis para siempre.</p>
+      <a href="https://ko-fi.com/facturaia" target="_blank" rel="noopener" class="footer-donate">Apoyar el proyecto</a>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-banner-inner">
+    <p>Usamos cookies mínimas para funcionar. No vendemos tus datos. <a href="/privacidad.html">Más info</a></p>
+    <button class="btn-accept" id="acceptCookies">Aceptar</button>
+  </div>
+</div>
+
+<button class="scroll-top" id="scrollTop" aria-label="Volver arriba">&#8593;</button>
+
+<script src="seo/js/main.js" defer></script>
+</body>
+</html>

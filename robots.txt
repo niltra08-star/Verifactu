@@ -1,5 +1,13 @@
 User-agent: *
 Allow: /
 Disallow: /api/
+Disallow: /app
+Crawl-delay: 1
 
 Sitemap: https://facturaia.app/sitemap.xml
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aprende a hacer una factura electronica valida para la AEAT. Guia paso a paso con todos los campos obligatorios, formato FacturaE y requisitos Verifactu para autonomos.">
+  <meta name="keywords" content="factura electronica, como hacer factura electronica, facturae, factura aeate, campos obligatorios factura, factura electronica autonomo, verifactu">
+  <meta name="author" content="FacturaIA">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://facturaia.com/blog/como-hacer-factura-electronica.html">
+  <meta property="og:title" content="Como Hacer una Factura Electronica Paso a Paso (2026) | FacturaIA">
+  <meta property="og:description" content="Aprende a hacer una factura electronica valida para la AEAT. Guia paso a paso con todos los campos obligatorios, formato FacturaE y requisitos Verifactu para autonomos.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://facturaia.com/blog/como-hacer-factura-electronica.html">
+  <meta property="og:image" content="https://facturaia.com/seo/img/og-factura-electronica.png">
+  <meta property="og:site_name" content="FacturaIA">
+  <meta property="og:locale" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Como Hacer una Factura Electronica Paso a Paso (2026) | FacturaIA">
+  <meta name="twitter:description" content="Aprende a hacer una factura electronica valida para la AEAT. Guia paso a paso con campos obligatorios, formato FacturaE y requisitos Verifactu.">
+  <meta name="twitter:image" content="https://facturaia.com/seo/img/og-factura-electronica.png">
+  <title>Como Hacer una Factura Electronica Paso a Paso (2026) | FacturaIA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../seo/css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Como Hacer una Factura Electronica Paso a Paso (2026)",
+    "description": "Aprende a hacer una factura electronica valida para la AEAT. Guia paso a paso con todos los campos obligatorios, formato FacturaE y requisitos Verifactu para autonomos.",
+    "image": "https://facturaia.com/seo/img/og-factura-electronica.png",
+    "author": {
+      "@type": "Organization",
+      "name": "Equipo FacturaIA",
+      "url": "https://facturaia.com"
+    },
+    "datePublished": "2026-02-10T09:00:00+01:00",
+    "dateModified": "2026-05-18T11:00:00+01:00",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FacturaIA",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://facturaia.com/seo/img/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://facturaia.com/blog/como-hacer-factura-electronica.html"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://facturaia.com" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://facturaia.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Como Hacer una Factura Electronica Paso a Paso", "item": "https://facturaia.com/blog/como-hacer-factura-electronica.html" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Que diferencia hay entre una factura electronica y una factura digital (PDF)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Una factura electronica es un documento estructurado en formato XML (FacturaE) que puede ser procesado automaticamente por sistemas informaticos. Un PDF, aunque sea digital, no es una factura electronica valida a efectos fiscales porque no contiene los datos estructurados que la AEAT necesita para su verificacion y procesamiento automatico."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Es obligatorio usar el formato FacturaE para todas las facturas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Con la entrada en vigor de Verifactu, todas las facturas deberan generarse con software homologado que emita registros en el formato establecido por la AEAT. El formato FacturaE sera el estandar para la facturacion electronica B2B y B2G, mientras que para B2C el sistema Verifactu emitira un registro XML con codigo QR verificable."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Puedo hacer una factura electronica desde Excel?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. A partir de julio de 2027, no podras utilizar Excel, Word ni ninguna herramienta ofimatica para emitir facturas validas. La normativa Verifactu exige el uso de software homologado que garantice la integridad e inalterabilidad de los registros de facturacion. Excel no puede generar los registros XML ni los hashes encadenados requeridos por la AEAT."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Que datos debe incluir obligatoriamente una factura electronica?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Los campos obligatorios de una factura electronica incluyen: numero y serie de factura, fecha de expedicion, NIF del emisor y receptor, nombre y direccion de ambas partes, descripcion de los bienes o servicios, base imponible, tipo de IVA y cuota, importe total, y en el caso de Verifactu, tambien el codigo QR y el hash de verificacion."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <nav class="nav" id="navbar">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><span class="nav-logo-dot"></span>FacturaIA</a>
+      <div class="nav-links">
+        <a href="/#features" class="nav-link">Funcionalidades</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+        <a href="/herramientas/" class="nav-link">Herramientas</a>
+        <a href="/#faq" class="nav-link">FAQ</a>
+        <a href="/app" class="nav-cta">Probar gratis</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="blog-hero">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="/">Inicio</a> <span class="breadcrumb-sep">/</span>
+          <a href="/blog/">Blog</a> <span class="breadcrumb-sep">/</span>
+          <span>Como Hacer una Factura Electronica Paso a Paso</span>
+        </div>
+        <div class="blog-hero-content">
+          <span class="blog-category">Facturacion</span>
+          <h1>Como Hacer una <span class="highlight">Factura Electronica</span> Paso a Paso</h1>
+          <p class="blog-hero-subtitle">Guia practica para crear facturas electronicas validas para la AEAT. Con ejemplos y todos los campos obligatorios.</p>
+          <div class="blog-meta">
+            <span class="blog-date">Actualizado: 18 de mayo de 2026</span>
+            <span class="blog-read-time">12 min de lectura</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="blog-layout">
+        <article class="blog-content">
+          <div class="author-box">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 56'%3E%3Crect width='56' height='56' fill='%231E3254'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter,sans-serif' font-weight='800' font-size='22' fill='%23D4A843'%3EF%3C/text%3E%3C/svg%3E" alt="FacturaIA" width="56" height="56">
+            <div>
+              <div class="author-name">Equipo FacturaIA</div>
+              <div class="author-bio">Creamos herramientas gratuitas y open source para que los autonomos espanoles puedan facturar sin pagar un euro. Creemos en la transparencia, la privacidad y el software libre.</div>
+            </div>
+          </div>
+
+          <nav class="toc" aria-label="Tabla de contenidos">
+            <h2 class="toc-title">Indice de contenidos</h2>
+            <ol class="toc-list">
+              <li><a href="#que-es">Que es una factura electronica</a></li>
+              <li><a href="#campos-obligatorios">Campos obligatorios de una factura</a></li>
+              <li><a href="#formato-facturae">Formato FacturaE: estructura basica</a></li>
+              <li><a href="#paso-a-paso">Como crear una factura electronica paso a paso</a></li>
+              <li><a href="#ejemplo">Ejemplo practico de factura</a></li>
+              <li><a href="#errores-comunes">Errores comunes al crear facturas electronicas</a></li>
+              <li><a href="#comparativa">Factura electronica vs factura en papel</a></li>
+              <li><a href="#faq-section">Preguntas frecuentes</a></li>
+            </ol>
+          </nav>
+
+          <div class="prose">
+            <h2 id="que-es">1. Que es una factura electronica</h2>
+
+            <p>Una factura electronica es mucho mas que un PDF con tu logo. Es un documento estructurado en un formato especifico (FacturaE, basado en XML) que contiene todos los datos fiscales de la operacion y que puede ser procesado automaticamente por sistemas informaticos, incluidos los de la Agencia Tributaria.</p>
+
+            <p>A diferencia de una simple imagen o PDF, la factura electronica permite:</p>
+            <ul>
+              <li><strong>Procesamiento automatico:</strong> El receptor puede importar los datos directamente a su sistema contable sin necesidad de teclearlos manualmente.</li>
+              <li><strong>Verificacion de autenticidad:</strong> La AEAT puede verificar que la factura es genuina mediante la firma electronica y, desde Verifactu, el codigo QR y el hash encadenado.</li>
+              <li><strong>Integridad garantizada:</strong> Cualquier modificacion del documento es detectable, lo que protege tanto al emisor como al receptor.</li>
+              <li><strong>Trazabilidad completa:</strong> Cada factura queda registrada en una cadena verificable desde su emision hasta su conservacion.</li>
+            </ul>
+
+            <div class="info-card">
+              <strong>Importante:</strong> A partir de julio de 2027, con la implantacion total de Verifactu, todas las facturas deberan emitirse con software homologado. El formato FacturaE es el estandar en Espana para la facturacion electronica entre empresas (B2B) y con la administracion (B2G).
+            </div>
+
+            <h2 id="campos-obligatorios">2. Campos obligatorios de una factura</h2>
+
+            <p>Segun el Reglamento de Facturacion (RD 1619/2012) y las novedades introducidas por Verifactu, estos son los campos que toda factura electronica debe contener:</p>
+
+            <h3>Datos del emisor</h3>
+            <ul>
+              <li>Nombre y apellidos o razon social completa</li>
+              <li>NIF del emisor</li>
+              <li>Direccion fiscal completa (calle, codigo postal, poblacion, provincia)</li>
+            </ul>
+
+            <h3>Datos del receptor</h3>
+            <ul>
+              <li>Nombre y apellidos o razon social</li>
+              <li>NIF del receptor (obligatorio para facturas a empresas y profesionales)</li>
+              <li>Direccion (obligatoria en segun que circunstancias, como operaciones intracomunitarias)</li>
+            </ul>
+
+            <h3>Datos de la factura</h3>
+            <ul>
+              <li><strong>Numero de factura</strong> y, si procede, serie (ej: 2026/A/0001)</li>
+              <li><strong>Fecha de expedicion</strong> de la factura</li>
+              <li><strong>Fecha de la operacion</strong> si es distinta a la de expedicion</li>
+              <li><strong>Descripcion</strong> detallada de los bienes entregados o servicios prestados</li>
+              <li><strong>Base imponible</strong> para cada tipo de IVA aplicado</li>
+              <li><strong>Tipo impositivo de IVA</strong> aplicado (21%, 10%, 4% o exento) y cuota resultante</li>
+              <li><strong>Retencion de IRPF</strong> aplicada si procede (-15% general, -7% primeros anos)</li>
+              <li><strong>Importe total</strong> de la factura</li>
+            </ul>
+
+            <h3>Campos adicionales Verifactu</h3>
+            <ul>
+              <li><strong>Codigo QR</strong> con los datos de verificacion</li>
+              <li><strong>Hash SHA-256</strong> del registro de facturacion anterior (encadenamiento)</li>
+              <li><strong>Firma electronica</strong> del registro de evento</li>
+            </ul>
+
+            <div class="info-card">
+              <strong>Atencion:</strong> Si emites facturas simplificadas (tickets) no es necesario incluir los datos del receptor salvo que el importe supere los 3.000 euros (IVA incluido) o que sea una operacion intracomunitaria.
+            </div>
+
+            <h2 id="formato-facturae">3. Formato FacturaE: estructura basica</h2>
+
+            <p>FacturaE es el formato estandar de factura electronica en Espana, definido por la AEAT y basado en XML (Extensible Markup Language). Un archivo FacturaE tiene la extension <code>.xsig</code> (firmado) o <code>.xml</code> y su estructura esta organizada en bloques logicos:</p>
+
+            <ul>
+              <li><strong>Cabecera (FileHeader):</strong> Informacion del esquema utilizado, version del formato, identificador del mensaje y datos del emisor del envio.</li>
+              <li><strong>Partes (Parties):</strong> Bloque con los datos del emisor (SellerParty) y del receptor (BuyerParty), incluyendo NIF, nombre, direccion y datos de contacto.</li>
+              <li><strong>Datos de la factura (Invoices):</strong> Numero, serie, fechas, codigos de operacion, descripcion de conceptos (InvoiceLines) con unidades, precio unitario, importe total por linea.</li>
+              <li><strong>Impuestos (Taxes):</strong> Desglose de IVA (TaxOutputs) por tipo impositivo con base y cuota, retenciones de IRPF aplicadas y totales.</li>
+              <li><strong>Totales (Totals):</strong> Importe total bruto, descuentos, base imponible total, cuota de IVA, retenciones y total factura.</li>
+            </ul>
+
+            <p>El software de facturacion homologado genera automaticamente el archivo FacturaE. No necesitas saber XML para crear facturas electronicas, pero comprender su estructura te ayuda a saber que esta pasando "por debajo".</p>
+
+            <h2 id="paso-a-paso">4. Como crear una factura electronica paso a paso</h2>
+
+            <p>Crear una factura electronica valida es sencillo si utilizas el software adecuado. Aqui tienes el proceso paso a paso:</p>
+
+            <div class="steps-list">
+              <div class="step-item">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h4>Elige un software de facturacion homologado</h4>
+                  <p>El primer paso es elegir un programa que emita facturas en formato FacturaE y que este homologado para Verifactu. Puedes usar opciones gratuitas como <a href="/">FacturaIA</a> o soluciones de pago como Holded, Quipu, Debitoor o Anfix. Lo importante es que este certificado por la AEAT y genere el XML correcto con todos los campos requeridos.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h4>Configura tus datos fiscales</h4>
+                  <p>Antes de emitir tu primera factura, introduce tus datos fiscales en el sistema: NIF, nombre o razon social, direccion fiscal completa, codigo postal, provincia, telefono y email. Estos datos se incluiran automaticamente en todas tus facturas. Verifica que todo sea correcto porque un error aqui se arrastrara a todas las facturas que emitas.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h4>Anade los datos de tu cliente</h4>
+                  <p>Registra los datos del receptor: NIF, nombre o razon social y direccion. Si facturas a una empresa, el NIF es obligatorio. Si el cliente es un particular, el NIF no es obligatorio salvo que la factura supere los 3.000 euros. Crea fichas de cliente para agilizar futuras facturas recurrentes.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <h4>Rellena los conceptos de la factura</h4>
+                  <p>Describe cada servicio o producto con claridad. Para cada linea, indica: descripcion del concepto, cantidad o unidades, precio unitario (sin IVA), tipo de IVA aplicable y si hay retencion de IRPF. El software calculara automaticamente la base imponible y la cuota de IVA. Se lo mas descriptivo posible: "Diseno de pagina web corporativa (5 paginas)" es mejor que "Servicios de diseno".</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-number">5</div>
+                <div class="step-content">
+                  <h4>Revisa los totales y los impuestos</h4>
+                  <p>Verifica que las bases imponibles, los tipos de IVA y las retenciones de IRPF son correctos. Comprueba especialmente la retencion: la general es del 15%, pero los nuevos autonomos tienen una reduccion al 7% durante los primeros anos de actividad. Un error en la retencion te obligara a emitir una factura rectificativa.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-number">6</div>
+                <div class="step-content">
+                  <h4>Emite la factura y enviala</h4>
+                  <p>Genera la factura. El software creara automaticamente el archivo FacturaE (XML) y un PDF visual para enviar al cliente. El XML es el documento legalmente valido; el PDF es solo una representacion grafica para comodidad del receptor. Envialo por email junto con el PDF y conserva siempre el XML original.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-number">7</div>
+                <div class="step-content">
+                  <h4>Conserva la factura correctamente</h4>
+                  <p>Archiva tanto el XML como el PDF. Con Verifactu, el software conserva automaticamente el registro de facturacion y lo envia a la AEAT cuando corresponde. Las facturas deben conservarse durante al menos 4 anos (plazo general de prescripcion fiscal), ampliable a 10 en ciertos casos como operaciones inmobiliarias.</p>
+                </div>
+              </div>
+            </div>
+
+            <h2 id="ejemplo">5. Ejemplo practico de factura</h2>
+
+            <p>Veamos un ejemplo concreto. Imagina que eres un disenador grafico autonomo y has realizado un trabajo para una empresa. Asi seria tu factura:</p>
+
+            <div class="info-card">
+              <strong>Datos del emisor (tu):</strong> Carlos Garcia Lopez, NIF 12345678A, Calle Mayor 15, 28013 Madrid<br><br>
+              <strong>Datos del receptor (cliente):</strong> Empresa Digital S.L., NIF B87654321, Calle Alcala 200, 28028 Madrid<br><br>
+              <strong>Factura:</strong> Numero 2026/001, Fecha 15 de marzo de 2026<br><br>
+              <strong>Concepto 1:</strong> Diseno de identidad corporativa (logo + manual de marca) - 1 unidad x 800,00 EUR = 800,00 EUR base imponible<br>
+              <strong>Concepto 2:</strong> Diseno de tarjetas de visita - 1 unidad x 200,00 EUR = 200,00 EUR base imponible<br><br>
+              <strong>IVA (21% sobre 1.000 EUR):</strong> 210,00 EUR<br>
+              <strong>Retencion IRPF (-15% sobre 1.000 EUR):</strong> -150,00 EUR<br><br>
+              <strong>TOTAL FACTURA:</strong> 1.060,00 EUR
+            </div>
+
+            <p>El software generara un archivo XML (FacturaE) con toda esta informacion estructurada, mas el hash de la factura anterior y un codigo QR para verificacion. El cliente recibira un PDF bonito con tu logo y el XML que podra importar directamente a su sistema contable.</p>
+
+            <h2 id="errores-comunes">6. Errores comunes al crear facturas electronicas</h2>
+
+            <p>Estos son los errores mas frecuentes que cometen los autonomos al hacer facturas electronicas. Revisa esta lista antes de emitir cada factura:</p>
+
+            <ul>
+              <li><strong>NIF incorrecto del cliente:</strong> El error mas comun. Un NIF mal escrito (una letra, un numero de mas o de menos) invalida la factura fiscalmente. Verifica siempre el NIF en el censo de la AEAT o pidele al cliente que te confirme su numero.</li>
+              <li><strong>Olvidar la retencion de IRPF:</strong> Si eres un profesional (no actividad empresarial), debes aplicar retencion de IRPF. Muchos autonomos nuevos olvidan incluirla y luego tienen que rectificar.</li>
+              <li><strong>Tipo de IVA equivocado:</strong> Aplicar el 21% cuando corresponde el 10% (o viceversa). Revisa la tabla de tipos de IVA segun la actividad. Puedes consultar nuestra <a href="/blog/iva-autonomos-guia-completa.html">guia completa del IVA para autonomos</a>.</li>
+              <li><strong>Numeracion incorrecta de facturas:</strong> La numeracion debe ser correlativa y unica. Saltarse numeros, repetirlos o usar series inconsistentes genera problemas en una inspeccion.</li>
+              <li><strong>Fechas incoherentes:</strong> La fecha de la factura debe ser coherente con la fecha de la operacion. No puedes fechar una factura en marzo si el trabajo se hizo en enero.</li>
+              <li><strong>Descripciones vagas:</strong> "Servicios profesionales" no dice nada a Hacienda. Describe especificamente lo que has hecho.</li>
+              <li><strong>No conservar el XML:</strong> Guardar solo el PDF es inutil. El XML FacturaE es el documento legal. Sin el, la factura no tiene validez electronica.</li>
+            </ul>
+
+            <div class="info-card">
+              <strong>Consejo:</strong> Usa software homologado que valide automaticamente los NIF, calcule los impuestos correctamente y aplique las retenciones segun tu situacion fiscal. Esto elimina el 90% de los errores humanos.
+            </div>
+
+            <h2 id="comparativa">7. Factura electronica vs factura en papel</h2>
+
+            <p>Con la entrada en vigor de Verifactu, la factura en papel tradicional desaparece del ambito profesional. Estas son las diferencias clave entre ambos formatos:</p>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Caracteristica</th>
+                  <th>Factura Electronica (FacturaE)</th>
+                  <th>Factura en Papel / PDF</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Validez fiscal Verifactu</td>
+                  <td>Si, plenamente valida</td>
+                  <td>No valida desde julio 2027</td>
+                </tr>
+                <tr>
+                  <td>Procesamiento automatico</td>
+                  <td>Si (estructura XML)</td>
+                  <td>No (requiere introduccion manual)</td>
+                </tr>
+                <tr>
+                  <td>Verificacion AEAT</td>
+                  <td>Automatica via QR y hash</td>
+                  <td>Manual (inspeccion tradicional)</td>
+                </tr>
+                <tr>
+                  <td>Firma electronica</td>
+                  <td>Incluida en el XML</td>
+                  <td>No disponible</td>
+                </tr>
+                <tr>
+                  <td>Conservacion</td>
+                  <td>Digital, sin degradacion</td>
+                  <td>Se deteriora, ocupa espacio fisico</td>
+                </tr>
+                <tr>
+                  <td>Coste de emision</td>
+                  <td>0 EUR (con software gratuito)</td>
+                  <td>Papel, tinta, envio postal</td>
+                </tr>
+                <tr>
+                  <td>Velocidad de envio</td>
+                  <td>Instantanea (email o API)</td>
+                  <td>Dias (correo postal)</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <p>La conclusion es clara: la factura electronica no solo es obligatoria, sino que es mas eficiente, mas barata y mas segura que el papel. Para el autonomo, significa menos tiempo en gestion administrativa y mas seguridad ante una inspeccion.</p>
+
+            <h2 id="faq-section">8. Preguntas frecuentes</h2>
+
+            <div class="faq">
+              <div class="faq-item">
+                <h3>¿Que diferencia hay entre una factura electronica y una factura digital (PDF)?</h3>
+                <p>Una factura electronica es un documento estructurado en formato XML (FacturaE) que puede ser procesado automaticamente por sistemas informaticos. Un PDF, aunque sea digital, no es una factura electronica valida a efectos fiscales porque no contiene los datos estructurados que la AEAT necesita para su verificacion y procesamiento automatico. Con Verifactu, el PDF es solo una representacion visual del XML, que es el documento legal real.</p>
+              </div>
+              <div class="faq-item">
+                <h3>¿Es obligatorio usar el formato FacturaE para todas las facturas?</h3>
+                <p>Con la entrada en vigor completa de Verifactu en julio de 2027, todas las facturas deberan generarse con software homologado que emita registros en el formato establecido por la AEAT. El formato FacturaE es el estandar para la facturacion electronica B2B (empresa a empresa) y B2G (empresa a administracion publica). Para facturas B2C (empresa a consumidor final), el sistema Verifactu emite un registro XML de facturacion simplificado con codigo QR verificable.</p>
+              </div>
+              <div class="faq-item">
+                <h3>¿Puedo hacer una factura electronica desde Excel?</h3>
+                <p>No. A partir de julio de 2027, no podras utilizar Excel, Word ni ninguna herramienta ofimatica para emitir facturas validas. La normativa Verifactu exige el uso de software homologado que garantice la integridad e inalterabilidad de los registros de facturacion. Excel no puede generar los registros XML con firma electronica, los hashes encadenados ni los codigos QR requeridos por la AEAT. Necesitas software certificado, gratuito como <a href="/">FacturaIA</a> o de pago.</p>
+              </div>
+              <div class="faq-item">
+                <h3>¿Que datos debe incluir obligatoriamente una factura electronica?</h3>
+                <p>Los campos obligatorios incluyen: numero y serie de factura, fecha de expedicion y de operacion, NIF, nombre y direccion del emisor y receptor, descripcion detallada de los bienes o servicios, base imponible, tipo de IVA y cuota, retencion de IRPF si procede, e importe total. Con Verifactu se anaden el codigo QR, el hash de encadenamiento y la firma electronica del registro. El software homologado incluye automaticamente todos estos campos.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta-box">
+            <h2 class="cta-title">Crea tus facturas electronicas <span class="highlight">gratis</span> con FacturaIA</h2>
+            <p class="cta-text">Software Verifactu homologado, 100% gratuito y open source. Sin limites de facturas, sin letra pequena.</p>
+            <form class="cta-form" id="waitlistForm">
+              <input type="email" class="cta-input" placeholder="tu@email.com" required aria-label="Tu email">
+              <button type="submit" class="cta-button">Empezar ahora</button>
+            </form>
+            <p class="cta-disclaimer">Sin tarjeta de credito. Facturas electronicas validas desde el primer dia.</p>
+          </div>
+
+          <div class="related-posts">
+            <h3 class="related-title">Articulos relacionados</h3>
+            <div class="related-grid">
+              <a href="/blog/guia-verifactu-2027.html" class="related-article">
+                <span class="related-category">Verifactu</span>
+                <h4>Guia Definitiva de Verifactu 2027 para Autonomos</h4>
+                <p>Todo sobre plazos, requisitos, sanciones y como prepararte.</p>
+              </a>
+              <a href="/blog/iva-autonomos-guia-completa.html" class="related-article">
+                <span class="related-category">IVA</span>
+                <h4>IVA para Autonomos: Guia Completa</h4>
+                <p>Tipos, calculo y plazos de presentacion del IVA trimestral.</p>
+              </a>
+              <a href="/calculadora-iva.html" class="related-article">
+                <span class="related-category">Herramientas</span>
+                <h4>Calculadora de IVA Gratuita</h4>
+                <p>Calcula el IVA de tus facturas al instante con nuestra herramienta gratuita.</p>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="footer-logo"><span class="nav-logo-dot"></span>FacturaIA</a>
+          <p class="footer-tagline">Software de facturacion VeriFactu 100% gratis y open source para autonomos espanoles.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Producto</h4>
+          <a href="/#features">Funcionalidades</a>
+          <a href="/#comparison">Comparativa</a>
+          <a href="/blog/">Blog</a>
+          <a href="/herramientas/">Herramientas</a>
+        </div>
+        <div class="footer-col">
+          <h4>Recursos</h4>
+          <a href="/verifactu-autonomos.html">Verifactu Autonomos</a>
+          <a href="/blog/guia-verifactu-2027.html">Guia Verifactu 2027</a>
+          <a href="/calculadora-iva.html">Calculadora IVA</a>
+          <a href="/calculadora-irpf.html">Calculadora IRPF</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/aviso-legal.html">Aviso Legal</a>
+          <a href="/privacidad.html">Privacidad</a>
+          <a href="/terminos.html">Terminos</a>
+          <a href="https://github.com/facturaia" class="external">GitHub</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 FacturaIA. Open Source MIT. 100% gratis para siempre.</p>
+        <a href="https://ko-fi.com/facturaia" target="_blank" rel="noopener" class="footer-donate">Apoyar el proyecto</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">&#8593;</button>
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-banner-inner">
+      <p>Usamos cookies minimas para funcionar. No vendemos tus datos. <a href="/privacidad.html">Mas info</a></p>
+      <button class="btn-accept" id="acceptCookies">Aceptar</button>
+    </div>
+  </div>
+
+  <script src="../seo/js/main.js" defer></script>
+</body>
+</html>

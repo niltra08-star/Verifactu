@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Checklist completa de requisitos del software Verifactu homologado: hash SHA-256, firma digital, código QR, FacturaE XML, conectividad AEAT y proceso de certificación.">
+  <meta name="keywords" content="verifactu requisitos obligatorios, software verificatu homologado, checklist verificatu, sha-256 verificatu, qr verificatu, facturae xml, certificacion aeet verificatu">
+  <meta name="author" content="FacturaIA">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://facturaia.com/blog/verifactu-requisitos-obligatorios.html">
+
+  <meta property="og:title" content="Requisitos del Software Verifactu Homologado: Checklist Completa | FacturaIA">
+  <meta property="og:description" content="Checklist completa de requisitos del software Verifactu homologado: hash SHA-256, firma digital, código QR, FacturaE XML, conectividad AEAT y proceso de certificación.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://facturaia.com/blog/verifactu-requisitos-obligatorios.html">
+  <meta property="og:image" content="https://facturaia.com/seo/img/og-verifactu-requisitos-obligatorios.png">
+  <meta property="og:site_name" content="FacturaIA">
+  <meta property="og:locale" content="es_ES">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Requisitos del Software Verifactu Homologado: Checklist Completa | FacturaIA">
+  <meta name="twitter:description" content="Checklist de lo que debe tener un software Verifactu homologado. Todo autónomo debe conocerlo.">
+  <meta name="twitter:image" content="https://facturaia.com/seo/img/og-verifactu-requisitos-obligatorios.png">
+
+  <title>Requisitos del Software Verifactu Homologado: Checklist Completa | FacturaIA</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../seo/css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Requisitos del Software Verifactu Homologado: Checklist Completa",
+    "description": "Checklist completa de requisitos del software Verifactu homologado: hash SHA-256, firma digital, código QR, FacturaE XML, conectividad AEAT y proceso de certificación.",
+    "image": "https://facturaia.com/seo/img/og-verifactu-requisitos-obligatorios.png",
+    "author": {
+      "@type": "Organization",
+      "name": "Equipo FacturaIA",
+      "url": "https://facturaia.com"
+    },
+    "datePublished": "2026-05-27T10:00:00+02:00",
+    "dateModified": "2026-05-27T10:00:00+02:00",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FacturaIA",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://facturaia.com/seo/img/logo.png"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://facturaia.com/blog/verifactu-requisitos-obligatorios.html"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://facturaia.com" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://facturaia.com/blog/" },
+      { "@type": "ListItem", "position": 3, "name": "Requisitos Verifactu Homologado", "item": "https://facturaia.com/blog/verifactu-requisitos-obligatorios.html" }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Qué requisitos debe cumplir un software Verifactu homologado?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Debe cumplir: generación de hash encadenado SHA-256, firma electrónica de cada registro, código QR con URL de verificación de la AEAT, generación de FacturaE 4.0, registro de eventos inmutable, capacidad de envío a la AEAT, y pasar el proceso de certificación oficial."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Es obligatorio el código QR en las facturas Verifactu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. Todas las facturas emitidas con software Verifactu homologado deben incluir un código QR que contenga una URL de verificación de la AEAT. El cliente puede escanear el QR para verificar que la factura está registrada y no ha sido modificada."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo funciona el hash encadenado SHA-256 en Verifactu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Cada factura incluye el hash de la factura anterior más sus propios datos. El resultado es una cadena donde modificar cualquier factura del pasado rompería todos los hashes posteriores. Esto garantiza la integridad de todo el historial de facturación."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Cómo sé si mi software actual es Verifactu compatible?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "La AEAT publicará un listado oficial de software certificado. Si tu software no aparece en ese listado o no ha pasado el proceso de certificación, no es Verifactu compatible. Consulta directamente con el fabricante de tu software."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿FacturaIA está certificado como software Verifactu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "FacturaIA está construido desde cero para cumplir todos los requisitos técnicos de Verifactu: hash SHA-256, firma electrónica, QR, FacturaE 4.0 y registro de eventos. El proceso de certificación oficial estará disponible cuando la AEAT lo habilite, y FacturaIA se someterá a él de inmediato."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <nav class="nav" id="navbar">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo"><span class="nav-logo-dot"></span>FacturaIA</a>
+      <div class="nav-links">
+        <a href="/#features" class="nav-link">Funcionalidades</a>
+        <a href="/blog/" class="nav-link">Blog</a>
+        <a href="/herramientas/" class="nav-link">Herramientas</a>
+        <a href="/#faq" class="nav-link">FAQ</a>
+        <a href="/app" class="nav-cta">Probar gratis</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="blog-hero">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="/">Inicio</a> <span class="breadcrumb-sep">/</span>
+          <a href="/blog/">Blog</a> <span class="breadcrumb-sep">/</span>
+          <span>Requisitos Verifactu Homologado</span>
+        </div>
+        <div class="blog-hero-content">
+          <span class="blog-category">Verifactu</span>
+          <h1>Requisitos del <span class="highlight">Software Verifactu Homologado:</span> Checklist Completa</h1>
+          <p class="blog-hero-subtitle">Todo lo que debe tener un software de facturación para ser considerado Verifactu compliant. Hash, firma, QR, conectividad y certificación explicados al detalle.</p>
+          <div class="blog-meta">
+            <span class="blog-date">Publicado: 27 de mayo de 2026</span>
+            <span class="blog-read-time">17 min de lectura</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="blog-layout">
+        <article class="blog-content">
+          <div class="author-box">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 56 56'%3E%3Crect width='56' height='56' fill='%231E3254'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter,sans-serif' font-weight='800' font-size='22' fill='%23D4A843'%3EF%3C/text%3E%3C/svg%3E" alt="FacturaIA" width="56" height="56">
+            <div>
+              <div class="author-name">Equipo FacturaIA</div>
+              <div class="author-bio">Creamos herramientas gratuitas y open source para que los autónomos españoles puedan facturar sin pagar un euro. Creemos en la transparencia, la privacidad y el software libre.</div>
+            </div>
+          </div>
+
+          <nav class="toc" aria-label="Tabla de contenidos">
+            <h2 class="toc-title">Índice de contenidos</h2>
+            <ol class="toc-list">
+              <li><a href="#resumen-ejecutivo">Resumen ejecutivo: la checklist rápida</a></li>
+              <li><a href="#hash-encadenado">Hash encadenado SHA-256</a></li>
+              <li><a href="#firma-digital">Firma electrónica de registros</a></li>
+              <li><a href="#codigo-qr">Código QR con URL de verificación</a></li>
+              <li><a href="#facturae-xml">Formato FacturaE 4.0</a></li>
+              <li><a href="#conectividad-aeat">Conectividad con la AEAT</a></li>
+              <li><a href="#registro-eventos">Registro de eventos inmutable</a></li>
+              <li><a href="#certificacion">Proceso de certificación oficial</a></li>
+              <li><a href="#checklist-completa">Checklist completa imprimible</a></li>
+              <li><a href="#faq">Preguntas frecuentes</a></li>
+            </ol>
+          </nav>
+
+          <div class="prose">
+            <h2 id="resumen-ejecutivo">1. Resumen ejecutivo: la checklist rápida</h2>
+            <p>Antes de entrar en detalle, aquí tienes la <strong>lista de requisitos obligatorios</strong> que todo software de facturación debe cumplir para estar homologado bajo Verifactu. Si tu software falla en uno solo de estos puntos, <strong>no es Verifactu compliant</strong>:</p>
+
+            <div class="info-card">
+              <strong>Checklist rápida Verifactu:</strong><br><br>
+              &#9744; Hash encadenado SHA-256 en cada factura<br>
+              &#9744; Firma electrónica de todos los registros de facturación<br>
+              &#9744; Código QR con URL de verificación de la AEAT<br>
+              &#9744; Generación de facturas en formato FacturaE 4.0<br>
+              &#9744; Capacidad de envío de registros a la AEAT<br>
+              &#9744; Registro de eventos de facturación inmutable<br>
+              &#9744; Certificación oficial del software<br>
+              &#9744; Conservación de facturas (mínimo 4 años)<br>
+              &#9744; Protección contra alteración y eliminación de registros
+            </div>
+
+            <h2 id="hash-encadenado">2. Hash encadenado SHA-256</h2>
+            <p>El <strong>hash encadenado SHA-256</strong> es el mecanismo central de seguridad de Verifactu. Es lo que impide que alguien pueda modificar una factura antigua sin que se detecte inmediatamente.</p>
+
+            <h3>Cómo funciona</h3>
+            <p>Cada factura que emites contiene un <strong>hash criptográfico</strong> (una huella digital única) de <strong>la factura anterior más los datos de la factura actual</strong>. El resultado es una cadena donde:</p>
+            <ul>
+              <li>La factura #1 genera un hash a partir de sus propios datos.</li>
+              <li>La factura #2 genera un hash a partir del hash de la factura #1 + sus datos.</li>
+              <li>La factura #3 genera un hash a partir del hash de la factura #2 + sus datos.</li>
+              <li>Y así sucesivamente...</li>
+            </ul>
+            <p>Si alguien modifica la factura #1 después de haber emitido la #100, el hash de la #1 cambia, lo que invalida el hash de la #2, que invalida el de la #3... y así hasta la #100. <strong>Modificar una factura del pasado rompe toda la cadena</strong>, y la rotura es detectable por la AEAT.</p>
+
+            <h3>Requisitos específicos</h3>
+            <ul>
+              <li><strong>Algoritmo:</strong> SHA-256 (no SHA-1, no MD5).</li>
+              <li><strong>Encadenamiento:</strong> Cada registro debe incluir la huella del registro inmediatamente anterior.</li>
+              <li><strong>Datos incluidos en el hash:</strong> NIF del emisor, número de factura, fecha, importe total, y huella del registro anterior.</li>
+              <li><strong>Primer registro:</strong> La primera factura de cada serie debe usar un valor inicial conocido como "semilla" o "valor cero".</li>
+            </ul>
+
+            <div class="info-card">
+              <strong>Dato técnico:</strong><br><br>
+              El hash SHA-256 produce una cadena de 64 caracteres hexadecimales (256 bits). Es computacionalmente imposible encontrar dos facturas diferentes que produzcan el mismo hash (lo que se conoce como "resistencia a colisiones").
+            </div>
+
+            <h2 id="firma-digital">3. Firma electrónica de registros</h2>
+            <p>Cada registro de facturación debe estar <strong>firmado electrónicamente</strong> para garantizar dos cosas: la <strong>autenticidad</strong> (el emisor es quien dice ser) y la <strong>integridad</strong> (el contenido no ha sido alterado desde la firma).</p>
+
+            <h3>Qué se firma</h3>
+            <ul>
+              <li>Todos los registros de facturación (alta de facturas, modificaciones, anulaciones).</li>
+              <li>El hash encadenado de cada registro.</li>
+              <li>Los datos identificativos del obligado tributario (NIF, razón social).</li>
+            </ul>
+
+            <h3>Cómo se firma</h3>
+            <p>La firma se realiza con un <strong>certificado digital cualificado</strong> (FNMT, Camerfirma, etc.) utilizando el estándar <strong>XAdES</strong> (XML Advanced Electronic Signature). El software debe ser capaz de:</p>
+            <ul>
+              <li>Detectar el certificado digital instalado en el sistema.</li>
+              <li>Calcular el hash del registro de facturación.</li>
+              <li>Firmar el hash con la clave privada del certificado.</li>
+              <li>Incluir la firma en el registro de facturación.</li>
+            </ul>
+
+            <h2 id="codigo-qr">4. Código QR con URL de verificación</h2>
+            <p>Toda factura emitida con software Verifactu homologado debe incluir un <strong>código QR</strong> que contenga una <strong>URL de verificación de la AEAT</strong>. Este QR permite a cualquier persona (el cliente, un inspector, un contable) verificar en tiempo real que la factura es auténtica y está correctamente registrada.</p>
+
+            <h3>Qué contiene el QR</h3>
+            <ul>
+              <li>URL de verificación de la AEAT (formato: https://www.agenciatributaria.es/verifactu/...).</li>
+              <li>Parámetros de la factura: NIF del emisor, número de serie y factura, fecha, importe total.</li>
+              <li>Hash de verificación que permite a la AEAT comprobar la integridad del documento.</li>
+            </ul>
+
+            <h3>Cómo debe mostrarse</h3>
+            <ul>
+              <li>El QR debe ser <strong>claramente visible</strong> en la representación impresa o digital de la factura.</li>
+              <li>Debe ser <strong>escaneable</strong> (tamaño mínimo recomendado: 2 x 2 cm).</li>
+              <li>Debe ir acompañado de un texto como "Verifique esta factura en la web de la AEAT".</li>
+            </ul>
+
+            <h2 id="facturae-xml">5. Formato FacturaE 4.0</h2>
+            <p>Verifactu no obliga explícitamente a usar FacturaE en el texto legal, pero el <strong>reglamento técnico</strong> establece que los registros de facturación deben generarse en un formato estructurado que cumpla el esquema FacturaE 4.0 o equivalente. En la práctica, FacturaE 4.0 es el estándar de facto.</p>
+
+            <h3>Campos obligatorios en FacturaE 4.0 para Verifactu</h3>
+            <ul>
+              <li><strong>Cabecera:</strong> NIF emisor, razón social, dirección, tipo de factura (completa/simplificada).</li>
+              <li><strong>Receptor:</strong> NIF, nombre, dirección del cliente.</li>
+              <li><strong>Líneas de factura:</strong> descripción, cantidad, precio unitario, tipo de IVA, cuota.</li>
+              <li><strong>Totales:</strong> base imponible, cuota IVA, tipo IRPF, cuota IRPF, total factura.</li>
+              <li><strong>Huella:</strong> hash encadenado del registro actual.</li>
+              <li><strong>Firma:</strong> firma electrónica XAdES del registro.</li>
+            </ul>
+
+            <div class="info-card">
+              <strong>Atención:</strong><br><br>
+              FacturaE 4.0 incluye campos adicionales que Verifactu no exige (como datos de transporte, pagos, etc.). El software debe soportar al menos los campos obligatorios de Verifactu. FacturaIA implementa el esquema completo de FacturaE 4.0.
+            </div>
+
+            <h2 id="conectividad-aeat">6. Conectividad con la AEAT</h2>
+            <p>El software Verifactu debe tener la <strong>capacidad técnica de enviar</strong> los registros de facturación a la Agencia Tributaria. Esto no significa que tenga que enviarlos en tiempo real (aunque puede hacerlo), sino que debe estar preparado para enviarlos cuando la AEAT lo solicite o cuando el usuario decida hacerlo voluntariamente.</p>
+
+            <h3>Requisitos de conectividad</h3>
+            <ul>
+              <li><strong>Protocolo:</strong> Servicio web SOAP/REST de la AEAT.</li>
+              <li><strong>Autenticación:</strong> Certificado digital del obligado tributario.</li>
+              <li><strong>Envío:</strong> Los registros se envían en lotes (un archivo ZIP que contiene los XML de facturación).</li>
+              <li><strong>Respuesta:</strong> La AEAT devuelve un acuse de recibo con el resultado de la validación (aceptado, rechazado con errores).</li>
+              <li><strong>Reenvío en caso de error:</strong> El software debe ser capaz de corregir los errores notificados y reenviar los registros.</li>
+            </ul>
+
+            <h3>Envío voluntario vs obligatorio</h3>
+            <p>El envío de facturas a la AEAT es, en principio, <strong>voluntario</strong>. Sin embargo, el software debe estar <strong>técnicamente preparado</strong> para hacerlo. La AEAT puede requerir el envío en cualquier momento durante una inspección. Además, enviar voluntariamente las facturas puede tener ventajas (como acreditar buena fe en caso de discrepancia).</p>
+
+            <h2 id="registro-eventos">7. Registro de eventos inmutable</h2>
+            <p>El software Verifactu debe mantener un <strong>registro cronológico de todos los eventos</strong> relacionados con la facturación. Este registro debe ser <strong>inmutable</strong>: una vez escrito, no puede modificarse ni eliminarse.</p>
+
+            <h3>Qué eventos se registran</h3>
+            <ul>
+              <li><strong>Alta de factura:</strong> momento exacto en que se emite una factura.</li>
+              <li><strong>Modificación de factura:</strong> si se corrige algún dato (con indicación del motivo).</li>
+              <li><strong>Anulación de factura:</strong> registro de la factura rectificativa que anula la original.</li>
+              <li><strong>Envío a la AEAT:</strong> registro de cada envío de lotes con su resultado.</li>
+              <li><strong>Errores:</strong> cualquier incidencia técnica detectada por el software.</li>
+            </ul>
+
+            <h3>Cómo se garantiza la inmutabilidad</h3>
+            <p>La inmutabilidad se consigue mediante el <strong>hash encadenado</strong> de todos los registros (no solo las facturas, sino también los eventos del sistema). Si alguien intenta borrar o modificar un registro de evento, el hash de los registros posteriores se rompe, dejando evidencia de la manipulación.</p>
+
+            <h2 id="certificacion">8. Proceso de certificación oficial</h2>
+            <p>Para que un software sea considerado "Verifactu homologado", debe pasar un <strong>proceso de certificación oficial</strong> ante la AEAT. Este proceso aún no está completamente operativo (previsto para 2026), pero ya se conocen sus líneas generales:</p>
+
+            <div class="steps-list">
+              <div class="step-item">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                  <h4>Declaración responsable del fabricante</h4>
+                  <p>El desarrollador del software presenta una declaración ante la AEAT asegurando que su producto cumple todos los requisitos técnicos del reglamento Verifactu.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                  <h4>Pruebas en entorno de test de la AEAT</h4>
+                  <p>El software debe demostrar su funcionamiento en el entorno de pruebas de la AEAT (preportal.aeat.es), enviando facturas de prueba y verificando que son aceptadas correctamente.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                  <h4>Publicación en el listado oficial</h4>
+                  <p>Una vez superadas las pruebas, la AEAT incluye el software en un listado público de aplicaciones Verifactu homologadas, accesible para todos los contribuyentes.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-number">4</div>
+                <div class="step-content">
+                  <h4>Renovación y auditorías periódicas</h4>
+                  <p>La certificación no es para siempre. La AEAT puede realizar auditorías aleatorias y exigir la renovación de la certificación si se detectan cambios en el software o en la normativa.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <strong>Estado actual de FacturaIA:</strong><br><br>
+              FacturaIA ha sido diseñado desde cero para cumplir todos los requisitos técnicos de Verifactu. El código está preparado para pasar el proceso de certificación en cuanto la AEAT abra la convocatoria oficial. Al ser open source, cualquier persona puede auditar nuestro cumplimiento.
+            </div>
+
+            <h2 id="checklist-completa">9. Checklist completa imprimible</h2>
+            <p>Aquí tienes la checklist definitiva para evaluar cualquier software de facturación. Puedes usarla para comparar FacturaIA con otras alternativas:</p>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Requisito</th>
+                  <th>Nivel</th>
+                  <th>FacturaIA</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Hash encadenado SHA-256</td>
+                  <td>Crítico</td>
+                  <td>Sí</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Firma electrónica XAdES</td>
+                  <td>Crítico</td>
+                  <td>Sí</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Código QR Verifactu</td>
+                  <td>Crítico</td>
+                  <td>Sí</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>Formato FacturaE 4.0</td>
+                  <td>Crítico</td>
+                  <td>Sí</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>Conectividad AEAT</td>
+                  <td>Crítico</td>
+                  <td>Sí</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>Registro de eventos inmutable</td>
+                  <td>Crítico</td>
+                  <td>Sí</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>Conservación 4+ años</td>
+                  <td>Crítico</td>
+                  <td>Sí</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>Anti-manipulación</td>
+                  <td>Crítico</td>
+                  <td>Sí</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>Soporte multi-dispositivo</td>
+                  <td>Recomendado</td>
+                  <td>Sí</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>Exportación datos</td>
+                  <td>Recomendado</td>
+                  <td>Sí</td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td>100% gratuito</td>
+                  <td>Opcional</td>
+                  <td>Sí</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>Open source</td>
+                  <td>Opcional</td>
+                  <td>Sí</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <h2 id="faq">10. Preguntas frecuentes</h2>
+            <div class="faq">
+              <div class="faq-item">
+                <h3>¿Qué requisitos debe cumplir un software Verifactu homologado?</h3>
+                <p>Debe cumplir: generación de hash encadenado SHA-256 en cada factura, firma electrónica de cada registro, código QR con URL de verificación de la AEAT, generación de FacturaE 4.0 (o formato estructurado equivalente), registro de eventos inmutable, capacidad de envío a la AEAT, conservación de facturas durante al menos 4 años, y haber pasado el proceso de certificación oficial de la AEAT.</p>
+              </div>
+              <div class="faq-item">
+                <h3>¿Es obligatorio el código QR en las facturas Verifactu?</h3>
+                <p>Sí. Todas las facturas emitidas con software Verifactu homologado deben incluir un código QR que contenga una URL de verificación de la AEAT. El cliente (o cualquier persona) puede escanear el QR para verificar en tiempo real que la factura está registrada y no ha sido modificada.</p>
+              </div>
+              <div class="faq-item">
+                <h3>¿Cómo funciona el hash encadenado SHA-256 en Verifactu?</h3>
+                <p>Cada factura incluye el hash de la factura anterior más sus propios datos (NIF, número, fecha, importe). El resultado es una cadena donde modificar cualquier factura del pasado rompería todos los hashes posteriores. Esto garantiza la integridad de todo el historial de facturación y hace detectable cualquier manipulación.</p>
+              </div>
+              <div class="faq-item">
+                <h3>¿Cómo sé si mi software actual es Verifactu compatible?</h3>
+                <p>La AEAT publicará un listado oficial de software certificado. Si tu software no aparece en ese listado o no ha pasado el proceso de certificación, no es Verifactu compatible. Consulta directamente con el fabricante de tu software y pregúntale si tiene previsto certificarse.</p>
+              </div>
+              <div class="faq-item">
+                <h3>¿FacturaIA está certificado como software Verifactu?</h3>
+                <p>FacturaIA está construido desde cero para cumplir todos los requisitos técnicos de Verifactu: hash SHA-256, firma electrónica, QR, FacturaE 4.0 y registro de eventos. El proceso de certificación oficial estará disponible cuando la AEAT lo habilite (previsto para 2026), y FacturaIA se someterá a él de inmediato.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta-box">
+            <h2 class="cta-title">Prueba el software <span class="highlight">Verifactu ready</span> sin coste</h2>
+            <p class="cta-text">FacturaIA cumple todos los requisitos de la checklist Verifactu. Hash SHA-256, firma digital, QR y FacturaE 4.0. 100% gratis y open source.</p>
+            <form class="cta-form" id="waitlistForm">
+              <input type="email" class="cta-input" placeholder="tu@email.com" required aria-label="Tu email">
+              <button type="submit" class="cta-button">Empezar gratis</button>
+            </form>
+            <p class="cta-disclaimer">Sin coste. Sin límites. Checklist Verifactu completa desde el primer día.</p>
+          </div>
+
+          <div class="related-posts">
+            <h3 class="related-title">Artículos relacionados</h3>
+            <div class="related-grid">
+              <a href="/blog/verifactu-vs-facturae-diferencias.html" class="related-article">
+                <span class="related-category">Verifactu</span>
+                <h4>Verifactu vs FacturaE: Diferencias Clave</h4>
+                <p>Entiende la diferencia entre la normativa Verifactu y el formato FacturaE.</p>
+              </a>
+              <a href="/blog/hash-encadenado-verifactu.html" class="related-article">
+                <span class="related-category">Verifactu</span>
+                <h4>Hash Encadenado Verifactu: Cómo Funciona el SHA-256</h4>
+                <p>Guía técnica sobre el sistema de hash que garantiza la integridad de tus facturas.</p>
+              </a>
+              <a href="/blog/certificado-digital-verifactu-aeat.html" class="related-article">
+                <span class="related-category">Verifactu</span>
+                <h4>Certificado Digital para Verifactu: Cómo Obtenerlo</h4>
+                <p>Guía paso a paso para obtener tu certificado digital de la FNMT.</p>
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="footer-logo"><span class="nav-logo-dot"></span>FacturaIA</a>
+          <p class="footer-tagline">Software de facturación VeriFactu 100% gratis y open source para autónomos españoles.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Producto</h4>
+          <a href="/#features">Funcionalidades</a>
+          <a href="/#comparison">Comparativa</a>
+          <a href="/blog/">Blog</a>
+          <a href="/herramientas/">Herramientas</a>
+        </div>
+        <div class="footer-col">
+          <h4>Recursos</h4>
+          <a href="/verifactu-autonomos.html">Verifactu Autónomos</a>
+          <a href="/blog/guia-verifactu-2027.html">Guía Verifactu 2027</a>
+          <a href="/calculadora-iva.html">Calculadora IVA</a>
+          <a href="/calculadora-irpf.html">Calculadora IRPF</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/aviso-legal.html">Aviso Legal</a>
+          <a href="/privacidad.html">Privacidad</a>
+          <a href="/términos.html">Términos</a>
+          <a href="https://github.com/facturaia" class="external">GitHub</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2026 FacturaIA. Open Source MIT. 100% gratis para siempre.</p>
+        <a href="https://ko-fi.com/facturaia" target="_blank" rel="noopener" class="footer-donate">Apoyar el proyecto</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">&#8593;</button>
+
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-banner-inner">
+      <p>Usamos cookies mínimas para funcionar. No vendemos tus datos. <a href="/privacidad.html">Más info</a></p>
+      <button class="btn-accept" id="acceptCookies">Aceptar</button>
+    </div>
+  </div>
+
+  <script src="../seo/js/main.js" defer></script>
+</body>
+</html>

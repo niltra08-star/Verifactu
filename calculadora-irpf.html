@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de IRPF para Autónomos | FacturaIA</title>
+  <meta name="description" content="Calcula la retención de IRPF de tus facturas. Calculadora gratuita para autónomos con IRPF general (15%) y reducido (7%). Calcula el neto que cobrarás tras la retención.">
+  <meta name="keywords" content="calculadora irpf, calcular irpf, irpf autonomos, retencion irpf, irpf factura, calcular retencion, irpf 15%, irpf 7%">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://facturaia.app/calculadora-irpf.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="seo/css/style.css">
+  <meta property="og:title" content="Calculadora de IRPF para Autónomos | FacturaIA">
+  <meta property="og:description" content="Calcula la retención de IRPF de tus facturas. Calculadora gratuita para autónomos con IRPF general (15%) y reducido (7%). Calcula el neto que cobrarás tras la retención.">
+  <meta property="og:url" content="https://facturaia.app/calculadora-irpf.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FacturaIA">
+  <meta property="og:locale" content="es_ES">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculadora de IRPF para Autónomos | FacturaIA">
+  <meta name="twitter:description" content="Calcula la retención de IRPF de tus facturas. Calculadora gratuita para autónomos con IRPF general (15%) y reducido (7%).">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Inicio",
+        "item": "https://facturaia.app/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Herramientas",
+        "item": "https://facturaia.app/herramientas/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Calculadora de IRPF",
+        "item": "https://facturaia.app/calculadora-irpf.html"
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Calculadora de IRPF",
+    "url": "https://facturaia.app/calculadora-irpf.html",
+    "description": "Calcula la retención de IRPF de tus facturas. IRPF general (15%) y reducido (7%) para autónomos.",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "FacturaIA"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<nav class="nav" id="navbar">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo"><span class="nav-logo-dot"></span>FacturaIA</a>
+    <div class="nav-links">
+      <a href="/#features" class="nav-link">Funcionalidades</a>
+      <a href="/blog/" class="nav-link">Blog</a>
+      <a href="/herramientas/" class="nav-link">Herramientas</a>
+      <a href="/#faq" class="nav-link">FAQ</a>
+      <a href="/app" class="nav-cta">Probar gratis</a>
+    </div>
+  </div>
+</nav>
+
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <div class="container">
+    <ol>
+      <li><a href="/">Inicio</a></li>
+      <li><a href="/herramientas/">Herramientas</a></li>
+      <li>Calculadora de IRPF</li>
+    </ol>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="container">
+    <h1>Calculadora de <span class="highlight">IRPF</span></h1>
+    <p class="page-subtitle">Calcula la retención de IRPF de tus facturas. Sepas cuanto vas a cobrar neto.</p>
+  </div>
+</header>
+
+<main>
+  <section class="section-padding">
+    <div class="container">
+      <div class="prose">
+        <p>El <strong>IRPF (Impuesto sobre la Renta de las Personas Físicas)</strong> es un tributo directo que grava la renta obtenida por las personas físicas residentes en España. Como autónomo, cuando emites una factura a otra empresa o profesional, debes incluir una <strong>retención de IRPF</strong> que tu cliente descontará del pago y luego ingresará en Hacienda en tu nombre.</p>
+        <p>Esta retención funciona como un anticipo del IRPF que pagarás en tu declaración anual de la renta. Es importante entenderla porque afecta directamente al <strong>importe neto que recibirás</strong> en tu cuenta bancaria. Nuestra calculadora te ayuda a visualizar este impacto de forma clara e inmediata.</p>
+      </div>
+
+      <div class="calc-card" id="calcIRPF">
+        <h2 class="calc-title">Calcular IRPF</h2>
+        <div class="calc-field">
+          <label for="irpfBase">Base imponible (€)</label>
+          <input type="number" id="irpfBase" placeholder="Ej: 1000" min="0" step="0.01">
+        </div>
+        <div class="calc-field">
+          <label for="irpfTipo">Tipo de retención</label>
+          <select id="irpfTipo">
+            <option value="15">15% - Retención general</option>
+            <option value="7">7% - Nuevos autónomos (primeros 3 años)</option>
+          </select>
+        </div>
+        <div class="calc-result" id="irpfResultado">
+          <div class="result-item">
+            <span class="result-label">Base imponible</span>
+            <span class="result-value" id="irpfBaseResult">0,00 €</span>
+          </div>
+          <div class="result-item">
+            <span class="result-label">Retención IRPF</span>
+            <span class="result-value" id="irpfImporteResult">0,00 €</span>
+          </div>
+          <div class="result-item result-total">
+            <span class="result-label">Neto a cobrar</span>
+            <span class="result-value" id="irpfNetoResult">0,00 €</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 48px;">
+        <div class="info-card">
+          <h3>¿Qué es la retención de IRPF?</h3>
+          <p>La retención de IRPF es un mecanismo por el cual el <strong>pagador</strong> de una factura (tu cliente, si es empresa o profesional) descuenta un porcentaje del importe y lo ingresa directamente en la Agencia Tributaria a cuenta del IRPF del profesional (tú). Es decir, no es un impuesto adicional, sino un <strong>anticipo del IRPF</strong> que liquidarás en tu declaración anual de la renta.</p>
+          <p>La retención se aplica sobre la base imponible (sin IVA). Si la factura incluye IVA, la retención solo se calcula sobre la base imponible, no sobre el total con IVA incluido.</p>
+        </div>
+        <div class="info-card">
+          <h3>Porcentajes de IRPF para autónomos</h3>
+          <p>Desde 2015, estos son los tipos de retención de IRPF aplicables a actividades profesionales:</p>
+          <ul>
+            <li><strong>Retención general: 15%.</strong> Es el tipo que se aplica por defecto a la mayoría de profesionales autónomos. Se introdujo en 2015, subiendo desde el 9% anterior.</li>
+            <li><strong>Nuevos autónomos: 7%.</strong> Durante los <strong>tres primeros años</strong> de alta como autónomo (el año de inicio y los dos siguientes), se aplica un tipo reducido del 7%. Esto ayuda a aliviar la carga fiscal al inicio de la actividad.</li>
+          </ul>
+          <p>Existen excepciones: algunos colectivos como agricultores, ganaderos y ciertos artistas tienen tipos reducidos específicos. Además, los autónomos que facturan exclusivamente a particulares (no a empresas) no están obligados a aplicar retención en sus facturas.</p>
+        </div>
+        <div class="info-card">
+          <h3>¿Cuándo se aplica IRPF en una factura?</h3>
+          <p>La retención de IRPF se aplica en facturas emitidas por profesionales autónomos cuando el destinatario es:</p>
+          <ul>
+            <li><strong>Una empresa o sociedad:</strong> siempre deben retener, salvo excepciones legales.</li>
+            <li><strong>Otro profesional autónomo:</strong> también deben aplicar retención si el emisor desarrolla una actividad profesional (no empresarial). La distinción entre actividad profesional y empresarial es clave: abogados, consultores, diseñadores, programadores y formadores realizan actividades profesionales y están sujetos a retención.</li>
+          </ul>
+          <p>No se aplica retención cuando el cliente es un <strong>particular</strong> (persona física no empresaria), salvo en casos muy específicos como arrendamientos de inmuebles sujetos a retención.</p>
+        </div>
+        <div class="info-card">
+          <h3>IRPF y tramos de la declaración de la renta</h3>
+          <p>La retención del 15% o 7% es solo un anticipo. En la declaración anual de la renta, el IRPF se calcula según los tramos progresivos:</p>
+          <table style="width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 0.9rem;">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--border-color, #2a2a4a);">
+                <th style="text-align: left; padding: 8px;">Base liquidable (€)</th>
+                <th style="text-align: right; padding: 8px;">Tipo estatal</th>
+                <th style="text-align: right; padding: 8px;">Tipo total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--border-color, #2a2a4a);"><td style="padding: 8px;">0 - 12.450</td><td style="text-align: right; padding: 8px;">9,5%</td><td style="text-align: right; padding: 8px;">19%</td></tr>
+              <tr style="border-bottom: 1px solid var(--border-color, #2a2a4a);"><td style="padding: 8px;">12.450 - 20.200</td><td style="text-align: right; padding: 8px;">12%</td><td style="text-align: right; padding: 8px;">24%</td></tr>
+              <tr style="border-bottom: 1px solid var(--border-color, #2a2a4a);"><td style="padding: 8px;">20.200 - 35.200</td><td style="text-align: right; padding: 8px;">15%</td><td style="text-align: right; padding: 8px;">30%</td></tr>
+              <tr style="border-bottom: 1px solid var(--border-color, #2a2a4a);"><td style="padding: 8px;">35.200 - 60.000</td><td style="text-align: right; padding: 8px;">18,5%</td><td style="text-align: right; padding: 8px;">37%</td></tr>
+              <tr style="border-bottom: 1px solid var(--border-color, #2a2a4a);"><td style="padding: 8px;">60.000 - 300.000</td><td style="text-align: right; padding: 8px;">22,5%</td><td style="text-align: right; padding: 8px;">45%</td></tr>
+              <tr><td style="padding: 8px;">Más de 300.000</td><td style="text-align: right; padding: 8px;">24,5%</td><td style="text-align: right; padding: 8px;">47%</td></tr>
+            </tbody>
+          </table>
+          <p style="font-size: 0.85rem; margin-top: 8px; opacity: 0.7;">Tipos estatales. El tipo total incluye el tramo autonómico (variable según CCAA). Los tramos pueden variar ligeramente por comunidad autónoma.</p>
+        </div>
+      </div>
+
+      <div class="prose" style="margin-top: 48px;">
+        <h2>Cómo afecta la retención al flujo de caja</h2>
+        <p>Un error frecuente entre autónomos noveles es no tener en cuenta que <strong>el cliente te pagará menos</strong> del importe que figura en la factura. Si emites una factura con base imponible de 1.000 € + IVA, el cálculo sería:</p>
+        <ul>
+          <li>Base imponible: 1.000,00 €</li>
+          <li>IVA (21%): + 210,00 €</li>
+          <li>IRPF (15%): - 150,00 €</li>
+          <li><strong>Total a pagar por el cliente: 1.060,00 €</strong></li>
+        </ul>
+        <p>Como ves, de los 1.210 € que parecería a simple vista, solo recibirás 1.060 €. Los 150 € de retención los ingresará tu cliente directamente en Hacienda. Es crucial tener esto presente para planificar tu tesorería y no llevarte sorpresas.</p>
+        <h2>Obligaciones trimestrales del IRPF</h2>
+        <p>A diferencia del IVA, el IRPF no se liquida trimestralmente de forma directa. Sin embargo, los autónomos en estimación directa deben presentar el <strong>modelo 130</strong> de pagos fraccionados a cuenta del IRPF cada trimestre (20% del rendimiento neto). Las retenciones que te hayan practicado tus clientes se descuentan de este pago fraccionado, por lo que el modelo 130 puede salir incluso negativo o a cero si has tenido suficientes retenciones.</p>
+      </div>
+
+      <div class="trust-badges" style="margin-top: 48px; display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; text-align: center;">
+        <div class="trust-badge">
+          <span style="font-size: 2rem;">&#128274;</span>
+          <p>Sin registro</p>
+        </div>
+        <div class="trust-badge">
+          <span style="font-size: 2rem;">&#9889;</span>
+          <p>Cálculo instantáneo</p>
+        </div>
+        <div class="trust-badge">
+          <span style="font-size: 2rem;">&#127758;</span>
+          <p>100% gratis</p>
+        </div>
+        <div class="trust-badge">
+          <span style="font-size: 2rem;">&#9989;</span>
+          <p>Datos actualizados</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding" style="background: var(--bg-card, #1a1a2e);">
+    <div class="container">
+      <div class="cta-box" style="text-align: center; max-width: 600px; margin: 0 auto;">
+        <h2>FacturaIA calcula el IRPF automáticamente</h2>
+        <p>Cada factura incluye la retención de IRPF correcta según tu perfil. Olvídate de hacer cálculos manuales y evita errores con Hacienda.</p>
+        <form class="waitlist-form" style="display: flex; gap: 12px; max-width: 450px; margin: 24px auto 0;" id="ctaForm" onsubmit="event.preventDefault(); alert('¡Gracias! Te avisaremos cuando esté disponible.'); this.reset();">
+          <input type="email" placeholder="tu@email.com" required style="flex: 1; padding: 12px 16px; border-radius: 8px; border: 1px solid var(--border-color, #2a2a4a); background: var(--bg-input, #0f0f23); color: #fff; font-family: inherit;">
+          <button type="submit" class="btn-primary">Unirme</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 32px;">También te puede interesar</h2>
+      <div class="related-links" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+        <a href="/calculadora-iva.html" class="info-card" style="text-decoration: none; display: block; transition: transform 0.2s; border: 1px solid var(--border-color, #2a2a4a);">
+          <h3>Calculadora de IVA</h3>
+          <p>Calcula el IVA de tus facturas al instante con los tipos vigentes en España.</p>
+        </a>
+        <a href="/calculadora-factura.html" class="info-card" style="text-decoration: none; display: block; transition: transform 0.2s; border: 1px solid var(--border-color, #2a2a4a);">
+          <h3>Calculadora de Factura Completa</h3>
+          <p>Calcula el total de tu factura con IVA e IRPF en un solo paso.</p>
+        </a>
+        <a href="/calculadora-cuota-autonomos.html" class="info-card" style="text-decoration: none; display: block; transition: transform 0.2s; border: 1px solid var(--border-color, #2a2a4a);">
+          <h3>Calculadora Cuota de Autónomos</h3>
+          <p>Descubre cuánto pagarás de Seguridad Social según tus ingresos reales en 2026.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-padding" style="background: var(--bg-card, #1a1a2e);">
+    <div class="container">
+      <div class="author-box" style="display: flex; gap: 24px; align-items: flex-start; max-width: 700px; margin: 0 auto; padding: 32px; background: var(--bg-main, #0f0f23); border-radius: 12px; border: 1px solid var(--border-color, #2a2a4a);">
+        <div class="author-avatar" style="width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, var(--gold, #D4A843), #f0d060); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; flex-shrink: 0;">DN</div>
+        <div class="author-info">
+          <h3 style="margin: 0 0 4px;">David Navas</h3>
+          <p style="margin: 0; opacity: 0.7; font-size: 0.9rem;">Creador de FacturaIA · Desarrollador Java Backend</p>
+          <p style="margin-top: 8px; font-size: 0.95rem;">Ingeniero de software y creador de contenido sobre desarrollo y finanzas para autónomos. Construí FacturaIA porque creo que las herramientas de facturación deberían ser accesibles para todos, sin coste y con la máxima transparencia.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo"><span class="nav-logo-dot"></span>FacturaIA</a>
+        <p class="footer-tagline">Software de facturación VeriFactu 100% gratis y open source para autónomos españoles.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Producto</h4>
+        <a href="/#features">Funcionalidades</a>
+        <a href="/#comparison">Comparativa</a>
+        <a href="/blog/">Blog</a>
+        <a href="/herramientas/">Herramientas</a>
+      </div>
+      <div class="footer-col">
+        <h4>Recursos</h4>
+        <a href="/verifactu-autonomos.html">VeriFactu Autónomos</a>
+        <a href="/blog/guia-verifactu-2027.html">Guía VeriFactu 2027</a>
+        <a href="/calculadora-iva.html">Calculadora IVA</a>
+        <a href="/calculadora-irpf.html">Calculadora IRPF</a>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <a href="/aviso-legal.html">Aviso Legal</a>
+        <a href="/privacidad.html">Privacidad</a>
+        <a href="/terminos.html">Términos</a>
+        <a href="https://github.com/facturaia" class="external">GitHub</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2026 FacturaIA. Open Source MIT. 100% gratis para siempre.</p>
+      <a href="https://ko-fi.com/facturaia" target="_blank" rel="noopener" class="footer-donate">Apoyar el proyecto</a>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-banner-inner">
+    <p>Usamos cookies mínimas para funcionar. No vendemos tus datos. <a href="/privacidad.html">Más info</a></p>
+    <button class="btn-accept" id="acceptCookies">Aceptar</button>
+  </div>
+</div>
+
+<button class="scroll-top" id="scrollTop" aria-label="Volver arriba">&#8593;</button>
+
+<script src="seo/js/main.js" defer></script>
+</body>
+</html>

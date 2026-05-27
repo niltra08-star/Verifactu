@@ -1,0 +1,57 @@
+{
+  "version": 2,
+  "buildCommand": "echo \"Static SEO site - no build needed\" && cd frontend && npm install && npm run build",
+  "outputDirectory": "dist",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/$1" },
+    { "source": "/app", "destination": "/app/index.html" },
+    { "source": "/app/(.*)", "destination": "/app/index.html" },
+    { "source": "/blog/feed.xml", "destination": "/blog/feed.xml" },
+    { "source": "/go", "destination": "/go.html" },
+    { "source": "/", "destination": "/index.html" }
+  ],
+  "redirects": [
+    { "source": "/blog", "destination": "/blog/index.html", "permanent": true },
+    { "source": "/herramientas", "destination": "/herramientas/index.html", "permanent": true },
+    { "source": "/go/:to", "destination": "/go.html?to=:to", "permanent": false }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+      ]
+    },
+    {
+      "source": "/seo/(css|js)/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/blog/(.*).html",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400, s-maxage=3600" }
+      ]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        { "key": "Content-Type", "value": "application/xml; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    },
+    {
+      "source": "/blog/feed.xml",
+      "headers": [
+        { "key": "Content-Type", "value": "application/rss+xml; charset=utf-8" },
+        { "key": "Cache-Control", "value": "public, max-age=3600" }
+      ]
+    }
+  ]
+}
