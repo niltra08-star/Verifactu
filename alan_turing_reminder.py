@@ -59,6 +59,19 @@ def build_reminder(event_date, label, verb, days_before):
 
 hoy = date.today()
 print(f"Verificando recordatorios para {hoy}...")
+
+if hoy > FECHA_CIERRE:
+    if hoy == FECHA_CIERRE + timedelta(days=1):
+        send_telegram(
+            "<b>CPIFP Alan Turing - Recordatorios finalizados</b>\n\n"
+            "El plazo de solicitudes ya ha cerrado (30 de junio de 2026).\n\n"
+            "Este bot ya no enviara mas recordatorios. Cuando puedas, borra los secrets de GitHub:\n"
+            "<code>gh secret remove TELEGRAM_BOT_TOKEN --repo niltra08-star/Verifactu</code>\n"
+            "<code>gh secret remove TELEGRAM_CHAT_ID --repo niltra08-star/Verifactu</code>"
+        )
+    print("Plazo de solicitudes finalizado. Este workflow ya no es necesario.")
+    sys.exit(0)
+
 enviados = 0
 
 eventos = [
